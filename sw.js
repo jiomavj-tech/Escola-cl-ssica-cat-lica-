@@ -2,7 +2,7 @@
    Estratégia: cache-first para os arquivos próprios do app.
    Para publicar uma versão nova, altere CACHE abaixo — o navegador
    descarta o cache antigo e busca os arquivos atualizados. */
-const CACHE = 'acc-v79-1';
+const CACHE = 'acc-v80-1';
 const ARQUIVOS = [
   './',
   './index.html',
