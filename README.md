@@ -64,5 +64,29 @@ python3 -m http.server 8000   # depois abra http://localhost:8000
 | `service-worker.js` | Cache offline. O `CACHE_NAME` precisa mudar a cada versão. |
 | `manifest.webmanifest` | Nome, cores e ícones da instalação na tela inicial. |
 | `icon-*.png` | Ícones do app. |
+| `sw.js` | **Não apague.** Resgata os aparelhos presos numa versão antiga — veja abaixo. |
 | `scripts/` | Scripts de publicação e verificação, usados pelos workflows e à mão. |
 | `.github/workflows/` | `publicar.yml` (no `main`) e `verificar.yml` (nas demais branches). |
+
+## Por que existe um `sw.js` que não faz nada
+
+Até a V79 o service worker se chamava `sw.js` e era *cache-first* para tudo,
+inclusive para a navegação. Quando o arquivo foi renomeado para
+`service-worker.js`, os aparelhos que já tinham o nome antigo registrado
+ficaram presos: o navegador procura `sw.js` para atualizar, recebe 404 e por
+isso mantém o worker velho vivo indefinidamente, servindo do cache o
+`index.html` da V76 — com um manifesto que aponta para ícones que já não
+existem. É por isso que nesses aparelhos o Chrome oferece um atalho genérico
+em vez de instalar o app.
+
+O `sw.js` de hoje devolve 200 nesse endereço só para que o navegador consiga
+finalmente atualizar. Ele não serve nada: limpa os caches, se desregistra e
+recarrega a página, devolvendo o aparelho ao `service-worker.js` atual. O
+histórico do aluno não é afetado — fica em `localStorage`, que `caches.delete()`
+não toca.
+
+**Ele precisa continuar no repositório.** Se for apagado, volta a dar 404 e
+qualquer aparelho ainda não resgatado fica preso outra vez.
+
+Para não repetir o problema, `scripts/verificar.mjs` falha se o `index.html`
+registrar um service worker cujo arquivo não exista no repositório.
