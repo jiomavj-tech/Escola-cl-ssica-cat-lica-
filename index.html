@@ -338,6 +338,23 @@ body.v64-noscroll{overflow:hidden}
 <main>
 
 <section id="menu">
+<style id="v97RetaFinalStyle">
+/* Reta Final compacta: os três painéis abriam com ~1100px cada, empurrando o
+   menu principal para 4,6 telas de rolagem. Agora cada um mostra título,
+   botões e agenda; o conteúdo descritivo fica atrás de um <details>. Nada
+   foi removido — só recolhido. */
+.v84-hist>h2,.v83-final>h2,.v80-provas>h2{font-size:1.15rem;margin:2px 0 10px}
+.v97-acoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:10px 0}
+.v97-det{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:10px 0;padding:0 12px}
+.v97-det>summary{cursor:pointer;padding:12px 0;font-weight:bold;color:var(--wine);list-style:none;font-size:14px}
+.v97-det>summary::-webkit-details-marker{display:none}
+.v97-det>summary::before{content:"\25B8  "}
+.v97-det[open]>summary::before{content:"\25BE  "}
+.v97-det>*:last-child{margin-bottom:12px}
+.v80-agenda.v97-agenda{grid-template-columns:1fr;gap:5px}
+.v80-agenda.v97-agenda .v80-dia{padding:6px 9px;font-size:12px;line-height:1.3}
+.v80-foco.v97-foco{font-size:13px;padding:8px 10px;margin:8px 0}
+</style>
 <style id="v84HistoriaStyle">
 .v84-hist{border:2px solid var(--wine);background:#fffaf4;border-radius:12px;padding:14px;margin:16px 0}
 .v84-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
@@ -346,6 +363,11 @@ body.v64-noscroll{overflow:hidden}
 </style>
 <section class="v84-hist" id="v84Historia22" style="display:block">
 <h2>📜 Reta Final — História 22/09</h2>
+<div class="v97-acoes">
+<button onclick="v84TreinarHistoria()">🏺 Treinar História</button>
+<button class="gold" onclick="v84SimuladoHistoria()">📝 Simulado 22/09</button>
+</div>
+<details class="v97-det"><summary>O que cai na prova de História</summary>
 <p class="sub">Treino concentrado no conteúdo informado pela escola: Idade Moderna (séculos XV–XVII), Renascimento e chegada dos portugueses ao Brasil.</p>
 <div class="v84-grid">
  <div class="v84-card"><h3>🧭 1500 e Brasil</h3>
@@ -360,8 +382,7 @@ body.v64-noscroll{overflow:hidden}
  <p>Observe cronologia, causas, consequências e fontes. Não decore apenas datas: procure entender como navegações, mudanças culturais e acontecimentos religiosos se relacionam.</p>
  </div>
 </div>
-<button onclick="v84TreinarHistoria()">Treinar História — conteúdo da prova</button>
-<button class="gold" onclick="v84SimuladoHistoria()">📝 Simulado História 22/09</button>
+</details>
 </section>
 
 <style id="v83RetaFinalStyle">
@@ -376,28 +397,32 @@ body.v64-noscroll{overflow:hidden}
 </style>
 <section class="v83-final" id="v83RetaFinal" style="display:block">
   <h2>📚 Reta Final — Provas de 21/09</h2>
+  <div class="v97-acoes">
+    <button onclick="v83TreinarArtes()">🎨 Treinar Artes</button>
+    <button onclick="v83TreinarLatim()">🏛️ Treinar Latim</button>
+  </div>
+  <button class="gold" onclick="v83Simulado21()">📝 Simulado misto Artes + Latim</button>
+  <details class="v97-det"><summary>O que cai nas provas de 21/09</summary>
   <p class="sub">Treino direcionado somente ao conteúdo escolar de Artes e Latim. A Fase 3 continua congelada.</p>
   <div class="v83-grid">
     <div class="v83-card">
       <h3>🎨 Artes</h3>
       <p><b>Conteúdo:</b> apreciação artística, leitura de obra, composição e pintura com lápis de cor.</p>
       <div class="v83-check">Revise: pressão leve, camadas, mistura, textura, luz e sombra, contraste, equilíbrio e observação da obra.</div>
-      <button onclick="v83TreinarArtes()">Treinar Artes — conteúdo da prova</button>
       <p class="v83-mini">65 questões selecionadas para este treino.</p>
     </div>
     <div class="v83-card">
       <h3>🏛️ Latim</h3>
       <p><b>Conteúdo:</b> presente do indicativo, imperativo, 1ª e 2ª declinações, adjetivos, preposições e imperfeito.</p>
       <div class="v83-check">Revise: terminações, caso e função, concordância e diferença entre presente e imperfeito.</div>
-      <button onclick="v83TreinarLatim()">Treinar Latim — conteúdo da prova</button>
       <p class="v83-mini">55 questões selecionadas para este treino.</p>
     </div>
   </div>
-  <button class="gold" onclick="v83Simulado21()">📝 Simulado misto Artes + Latim</button>
   <div class="v83-card" style="margin-top:10px">
     <h3>Como usar hoje</h3>
     <p>1. Faça Artes. 2. Revise só os erros. 3. Faça Latim. 4. Termine com o simulado misto. Não avance conteúdo novo se os erros básicos ainda estiverem aparecendo.</p>
   </div>
+  </details>
 </section>
 
 <style id="v80ProvasStyle">
@@ -408,8 +433,10 @@ body.v64-noscroll{overflow:hidden}
 </style>
 <section id="v80PainelProvas" class="v80-provas" style="display:block">
   <h2>🎯 Modo Época de Provas</h2>
+  <details class="v97-det"><summary>Como o modo funciona</summary>
   <p class="sub">Até terminar a semana de avaliações, o aplicativo fica focado em revisão, simulados, erros e conteúdos da escola. Retórica e Dialética avançadas estão preservadas, mas congeladas.</p>
-  <div class="v80-agenda">
+  </details>
+  <div class="v80-agenda v97-agenda">
     <div class="v80-dia"><b>21/09 — Artes</b><br>Apreciação artística e pintura com lápis de cor.</div>
     <div class="v80-dia"><b>21/09 — Latim</b><br>Presente, imperativo, 1ª e 2ª declinações, adjetivos, preposições e imperfeito.</div>
     <div class="v80-dia"><b>22/09 — História</b><br>Idade Moderna, chegada dos portugueses ao Brasil e Renascimento.</div>
@@ -418,7 +445,7 @@ body.v64-noscroll{overflow:hidden}
     <div class="v80-dia"><b>24/09 — Matemática</b><br>Sistema métrico, conversões, medidas e divisibilidade.</div>
     <div class="v80-dia"><b>25/09 — Português</b><br>Conjugações, complementos verbais, irregulares, particípio, invariáveis e análise gramatical.</div>
   </div>
-  <div class="v80-foco"><b>Prioridade:</b> estudar o que cai na prova, fazer simulado, revisar os erros e só então ampliar o conteúdo.</div>
+  <div class="v80-foco v97-foco"><b>Prioridade:</b> estudar o que cai na prova, fazer simulado, revisar os erros e só então ampliar o conteúdo.</div>
   <button class="gold" onclick="abrirProva63()">🎯 Configurar Minha Próxima Prova</button>
 </section>
 
