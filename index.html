@@ -531,7 +531,60 @@ body.v64-noscroll{overflow:hidden}
 
 <section id="config"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>📝 Começar avaliação</h2>
-<p class="sub">Escolha a quantidade de questões, a dificuldade, a etapa do Trivium e a matéria.</p>
+<p class="sub">Ajuste os filtros e toque na matéria.</p>
+
+<style id="v96PickerStyle">
+/* Seletor compacto de matéria: antes eram duas listas iguais de dez botões
+   (uma para responder no app, outra para gerar PDF), o que dava doze linhas
+   de rolagem no celular. Agora escolhe-se o formato uma vez e a matéria em
+   três colunas. */
+.v96-seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 18px}
+.v96-seg button{background:var(--soft);color:var(--muted);font-weight:normal;font-size:14px;padding:11px 6px}
+.v96-seg button[aria-pressed="true"]{background:var(--wine);color:#fff;font-weight:bold;border-color:var(--wine)}
+.v96-mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px;margin:8px 0 12px}
+.v96-mats button{background:var(--card);color:var(--text);font-weight:normal;font-size:13px;line-height:1.2;padding:10px 4px}
+.v96-mats button:active{background:var(--soft)}
+.v96-ico{display:block;font-size:20px;margin-bottom:3px}
+.v96-dica{margin:10px 0 0;text-align:left}
+.v96-mais{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:0 14px;margin:16px 0}
+.v96-mais>summary{cursor:pointer;padding:14px 0;font-weight:bold;color:var(--wine);list-style:none}
+.v96-mais>summary::-webkit-details-marker{display:none}
+.v96-mais>summary::before{content:"▸ "}
+.v96-mais[open]>summary::before{content:"▾ "}
+.v96-mais>summary+*{margin-top:0}
+.v96-mais .card{background:var(--card)}
+</style>
+<script id="v96Picker">
+/* Formato escolhido no seletor de matéria: "app" responde na tela,
+   "pdf" gera a prova impressa. As funções de destino são as mesmas de antes. */
+var v96FormatoAtual = "app";
+
+function v96Formato(f){
+  v96FormatoAtual = (f === "pdf") ? "pdf" : "app";
+  var seg = document.getElementById("v96Seg");
+  if (seg) {
+    var botoes = seg.querySelectorAll("button");
+    if (botoes[0]) botoes[0].setAttribute("aria-pressed", String(v96FormatoAtual === "app"));
+    if (botoes[1]) botoes[1].setAttribute("aria-pressed", String(v96FormatoAtual === "pdf"));
+  }
+  var dica = document.getElementById("v96Dica");
+  if (dica) {
+    dica.textContent = (v96FormatoAtual === "pdf")
+      ? "Toque na matéria para gerar a prova em PDF, pronta para imprimir."
+      : "Toque na matéria para começar a avaliação no aplicativo.";
+  }
+}
+
+function v96Escolher(materia){
+  // "misto" é o nome de uma função global — cuidado para não sombreá-la aqui.
+  var ehMisto = (materia === "__misto");
+  if (v96FormatoAtual === "pdf") {
+    if (ehMisto) { v61GerarMistoDireto(); } else { v61GerarDireto(materia); }
+  } else {
+    if (ehMisto) { misto(); } else { start(materia); }
+  }
+}
+</script>
 
 <div class="card">
   <div class="grid">
@@ -565,35 +618,28 @@ body.v64-noscroll{overflow:hidden}
   </div>
 </div>
 
-<div class="grid">
-  <button onclick="start('Português')">📜 Português</button>
-  <button onclick="start('Matemática')">📐 Matemática</button>
-  <button onclick="start('História')">🏺 História</button>
-  <button onclick="start('Geografia')">🗺️ Geografia</button>
-  <button onclick="start('Filosofia')">⚖️ Filosofia</button>
-  <button onclick="start('Latim')">🏛️ Latim</button>
-  <button onclick="start('Artes')">🎨 Artes</button>
-  <button onclick="start('Ciências')">🔬 Ciências</button>
-  <button onclick="start('Retórica')">🪶 Retórica</button>
-  <button onclick="start('Dialética')">⚖️ Dialética</button>
-  <button class="gold" onclick="misto()">🧠 Trivium misto</button>
-</div>
-
-
-<div class="card">
-  <h3>📄 Prova em PDF</h3>
-  <p class="sub">Use os filtros acima e escolha a matéria. O aplicativo monta a prova e abre uma versão A4 pronta para imprimir ou salvar como PDF.</p>
-  <div class="grid">
-    <button onclick="v61GerarDireto('Português')">📜 Português PDF</button>
-    <button onclick="v61GerarDireto('Matemática')">📐 Matemática PDF</button>
-    <button onclick="v61GerarDireto('História')">🏺 História PDF</button>
-    <button onclick="v61GerarDireto('Geografia')">🗺️ Geografia PDF</button>
-    <button onclick="v61GerarDireto('Filosofia')">⚖️ Filosofia PDF</button>
-    <button onclick="v61GerarDireto('Latim')">🏛️ Latim PDF</button>
-    <button onclick="v61GerarDireto('Artes')">🎨 Artes PDF</button>
-  <button onclick="v61GerarDireto('Ciências')">🔬 Ciências PDF</button><button onclick="v61GerarDireto('Retórica')">🪶 Retórica PDF</button><button onclick="v61GerarDireto('Dialética')">⚖️ Dialética PDF</button>
-    <button class="gold" onclick="v61GerarMistoDireto()">🧠 Misto PDF</button>
+<div class="card v96-picker">
+  <b>Como você quer fazer</b>
+  <div class="v96-seg" id="v96Seg">
+    <button type="button" aria-pressed="true" onclick="v96Formato('app')">📱 No aplicativo</button>
+    <button type="button" aria-pressed="false" onclick="v96Formato('pdf')">📄 Em PDF</button>
   </div>
+
+  <b>Matéria</b>
+  <div class="v96-mats">
+    <button type="button" onclick="v96Escolher('Português')"><span class="v96-ico">📜</span>Português</button>
+    <button type="button" onclick="v96Escolher('Matemática')"><span class="v96-ico">📐</span>Matemática</button>
+    <button type="button" onclick="v96Escolher('História')"><span class="v96-ico">🏺</span>História</button>
+    <button type="button" onclick="v96Escolher('Geografia')"><span class="v96-ico">🗺️</span>Geografia</button>
+    <button type="button" onclick="v96Escolher('Filosofia')"><span class="v96-ico">⚖️</span>Filosofia</button>
+    <button type="button" onclick="v96Escolher('Latim')"><span class="v96-ico">🏛️</span>Latim</button>
+    <button type="button" onclick="v96Escolher('Artes')"><span class="v96-ico">🎨</span>Artes</button>
+    <button type="button" onclick="v96Escolher('Ciências')"><span class="v96-ico">🔬</span>Ciências</button>
+    <button type="button" onclick="v96Escolher('Retórica')"><span class="v96-ico">🪶</span>Retórica</button>
+    <button type="button" onclick="v96Escolher('Dialética')"><span class="v96-ico">⚖️</span>Dialética</button>
+  </div>
+  <button class="gold" type="button" onclick="v96Escolher('__misto')">🧠 Trivium misto</button>
+  <p class="sub v96-dica" id="v96Dica">Toque na matéria para começar a avaliação no aplicativo.</p>
 </div>
 
 <div class="card">
@@ -601,6 +647,8 @@ body.v64-noscroll{overflow:hidden}
   <button class="gold" onclick="abrirMatriz()">Ver matriz da prova</button>
 </div>
 
+<details class="v96-mais">
+<summary>Oficinas e material de apoio</summary>
 <div class="card">
   <h3>Oficinas de apoio</h3>
   <div class="grid">
@@ -626,7 +674,9 @@ body.v64-noscroll{overflow:hidden}
 <p class="sub">Instrumentos lógicos → Aristóteles → Metafísica → Fé e Razão → Método Escolástico → Cinco Vias.</p>
 <p class="sub">As questões objetivas verificam fundamentos e análise. Demonstração filosófica completa permanece nas oficinas abertas e na Disputatio: múltipla escolha não é tratada como Retórica.</p>
 </div>
-<button onclick="abrirFilosofiaAberta()">🏛 Oficina Filosófica V40</button><button onclick="abrirHistFontes()">📜 Oficina de Fontes Históricas V40</button><button onclick="abrirMatDem()">📐 Oficina de Demonstração Matemática V40</button><button onclick="abrirLatProg()">🏛 Oficina de Latim Progressivo V40</button><button onclick="abrirPtComp()">✍️ Oficina de Português e Composição V40</button><button onclick="abrirGeoAnalitica()">🗺️ Oficina de Geografia Analítica V40</button><button onclick="abrirArtEst()">🎨 Oficina de Artes e Estética V40</button><button onclick="abrirTutor39()">🧭 Tutor Socrático V40</button><button onclick="abrirDominio40()">🎯 Domínio Real V40</button><button class="gray" onclick="show(&quot;autoteste49&quot;);v49Executar()">🧪 Testar aplicativo</button></section>
+<div class="grid"><button onclick="abrirFilosofiaAberta()">🏛 Oficina Filosófica V40</button><button onclick="abrirHistFontes()">📜 Oficina de Fontes Históricas V40</button><button onclick="abrirMatDem()">📐 Oficina de Demonstração Matemática V40</button><button onclick="abrirLatProg()">🏛 Oficina de Latim Progressivo V40</button><button onclick="abrirPtComp()">✍️ Oficina de Português e Composição V40</button><button onclick="abrirGeoAnalitica()">🗺️ Oficina de Geografia Analítica V40</button><button onclick="abrirArtEst()">🎨 Oficina de Artes e Estética V40</button><button onclick="abrirTutor39()">🧭 Tutor Socrático V40</button><button onclick="abrirDominio40()">🎯 Domínio Real V40</button><button class="gray" onclick="show(&quot;autoteste49&quot;);v49Executar()">🧪 Testar aplicativo</button></div>
+</details>
+</section>
 
 <section id="abertas"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>✍️ Oficina de Respostas Abertas</h2>
