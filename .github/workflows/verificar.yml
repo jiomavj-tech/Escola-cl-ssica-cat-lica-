@@ -1,0 +1,30 @@
+name: Verificar o aplicativo
+
+# Confere a saúde do app antes de ele chegar ao main: versão coerente entre
+# version.json, service worker e título; manifesto e ícones no lugar;
+# index.html inteiro. Roda em pull requests e nas branches de trabalho.
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Conferir versão, cache e arquivos do app
+        run: node scripts/publicar.mjs --check
+
+      - name: Conferir manifesto, ícones e index.html
+        run: node scripts/verificar.mjs

@@ -1,0 +1,186 @@
+name: Publicar nova versão
+
+# Sempre que o index.html (ou outro arquivo do app) chega no main — inclusive
+# por upload pelo site do GitHub — esta automação numera a versão, troca o
+# CACHE_NAME do service worker, carimba a data, marca a tag e confere se o
+# GitHub Pages já está servindo a versão nova.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "manifest.webmanifest"
+      - "service-worker.js"
+      - "icon-*.png"
+      - "version.json"
+  workflow_dispatch:
+    inputs:
+      descricao:
+        description: "Descrição da versão (aparece no aviso de atualização do app)"
+        required: false
+        type: string
+      versao:
+        description: "Número da versão (vazio = incrementa a atual)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+# Uploads em sequência não podem gerar dois bumps ao mesmo tempo.
+concurrency:
+  group: publicar-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    outputs:
+      versao: ${{ steps.publicar.outputs.versao }}
+      mudou: ${{ steps.publicar.outputs.mudou }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Conferir manifesto, ícones e index.html
+        # Um upload truncado não deve ganhar número de versão nem tag.
+        run: node scripts/verificar.mjs
+
+      - name: Decidir entre numerar e apenas sincronizar
+        id: decidir
+        env:
+          EVENTO: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          # Se o próprio commit já mexeu no version.json, a versão foi definida
+          # à mão: respeitamos o número e só alinhamos o resto.
+          if [ "$EVENTO" = "workflow_dispatch" ]; then
+            echo "modo=bump" >> "$GITHUB_OUTPUT"
+          elif git show --name-only --format= HEAD | grep -qx "version.json"; then
+            echo "modo=sync" >> "$GITHUB_OUTPUT"
+          else
+            echo "modo=bump" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Numerar e sincronizar a versão
+        id: publicar
+        env:
+          MODO: ${{ steps.decidir.outputs.modo }}
+          DESCRICAO_ENTRADA: ${{ inputs.descricao }}
+          VERSAO_ENTRADA: ${{ inputs.versao }}
+          ASSUNTO_COMMIT: ${{ github.event.head_commit.message }}
+        run: |
+          set -euo pipefail
+          argumentos=("--$MODO" "--json")
+
+          if [ "$MODO" = "bump" ]; then
+            descricao="$DESCRICAO_ENTRADA"
+            if [ -z "$descricao" ]; then
+              # Primeira linha da mensagem do commit que disparou a publicação.
+              descricao="$(printf '%s' "$ASSUNTO_COMMIT" | head -n 1)"
+            fi
+            # "Add files via upload" (upload pelo site do GitHub) não descreve nada.
+            case "$descricao" in
+              "Add files via upload"|"Update index.html"|"") descricao="Atualização do aplicativo" ;;
+            esac
+            argumentos+=("--descricao=$descricao")
+            if [ -n "$VERSAO_ENTRADA" ]; then
+              argumentos+=("--versao=$VERSAO_ENTRADA")
+            fi
+          fi
+
+          resultado="$(node scripts/publicar.mjs "${argumentos[@]}")"
+          echo "$resultado"
+
+          {
+            echo "versao=$(echo "$resultado" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).versao))')"
+            echo "tag=$(echo "$resultado" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).tag))')"
+            echo "build=$(echo "$resultado" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).build))')"
+            echo "mudou=$(echo "$resultado" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).mudou))')"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Comitar e marcar a versão
+        if: steps.publicar.outputs.mudou == 'true'
+        env:
+          VERSAO: ${{ steps.publicar.outputs.versao }}
+          TAG: ${{ steps.publicar.outputs.tag }}
+          BUILD: ${{ steps.publicar.outputs.build }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add version.json service-worker.js index.html
+          # [skip ci] evita que este commit dispare a automação de novo.
+          git commit -m "Publica $BUILD" -m "Versão $VERSAO [skip ci]"
+
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "Tag $TAG já existe; seguindo sem marcar."
+            git push origin HEAD:main
+          else
+            git tag -a "$TAG" -m "$BUILD"
+            git push --atomic origin HEAD:main "refs/tags/$TAG"
+          fi
+
+      - name: Registrar a versão no histórico de releases
+        if: steps.publicar.outputs.mudou == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.publicar.outputs.tag }}
+          BUILD: ${{ steps.publicar.outputs.build }}
+          VERSAO: ${{ steps.publicar.outputs.versao }}
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" \
+            --title "$BUILD" \
+            --notes "Versão \`$VERSAO\` publicada em https://jiomavj-tech.github.io/Escola-cl-ssica-cat-lica-/" \
+            || echo "Release não criada (provavelmente já existe)."
+
+      - name: Resumo
+        env:
+          VERSAO: ${{ steps.publicar.outputs.versao }}
+          BUILD: ${{ steps.publicar.outputs.build }}
+          MUDOU: ${{ steps.publicar.outputs.mudou }}
+        run: |
+          {
+            if [ "$MUDOU" = "true" ]; then
+              echo "## Publicado: $BUILD"
+            else
+              echo "## Nada a publicar — já estava em $BUILD"
+            fi
+            echo ""
+            echo "- Versão: \`$VERSAO\`"
+            echo "- App: https://jiomavj-tech.github.io/Escola-cl-ssica-cat-lica-/"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  conferir-no-ar:
+    # O GitHub Pages publica sozinho a partir do main; aqui só confirmamos que
+    # o site no ar realmente já entrega a versão nova.
+    needs: publicar
+    if: needs.publicar.outputs.mudou == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esperar o GitHub Pages servir a versão nova
+        env:
+          ESPERADA: ${{ needs.publicar.outputs.versao }}
+          SITE: https://jiomavj-tech.github.io/Escola-cl-ssica-cat-lica-
+        run: |
+          set -uo pipefail
+          for tentativa in $(seq 1 20); do
+            sleep 30
+            no_ar="$(curl -fsSL -H 'Cache-Control: no-cache' "$SITE/version.json" \
+              | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).version)}catch(e){console.log("")}})')"
+            echo "tentativa $tentativa: no ar = '${no_ar:-nenhuma}', esperada = '$ESPERADA'"
+            if [ "$no_ar" = "$ESPERADA" ]; then
+              echo "::notice::App no ar na versão $ESPERADA."
+              exit 0
+            fi
+          done
+          echo "::warning::Passados 10 minutos o site ainda não servia $ESPERADA. Confira Settings › Pages."
+          exit 1
