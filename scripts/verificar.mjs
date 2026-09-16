@@ -61,6 +61,24 @@ try {
     problemas.push(`index.html: ${abre} tags <script> abertas para ${fecha} fechadas.`);
   }
 
+  // O arquivo do service worker precisa existir com o nome exato que o
+  // index.html registra. Renomeá-lo deixa órfãos os aparelhos que já tinham o
+  // nome antigo: o navegador recebe 404 ao procurar a atualização e mantém o
+  // worker velho vivo, servindo a versão antiga do cache para sempre.
+  const mRegistro = /navigator\.serviceWorker\.register\(\s*["'`]([^"'`]+)["'`]/.exec(html);
+  if (!mRegistro) {
+    problemas.push("index.html: não encontrei a chamada navigator.serviceWorker.register().");
+  } else {
+    const arquivoSw = mRegistro[1].replace(/^\.\//, "").split("?")[0];
+    if (!existsSync(resolve(RAIZ, arquivoSw))) {
+      problemas.push(
+        `index.html: registra o service worker "${mRegistro[1]}", que não existe no repositório.`,
+      );
+    } else {
+      ok.push(`index.html: registra ${arquivoSw}.`);
+    }
+  }
+
   if (!problemas.some((p) => p.startsWith("index.html"))) {
     ok.push(`index.html: ${(html.length / 1024).toFixed(0)} KB, ${abre} scripts.`);
   }
