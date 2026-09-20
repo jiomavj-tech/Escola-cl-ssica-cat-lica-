@@ -16,6 +16,8 @@
  * Opções:
  *   --versao=95              Força o número em vez de incrementar.
  *   --descricao="texto"      Texto do campo "build".
+ *   --commit="mensagem"      Deriva a descrição da mensagem de um commit,
+ *                            ignorando o assunto quando ele é um merge.
  *   --data=2026-09-16        Data de publicação (padrão: hoje em São Paulo).
  *   --json                   Imprime o resultado como JSON (usado pelo CI).
  */
@@ -23,6 +25,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { descricaoDeCommit } from "./descricao.mjs";
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ARQ_VERSAO = resolve(RAIZ, "version.json");
@@ -118,7 +121,12 @@ if (modo === "bump") {
   }
 
   const descPedida = valorDe("descricao");
-  if (descPedida !== null && descPedida.trim()) descricao = descPedida.trim();
+  const commitPedido = valorDe("commit");
+  if (descPedida !== null && descPedida.trim()) {
+    descricao = descPedida.trim();
+  } else if (commitPedido !== null) {
+    descricao = descricaoDeCommit(commitPedido);
+  }
   if (!descricao) descricao = "Atualização do aplicativo";
 }
 

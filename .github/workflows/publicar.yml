@@ -52,6 +52,9 @@ jobs:
         # Um upload truncado não deve ganhar número de versão nem tag.
         run: node scripts/verificar.mjs
 
+      - name: Testar as regras de publicação
+        run: node scripts/testar.mjs
+
       - name: Decidir entre numerar e apenas sincronizar
         id: decidir
         env:
@@ -80,16 +83,14 @@ jobs:
           argumentos=("--$MODO" "--json")
 
           if [ "$MODO" = "bump" ]; then
-            descricao="$DESCRICAO_ENTRADA"
-            if [ -z "$descricao" ]; then
-              # Primeira linha da mensagem do commit que disparou a publicação.
-              descricao="$(printf '%s' "$ASSUNTO_COMMIT" | head -n 1)"
+            # A descrição digitada no "Run workflow" vence. Sem ela, o script
+            # deriva da mensagem do commit — e sabe ignorar o assunto quando
+            # ele é um "Merge pull request #N from ...", que não descreve nada.
+            if [ -n "$DESCRICAO_ENTRADA" ]; then
+              argumentos+=("--descricao=$DESCRICAO_ENTRADA")
+            else
+              argumentos+=("--commit=$ASSUNTO_COMMIT")
             fi
-            # "Add files via upload" (upload pelo site do GitHub) não descreve nada.
-            case "$descricao" in
-              "Add files via upload"|"Update index.html"|"") descricao="Atualização do aplicativo" ;;
-            esac
-            argumentos+=("--descricao=$descricao")
             if [ -n "$VERSAO_ENTRADA" ]; then
               argumentos+=("--versao=$VERSAO_ENTRADA")
             fi
