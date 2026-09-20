@@ -28,6 +28,11 @@ O texto do campo `build` é o que aparece para o aluno no aviso de atualização
 Por padrão a automação usa o assunto do commit; quando o envio vem pelo site do
 GitHub (mensagem "Add files via upload"), ela grava "Atualização do aplicativo".
 
+Quando a versão vem de um pull request mesclado, o assunto do commit é
+"Merge pull request #N from ..." — que não descreve nada. Nesse caso a
+automação pula essa linha e usa o corpo do commit, que traz o título do pull
+request.
+
 Para escrever um texto próprio, use **Actions › Publicar nova versão › Run
 workflow** e preencha a descrição — e, se quiser, um número de versão fixo.
 
@@ -43,11 +48,13 @@ Precisa só do Node 20+, sem instalar nada:
 ```bash
 node scripts/publicar.mjs --check     # confere sem alterar nada
 node scripts/verificar.mjs            # confere manifesto, ícones e index.html
+node scripts/testar.mjs               # testa as regras de publicação
 node scripts/publicar.mjs --sync      # alinha service worker e título ao version.json
 node scripts/publicar.mjs --bump      # numera a versão seguinte e sincroniza tudo
 ```
 
-Opções do `--bump`: `--versao=95`, `--descricao="texto"`, `--data=2026-09-16`.
+Opções do `--bump`: `--versao=95`, `--descricao="texto"`, `--data=2026-09-16`,
+`--commit="mensagem"` (deriva a descrição de uma mensagem de commit).
 
 Para abrir o app na sua máquina (um `file://` não registra service worker):
 
@@ -65,7 +72,7 @@ python3 -m http.server 8000   # depois abra http://localhost:8000
 | `manifest.webmanifest` | Nome, cores e ícones da instalação na tela inicial. |
 | `icon-*.png` | Ícones do app. |
 | `sw.js` | **Não apague.** Resgata os aparelhos presos numa versão antiga — veja abaixo. |
-| `scripts/` | Scripts de publicação e verificação, usados pelos workflows e à mão. |
+| `scripts/` | Publicação, verificação e testes — usados pelos workflows e à mão. |
 | `.github/workflows/` | `publicar.yml` (no `main`) e `verificar.yml` (nas demais branches). |
 
 ## Por que existe um `sw.js` que não faz nada

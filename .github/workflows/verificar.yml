@@ -28,3 +28,6 @@ jobs:
 
       - name: Conferir manifesto, ícones e index.html
         run: node scripts/verificar.mjs
+
+      - name: Testar as regras de publicação
+        run: node scripts/testar.mjs
