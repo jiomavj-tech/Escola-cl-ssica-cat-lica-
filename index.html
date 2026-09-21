@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V98 — História 22/09</title>
+<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V84 — História 22/09</title>
 <style>
 :root{--bg:#f4efe6;--card:#fffdf8;--text:#332b25;--muted:#776b61;--gold:#9a6d1f;--wine:#6b2f3a;--green:#3f6652;--line:#d9cdbb;--soft:#f7f1e8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Georgia,"Times New Roman",serif;color:var(--text)}
@@ -12,7 +12,7 @@ h1,h2,h3{text-align:center;color:#4c352d}.sub{text-align:center;color:var(--mute
 .card,.q{padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--soft);margin:14px 0}
 button,select{width:100%;padding:13px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit}
 button{background:var(--wine);color:white;font-weight:bold;cursor:pointer}button.green{background:var(--green)}button.gold{background:var(--gold)}button.gray{background:#6f665e}
-.opt{display:block;padding:13px;background:var(--card);color:var(--text);font-weight:normal;border:1px solid var(--line);border-radius:8px;margin:8px 0;cursor:pointer}
+.opt{display:block;padding:13px;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0;cursor:pointer}
 .bar{height:10px;background:#ddd3c5;border-radius:20px;overflow:hidden}#fill{height:100%;background:var(--gold)}
 .tag{font-size:12px;color:var(--muted)}section:not(#menu){display:none}.ok{border-left:5px solid #467a59}.bad{border-left:5px solid #9b3b3b}
 .exp{background:#fff9e9;border-left:4px solid var(--gold);padding:10px;margin-top:8px}
@@ -338,49 +338,14 @@ body.v64-noscroll{overflow:hidden}
 <main>
 
 <section id="menu">
-<style id="v97RetaFinalStyle">
-/* Reta Final compacta: os três painéis abriam com ~1100px cada, empurrando o
-   menu principal para 4,6 telas de rolagem. Agora cada um mostra título,
-   botões e agenda; o conteúdo descritivo fica atrás de um <details>. Nada
-   foi removido — só recolhido. */
-.v84-hist>h2,.v83-final>h2,.v80-provas>h2{font-size:1.15rem;margin:2px 0 10px}
-.v97-acoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:10px 0}
-.v97-det{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:10px 0;padding:0 12px}
-.v97-det>summary{cursor:pointer;padding:12px 0;font-weight:bold;color:var(--wine);list-style:none;font-size:14px}
-.v97-det>summary::-webkit-details-marker{display:none}
-.v97-det>summary::before{content:"\25B8  "}
-.v97-det[open]>summary::before{content:"\25BE  "}
-.v97-det>*:last-child{margin-bottom:12px}
-.v80-agenda.v97-agenda{grid-template-columns:1fr;gap:5px}
-.v80-agenda.v97-agenda .v80-dia{padding:6px 9px;font-size:12px;line-height:1.3}
-.v80-foco.v97-foco{font-size:13px;padding:8px 10px;margin:8px 0}
-/* Menu principal em linhas: cada opção era um card com título, descrição e
-   botão de largura total — sete cards somavam mais de 1300px. Agora a linha
-   inteira é o botão. */
-.v97-menu{display:grid;gap:8px;margin:16px 0}
-.v97-item{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);color:var(--text);font-weight:normal;padding:12px 14px;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px}
-.v97-item.verde{border-left-color:var(--green)}
-.v97-item.cinza{border-left-color:#8a8078}
-.v97-item:active{background:var(--soft)}
-.v97-ico{font-size:21px;line-height:1;flex:0 0 auto}
-.v97-txt{flex:1 1 auto;min-width:0}
-.v97-txt b{display:block;font-size:15px;color:#4c352d;line-height:1.25}
-.v97-txt small{display:block;font-size:12.5px;color:var(--muted);line-height:1.3;margin-top:2px}
-.v97-seta{flex:0 0 auto;color:var(--muted);font-size:20px;line-height:1}
-</style>
 <style id="v84HistoriaStyle">
 .v84-hist{border:2px solid var(--wine);background:#fffaf4;border-radius:12px;padding:14px;margin:16px 0}
 .v84-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
 .v84-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
 .v84-card h3{text-align:left;color:var(--wine);margin:0 0 8px}.v84-line{border-left:4px solid var(--gold);padding:8px 10px;margin:7px 0;background:#fff}
 </style>
-<section class="v84-hist v97-fixo" id="v84Historia22" style="display:block">
+<section class="v84-hist" id="v84Historia22" style="display:block">
 <h2>📜 Reta Final — História 22/09</h2>
-<div class="v97-acoes">
-<button onclick="v84TreinarHistoria()">🏺 Treinar História</button>
-<button class="gold" onclick="v84SimuladoHistoria()">📝 Simulado 22/09</button>
-</div>
-<details class="v97-det"><summary>O que cai na prova de História</summary>
 <p class="sub">Treino concentrado no conteúdo informado pela escola: Idade Moderna (séculos XV–XVII), Renascimento e chegada dos portugueses ao Brasil.</p>
 <div class="v84-grid">
  <div class="v84-card"><h3>🧭 1500 e Brasil</h3>
@@ -395,7 +360,8 @@ body.v64-noscroll{overflow:hidden}
  <p>Observe cronologia, causas, consequências e fontes. Não decore apenas datas: procure entender como navegações, mudanças culturais e acontecimentos religiosos se relacionam.</p>
  </div>
 </div>
-</details>
+<button onclick="v84TreinarHistoria()">Treinar História — conteúdo da prova</button>
+<button class="gold" onclick="v84SimuladoHistoria()">📝 Simulado História 22/09</button>
 </section>
 
 <style id="v83RetaFinalStyle">
@@ -408,34 +374,30 @@ body.v64-noscroll{overflow:hidden}
 .v83-mini{font-size:12px;color:var(--muted)}
 .v83-check{background:#eef7ef;border-left:4px solid var(--green);padding:9px;margin:8px 0}
 </style>
-<section class="v83-final v97-fixo" id="v83RetaFinal" style="display:block">
+<section class="v83-final" id="v83RetaFinal" style="display:block">
   <h2>📚 Reta Final — Provas de 21/09</h2>
-  <div class="v97-acoes">
-    <button onclick="v83TreinarArtes()">🎨 Treinar Artes</button>
-    <button onclick="v83TreinarLatim()">🏛️ Treinar Latim</button>
-  </div>
-  <button class="gold" onclick="v83Simulado21()">📝 Simulado misto Artes + Latim</button>
-  <details class="v97-det"><summary>O que cai nas provas de 21/09</summary>
   <p class="sub">Treino direcionado somente ao conteúdo escolar de Artes e Latim. A Fase 3 continua congelada.</p>
   <div class="v83-grid">
     <div class="v83-card">
       <h3>🎨 Artes</h3>
       <p><b>Conteúdo:</b> apreciação artística, leitura de obra, composição e pintura com lápis de cor.</p>
       <div class="v83-check">Revise: pressão leve, camadas, mistura, textura, luz e sombra, contraste, equilíbrio e observação da obra.</div>
+      <button onclick="v83TreinarArtes()">Treinar Artes — conteúdo da prova</button>
       <p class="v83-mini">65 questões selecionadas para este treino.</p>
     </div>
     <div class="v83-card">
       <h3>🏛️ Latim</h3>
       <p><b>Conteúdo:</b> presente do indicativo, imperativo, 1ª e 2ª declinações, adjetivos, preposições e imperfeito.</p>
       <div class="v83-check">Revise: terminações, caso e função, concordância e diferença entre presente e imperfeito.</div>
+      <button onclick="v83TreinarLatim()">Treinar Latim — conteúdo da prova</button>
       <p class="v83-mini">55 questões selecionadas para este treino.</p>
     </div>
   </div>
+  <button class="gold" onclick="v83Simulado21()">📝 Simulado misto Artes + Latim</button>
   <div class="v83-card" style="margin-top:10px">
     <h3>Como usar hoje</h3>
     <p>1. Faça Artes. 2. Revise só os erros. 3. Faça Latim. 4. Termine com o simulado misto. Não avance conteúdo novo se os erros básicos ainda estiverem aparecendo.</p>
   </div>
-  </details>
 </section>
 
 <style id="v80ProvasStyle">
@@ -444,12 +406,10 @@ body.v64-noscroll{overflow:hidden}
 .v80-dia{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px}
 .v80-dia b{color:var(--wine)}.v80-foco{background:#eef7ef;border-left:5px solid var(--green);padding:10px;margin:10px 0}
 </style>
-<section id="v80PainelProvas" class="v80-provas v97-fixo" style="display:block">
+<section id="v80PainelProvas" class="v80-provas" style="display:block">
   <h2>🎯 Modo Época de Provas</h2>
-  <details class="v97-det"><summary>Como o modo funciona</summary>
   <p class="sub">Até terminar a semana de avaliações, o aplicativo fica focado em revisão, simulados, erros e conteúdos da escola. Retórica e Dialética avançadas estão preservadas, mas congeladas.</p>
-  </details>
-  <div class="v80-agenda v97-agenda">
+  <div class="v80-agenda">
     <div class="v80-dia"><b>21/09 — Artes</b><br>Apreciação artística e pintura com lápis de cor.</div>
     <div class="v80-dia"><b>21/09 — Latim</b><br>Presente, imperativo, 1ª e 2ª declinações, adjetivos, preposições e imperfeito.</div>
     <div class="v80-dia"><b>22/09 — História</b><br>Idade Moderna, chegada dos portugueses ao Brasil e Renascimento.</div>
@@ -458,7 +418,7 @@ body.v64-noscroll{overflow:hidden}
     <div class="v80-dia"><b>24/09 — Matemática</b><br>Sistema métrico, conversões, medidas e divisibilidade.</div>
     <div class="v80-dia"><b>25/09 — Português</b><br>Conjugações, complementos verbais, irregulares, particípio, invariáveis e análise gramatical.</div>
   </div>
-  <div class="v80-foco v97-foco"><b>Prioridade:</b> estudar o que cai na prova, fazer simulado, revisar os erros e só então ampliar o conteúdo.</div>
+  <div class="v80-foco"><b>Prioridade:</b> estudar o que cai na prova, fazer simulado, revisar os erros e só então ampliar o conteúdo.</div>
   <button class="gold" onclick="abrirProva63()">🎯 Configurar Minha Próxima Prova</button>
 </section>
 
@@ -468,14 +428,48 @@ body.v64-noscroll{overflow:hidden}
   <button class="green" onclick="abrirEstudoHoje()">⭐ O que estudar hoje?</button>
 </div>
 
-<div class="v97-menu">
-  <button type="button" class="v97-item ouro" onclick="show('config')"><span class="v97-ico">📝</span><span class="v97-txt"><b>Fazer avaliação</b><small>Treino por matéria ou simulado.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item verde" onclick="abrirLeitura()"><span class="v97-ico">📖</span><span class="v97-txt"><b>Ler a matéria</b><small>O conteúdo por extenso, antes de partir para as questões.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item ouro" onclick="abrirTreino()"><span class="v97-ico">🎯</span><span class="v97-txt"><b>Treino livre</b><small>Exercite um assunto sem nota e sem limite de questões.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item verde" onclick="review()"><span class="v97-ico">🔁</span><span class="v97-txt"><b>Recuperar erros</b><small>Revise conteúdos em que houve erro antes de tentar novamente.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item verde" onclick="abrirRevisaoEspacada()"><span class="v97-ico">🧠</span><span class="v97-txt"><b>Revisar hoje</b><small>Revisão espaçada para consolidar o que foi aprendido.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item cinza" onclick="abrirDiagnosticoCentral()"><span class="v97-ico">🧭</span><span class="v97-txt"><b>Ver diagnóstico</b><small>Veja produção, raciocínio, expressão e retenção.</small></span><span class="v97-seta">›</span></button>
-  <button type="button" class="v97-item cinza" onclick="show('ferramentasAvancadas')"><span class="v97-ico">🛠️</span><span class="v97-txt"><b>Ferramentas de formação</b><small>Use quando o plano diário recomendar ou quando quiser estudar de forma mais aprofundada.</small></span><span class="v97-seta">›</span></button>
+<div class="home-grid">
+  <div class="home-card">
+    <h3>📝 Fazer avaliação</h3>
+    <p class="home-small">Treino por matéria ou simulado.</p>
+    <button class="gold" onclick="show('config')">Começar</button>
+  </div>
+  <div class="home-card">
+    <h3>📖 Ler a matéria</h3>
+    <p class="home-small">O conteúdo por extenso, antes de partir para as questões.</p>
+    <button class="green" onclick="abrirLeitura()">Ler</button>
+  </div>
+  <div class="home-card">
+    <h3>🏛️ Curso de Latim</h3>
+    <p class="home-small">Lições em sequência, com textos da Bíblia e da liturgia.</p>
+    <button class="gold" onclick="abrirCursoLatim()">Estudar</button>
+  </div>
+  <div class="home-card">
+    <h3>🎯 Treino livre</h3>
+    <p class="home-small">Exercite um assunto sem nota e sem limite de questões.</p>
+    <button class="gold" onclick="abrirTreino()">Treinar</button>
+  </div>
+  <div class="home-card">
+    <h3>🔁 Recuperar erros</h3>
+    <p class="home-small">Revise conteúdos em que houve erro antes de tentar novamente.</p>
+    <button class="green" onclick="review()">Abrir recuperação</button>
+  </div>
+  <div class="home-card">
+    <h3>🧠 Revisar hoje</h3>
+    <p class="home-small">Revisão espaçada para consolidar o que foi aprendido.</p>
+    <button class="green" onclick="abrirRevisaoEspacada()">Abrir revisão</button>
+  </div>
+  <div class="home-card">
+    <h3>🧭 Ver diagnóstico</h3>
+    <p class="home-small">Veja produção, raciocínio, expressão e retenção.</p>
+    <button class="gray" onclick="abrirDiagnosticoCentral()">Abrir diagnóstico</button>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Ferramentas de formação</h3>
+  <p class="home-small">Use quando o plano diário recomendar ou quando quiser estudar de forma mais aprofundada.</p>
+  <button class="gray" onclick="show('ferramentasAvancadas')">Abrir ferramentas avançadas</button>
 </div>
 </section>
 
@@ -483,6 +477,13 @@ body.v64-noscroll{overflow:hidden}
 
 
 
+
+
+<section id="cursoLatim"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
+<h2>🏛️ Curso de Latim</h2>
+<p class="sub">Uma lição de cada vez, e cinco minutos de revisão por dia. Cada lição termina num texto verdadeiro da Bíblia ou da liturgia, lido com a gramática que você acabou de aprender. A próxima libera com 80% no teste.</p>
+<div id="clBox"></div>
+</section>
 
 <section id="leitura"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>📖 Ler a matéria</h2>
@@ -542,60 +543,7 @@ body.v64-noscroll{overflow:hidden}
 
 <section id="config"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>📝 Começar avaliação</h2>
-<p class="sub">Ajuste os filtros e toque na matéria.</p>
-
-<style id="v96PickerStyle">
-/* Seletor compacto de matéria: antes eram duas listas iguais de dez botões
-   (uma para responder no app, outra para gerar PDF), o que dava doze linhas
-   de rolagem no celular. Agora escolhe-se o formato uma vez e a matéria em
-   três colunas. */
-.v96-seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 18px}
-.v96-seg button{background:var(--soft);color:var(--muted);font-weight:normal;font-size:14px;padding:11px 6px}
-.v96-seg button[aria-pressed="true"]{background:var(--wine);color:#fff;font-weight:bold;border-color:var(--wine)}
-.v96-mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px;margin:8px 0 12px}
-.v96-mats button{background:var(--card);color:var(--text);font-weight:normal;font-size:13px;line-height:1.2;padding:10px 4px}
-.v96-mats button:active{background:var(--soft)}
-.v96-ico{display:block;font-size:20px;margin-bottom:3px}
-.v96-dica{margin:10px 0 0;text-align:left}
-.v96-mais{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:0 14px;margin:16px 0}
-.v96-mais>summary{cursor:pointer;padding:14px 0;font-weight:bold;color:var(--wine);list-style:none}
-.v96-mais>summary::-webkit-details-marker{display:none}
-.v96-mais>summary::before{content:"▸ "}
-.v96-mais[open]>summary::before{content:"▾ "}
-.v96-mais>summary+*{margin-top:0}
-.v96-mais .card{background:var(--card)}
-</style>
-<script id="v96Picker">
-/* Formato escolhido no seletor de matéria: "app" responde na tela,
-   "pdf" gera a prova impressa. As funções de destino são as mesmas de antes. */
-var v96FormatoAtual = "app";
-
-function v96Formato(f){
-  v96FormatoAtual = (f === "pdf") ? "pdf" : "app";
-  var seg = document.getElementById("v96Seg");
-  if (seg) {
-    var botoes = seg.querySelectorAll("button");
-    if (botoes[0]) botoes[0].setAttribute("aria-pressed", String(v96FormatoAtual === "app"));
-    if (botoes[1]) botoes[1].setAttribute("aria-pressed", String(v96FormatoAtual === "pdf"));
-  }
-  var dica = document.getElementById("v96Dica");
-  if (dica) {
-    dica.textContent = (v96FormatoAtual === "pdf")
-      ? "Toque na matéria para gerar a prova em PDF, pronta para imprimir."
-      : "Toque na matéria para começar a avaliação no aplicativo.";
-  }
-}
-
-function v96Escolher(materia){
-  // "misto" é o nome de uma função global — cuidado para não sombreá-la aqui.
-  var ehMisto = (materia === "__misto");
-  if (v96FormatoAtual === "pdf") {
-    if (ehMisto) { v61GerarMistoDireto(); } else { v61GerarDireto(materia); }
-  } else {
-    if (ehMisto) { misto(); } else { start(materia); }
-  }
-}
-</script>
+<p class="sub">Escolha a quantidade de questões, a dificuldade, a etapa do Trivium e a matéria.</p>
 
 <div class="card">
   <div class="grid">
@@ -629,28 +577,35 @@ function v96Escolher(materia){
   </div>
 </div>
 
-<div class="card v96-picker">
-  <b>Como você quer fazer</b>
-  <div class="v96-seg" id="v96Seg">
-    <button type="button" aria-pressed="true" onclick="v96Formato('app')">📱 No aplicativo</button>
-    <button type="button" aria-pressed="false" onclick="v96Formato('pdf')">📄 Em PDF</button>
-  </div>
+<div class="grid">
+  <button onclick="start('Português')">📜 Português</button>
+  <button onclick="start('Matemática')">📐 Matemática</button>
+  <button onclick="start('História')">🏺 História</button>
+  <button onclick="start('Geografia')">🗺️ Geografia</button>
+  <button onclick="start('Filosofia')">⚖️ Filosofia</button>
+  <button onclick="start('Latim')">🏛️ Latim</button>
+  <button onclick="start('Artes')">🎨 Artes</button>
+  <button onclick="start('Ciências')">🔬 Ciências</button>
+  <button onclick="start('Retórica')">🪶 Retórica</button>
+  <button onclick="start('Dialética')">⚖️ Dialética</button>
+  <button class="gold" onclick="misto()">🧠 Trivium misto</button>
+</div>
 
-  <b>Matéria</b>
-  <div class="v96-mats">
-    <button type="button" onclick="v96Escolher('Português')"><span class="v96-ico">📜</span>Português</button>
-    <button type="button" onclick="v96Escolher('Matemática')"><span class="v96-ico">📐</span>Matemática</button>
-    <button type="button" onclick="v96Escolher('História')"><span class="v96-ico">🏺</span>História</button>
-    <button type="button" onclick="v96Escolher('Geografia')"><span class="v96-ico">🗺️</span>Geografia</button>
-    <button type="button" onclick="v96Escolher('Filosofia')"><span class="v96-ico">⚖️</span>Filosofia</button>
-    <button type="button" onclick="v96Escolher('Latim')"><span class="v96-ico">🏛️</span>Latim</button>
-    <button type="button" onclick="v96Escolher('Artes')"><span class="v96-ico">🎨</span>Artes</button>
-    <button type="button" onclick="v96Escolher('Ciências')"><span class="v96-ico">🔬</span>Ciências</button>
-    <button type="button" onclick="v96Escolher('Retórica')"><span class="v96-ico">🪶</span>Retórica</button>
-    <button type="button" onclick="v96Escolher('Dialética')"><span class="v96-ico">⚖️</span>Dialética</button>
+
+<div class="card">
+  <h3>📄 Prova em PDF</h3>
+  <p class="sub">Use os filtros acima e escolha a matéria. O aplicativo monta a prova e abre uma versão A4 pronta para imprimir ou salvar como PDF.</p>
+  <div class="grid">
+    <button onclick="v61GerarDireto('Português')">📜 Português PDF</button>
+    <button onclick="v61GerarDireto('Matemática')">📐 Matemática PDF</button>
+    <button onclick="v61GerarDireto('História')">🏺 História PDF</button>
+    <button onclick="v61GerarDireto('Geografia')">🗺️ Geografia PDF</button>
+    <button onclick="v61GerarDireto('Filosofia')">⚖️ Filosofia PDF</button>
+    <button onclick="v61GerarDireto('Latim')">🏛️ Latim PDF</button>
+    <button onclick="v61GerarDireto('Artes')">🎨 Artes PDF</button>
+  <button onclick="v61GerarDireto('Ciências')">🔬 Ciências PDF</button><button onclick="v61GerarDireto('Retórica')">🪶 Retórica PDF</button><button onclick="v61GerarDireto('Dialética')">⚖️ Dialética PDF</button>
+    <button class="gold" onclick="v61GerarMistoDireto()">🧠 Misto PDF</button>
   </div>
-  <button class="gold" type="button" onclick="v96Escolher('__misto')">🧠 Trivium misto</button>
-  <p class="sub v96-dica" id="v96Dica">Toque na matéria para começar a avaliação no aplicativo.</p>
 </div>
 
 <div class="card">
@@ -658,11 +613,6 @@ function v96Escolher(materia){
   <button class="gold" onclick="abrirMatriz()">Ver matriz da prova</button>
 </div>
 
-<details class="v96-mais">
-<summary>Oficinas e material de apoio</summary>
-<div id="v70DifficultyNote" style="margin:.75rem 0;padding:.8rem 1rem;border:1px solid #c9b27b;border-radius:10px;background:#fffaf0;font-size:.92rem">
-  <strong>Dificuldade recalibrada:</strong> fácil = reconhecimento/fundamentos; médio = aplicação e análise curta; difícil = análise mais exigente, demonstração ou produção.
-</div>
 <div class="card">
   <h3>Oficinas de apoio</h3>
   <div class="grid">
@@ -688,9 +638,7 @@ function v96Escolher(materia){
 <p class="sub">Instrumentos lógicos → Aristóteles → Metafísica → Fé e Razão → Método Escolástico → Cinco Vias.</p>
 <p class="sub">As questões objetivas verificam fundamentos e análise. Demonstração filosófica completa permanece nas oficinas abertas e na Disputatio: múltipla escolha não é tratada como Retórica.</p>
 </div>
-<div class="grid"><button onclick="abrirFilosofiaAberta()">🏛 Oficina Filosófica V40</button><button onclick="abrirHistFontes()">📜 Oficina de Fontes Históricas V40</button><button onclick="abrirMatDem()">📐 Oficina de Demonstração Matemática V40</button><button onclick="abrirLatProg()">🏛 Oficina de Latim Progressivo V40</button><button onclick="abrirPtComp()">✍️ Oficina de Português e Composição V40</button><button onclick="abrirGeoAnalitica()">🗺️ Oficina de Geografia Analítica V40</button><button onclick="abrirArtEst()">🎨 Oficina de Artes e Estética V40</button><button onclick="abrirTutor39()">🧭 Tutor Socrático V40</button><button onclick="abrirDominio40()">🎯 Domínio Real V40</button><button class="gray" onclick="show(&quot;autoteste49&quot;);v49Executar()">🧪 Testar aplicativo</button></div>
-</details>
-</section>
+<button onclick="abrirFilosofiaAberta()">🏛 Oficina Filosófica V40</button><button onclick="abrirHistFontes()">📜 Oficina de Fontes Históricas V40</button><button onclick="abrirMatDem()">📐 Oficina de Demonstração Matemática V40</button><button onclick="abrirLatProg()">🏛 Oficina de Latim Progressivo V40</button><button onclick="abrirPtComp()">✍️ Oficina de Português e Composição V40</button><button onclick="abrirGeoAnalitica()">🗺️ Oficina de Geografia Analítica V40</button><button onclick="abrirArtEst()">🎨 Oficina de Artes e Estética V40</button><button onclick="abrirTutor39()">🧭 Tutor Socrático V40</button><button onclick="abrirDominio40()">🎯 Domínio Real V40</button><button class="gray" onclick="show(&quot;autoteste49&quot;);v49Executar()">🧪 Testar aplicativo</button></section>
 
 <section id="abertas"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>✍️ Oficina de Respostas Abertas</h2>
@@ -838,13 +786,6 @@ function v96Escolher(materia){
 <section id="ferramentasAvancadas"><div class="mobile-topbar"><button class="gray" onclick="home()">← Voltar</button></div>
 <h2>Ferramentas avançadas</h2>
 <p class="sub">Estas oficinas aprofundam produção, Lógica, Dialética e Retórica. O aluno não precisa usar todas no mesmo dia.</p>
-
-<div class="grid"><button type="button" class="v72-editorial-btn" onclick="v72AbrirRegras()">
-  📚 Ver critérios editoriais do banco
-</button>
-<button type="button" class="v73-validator-btn" onclick="v73AbrirValidador()">
-  ✅ Executar validador pré-publicação
-</button></div>
 
 <div class="avancado-grid">
   <div class="home-card">
@@ -994,8 +935,15 @@ function v96Escolher(materia){
 </div>
 </section>
 
-
-
+<div id="v70DifficultyNote" style="margin:.75rem 0;padding:.8rem 1rem;border:1px solid #c9b27b;border-radius:10px;background:#fffaf0;font-size:.92rem">
+  <strong>Dificuldade recalibrada:</strong> fácil = reconhecimento/fundamentos; médio = aplicação e análise curta; difícil = análise mais exigente, demonstração ou produção.
+</div>
+<button type="button" class="v72-editorial-btn" onclick="v72AbrirRegras()">
+  📚 Ver critérios editoriais do banco
+</button>
+<button type="button" class="v73-validator-btn" onclick="v73AbrirValidador()">
+  ✅ Executar validador pré-publicação
+</button>
 
 
 </main><script>
@@ -1312,9 +1260,7 @@ const mix=a=>[...a].sort(()=>Math.random()-.5);
 function show(id){
  const alvo=document.getElementById(id);
  if(!alvo){console.warn('Tela não encontrada:',id);return;}
- // .v97-fixo marca os painéis que vivem dentro de #menu: escondê-los aqui
- // os faria sumir de vez, já que só o #menu é reexibido ao voltar.
- document.querySelectorAll('section:not(.v97-fixo)').forEach(x=>x.style.display='none');
+ document.querySelectorAll('section').forEach(x=>x.style.display='none');
  alvo.style.display='block';
  window.scrollTo(0,0);
 }
@@ -4005,6 +3951,39 @@ function v61Documento(incluirGab){
 #leCorpo b{color:var(--text)}
 #leRodape button{margin:4px 6px 0 0}
 </style>
+
+<style id="cursoLatimCSS">
+.cl-alunos{display:flex;flex-wrap:wrap;gap:8px}
+.cl-alunos button{flex:0 0 auto;width:auto;padding:8px 14px}
+.cl-linha{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--card)}
+.cl-linha.bloq{opacity:.55}
+.cl-linha .cl-ico{font-size:1.4em;width:1.6em;text-align:center}
+.cl-linha .cl-txt{flex:1}
+.cl-linha button{width:auto;padding:8px 14px;margin:0}
+.cl-pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.cl-pills button{width:auto;padding:6px 10px;font-size:.85em;margin:0}
+.cl-corpo{line-height:1.62}
+.cl-corpo table{border-collapse:collapse;margin:.6em 0;width:100%;font-size:.95em}
+.cl-corpo th,.cl-corpo td{border:1px solid var(--line);padding:5px 8px;text-align:left}
+.cl-corpo th{background:var(--soft)}
+.cl-corpo h4{color:var(--wine);margin:1.1em 0 .3em}
+.cl-verso{font-size:1.35em;font-style:italic;text-align:center;padding:18px 10px;color:var(--wine);line-height:1.45}
+.cl-ex{border-top:1px solid var(--line);padding:10px 0}
+.cl-ex input{width:100%;margin:6px 0}
+.cl-q{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+.cl-q label{display:block;padding:6px 4px;cursor:pointer}
+.cl-ok{color:var(--green);font-weight:bold}
+.cl-no{color:var(--wine);font-weight:bold}
+.cl-nav{display:flex;gap:8px;margin-top:10px}
+.cl-nav button{flex:1}
+.cl-modulo{margin:18px 0 4px;color:var(--wine);font-size:1.05em}
+.cl-cartao{font-size:1.4em;text-align:center;padding:26px 12px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:var(--soft)}
+.cl-cartao.cl-resp{font-size:1.15em;background:var(--card);border-style:dashed}
+.cl-cal{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0}
+.cl-cal span{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75em;border:1px solid var(--line);color:var(--muted)}
+.cl-cal span.feito{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:bold}
+.cl-cal span.hoje{outline:2px solid var(--wine)}
+</style>
 </head><body>
  <div class="printbar">
    <button onclick="window.print()">🖨️ Imprimir / Salvar como PDF</button>
@@ -4754,6 +4733,338 @@ function leFonte(d){
 function leAplicarFonte(){
   const c=document.getElementById("leCorpo");
   if(c) c.style.fontSize=(leEscala*1.02)+"rem";
+}
+</script>
+
+<script id="cursoLatim">
+/* ── Curso de Latim ───────────────────────────────────────────────────────
+   Perfis de aluno, trilha com trava de aprovação, cinco etapas por lição.
+   Estado em classica_curso_latim: {alunos:{nome:{licoes:{id:{...}}}}, atual}. */
+const CURSO_LATIM = {"titulo": "Curso de Latim", "modulo": "Módulo I — Fundamentos", "aprovacao": 0.8, "licoes": [{"id": "L01", "titulo": "O que é um caso", "subtitulo": "Primeiro contato: terminação, função e pronúncia", "gramatica": "\n<p>Em português, quem faz a ação e quem a sofre se descobre pela <b>posição<\/b>: \"o menino vê a menina\" diz outra coisa que \"a menina vê o menino\". Em latim, descobre-se pela <b>terminação<\/b>. A palavra muda o final conforme a função que exerce, e a ordem pode variar sem mudar o sentido.<\/p>\n<p>Cada forma que uma palavra assume por causa da função chama-se <b>caso<\/b>. O latim tem seis:<\/p>\n<table>\n<tr><th>Caso<\/th><th>Função principal<\/th><th>Pergunta<\/th><\/tr>\n<tr><td>Nominativo<\/td><td>sujeito; predicativo<\/td><td>quem?<\/td><\/tr>\n<tr><td>Vocativo<\/td><td>chamamento<\/td><td>ó ...!<\/td><\/tr>\n<tr><td>Acusativo<\/td><td>objeto direto<\/td><td>o quê? quem?<\/td><\/tr>\n<tr><td>Genitivo<\/td><td>posse, pertença<\/td><td>de quem?<\/td><\/tr>\n<tr><td>Dativo<\/td><td>objeto indireto<\/td><td>a quem? para quem?<\/td><\/tr>\n<tr><td>Ablativo<\/td><td>circunstância<\/td><td>com quê? onde? como?<\/td><\/tr>\n<\/table>\n<p><b>O latim não tem artigo.<\/b> <i>Via<\/i> pode ser \"caminho\", \"o caminho\" ou \"um caminho\" — quem decide é o contexto, na hora de traduzir.<\/p>\n<p><b>Uma regra que vale desde já:<\/b> com o verbo <i>sum<\/i> (\"ser\"), o que se diz do sujeito fica também no <b>nominativo<\/b>. Chama-se predicativo. Em \"Deus é bom\", tanto \"Deus\" quanto \"bom\" ficam no nominativo — nenhum dos dois sofre ação alguma.<\/p>\n<h4>Pronúncia eclesiástica<\/h4>\n<p>É a pronúncia da liturgia, e a que se usa na escola. As regras que mais aparecem:<\/p>\n<ul>\n<li><b>ae<\/b> e <b>oe<\/b> soam <b>é<\/b>: <i>caelum<\/i> → \"tchélum\"<\/li>\n<li><b>c<\/b> antes de e, i, ae, oe soa <b>tch<\/b>: <i>caritas<\/i> → \"cáritas\", mas <i>Cicero<\/i> → \"Tchítchero\"<\/li>\n<li><b>g<\/b> antes de e, i soa <b>dj<\/b>: <i>regina<\/i> → \"redjína\"<\/li>\n<li><b>ti<\/b> seguido de vogal soa <b>tsi<\/b>: <i>gratia<\/i> → \"grátsia\"<\/li>\n<li><b>gn<\/b> soa como \"nh\": <i>regnum<\/i> → \"rênhum\"<\/li>\n<\/ul>\n", "vocab": [["ego", "eu"], ["sum", "sou"], ["est", "é"], ["et", "e"], ["non", "não"], ["Deus, -i", "Deus"], ["via, -ae", "caminho, via"], ["vita, -ae", "vida"], ["veritas, -atis", "verdade"], ["bonus, -a, -um", "bom"]], "lectio": {"latim": "Ego sum via, et veritas, et vita.", "ref": "João 14,6 — Vulgata", "traducao": "Eu sou o caminho, e a verdade, e a vida.", "analise": "\n<ul>\n<li><b>Ego<\/b> — pronome, nominativo: o sujeito. \"Eu\".<\/li>\n<li><b>sum<\/b> — verbo <i>ser<\/i>, 1ª pessoa do singular: \"sou\".<\/li>\n<li><b>via, veritas, vita<\/b> — os três no nominativo, porque são <b>predicativos<\/b>: dizem o que o sujeito é, com o verbo <i>sum<\/i>.<\/li>\n<\/ul>\n<p>Repare numa coisa: <i>via<\/i> e <i>vita<\/i> terminam em -a, mas <i>veritas<\/i> não. Pertencem a declinações diferentes — e mesmo assim estão no mesmo caso, porque têm a mesma função. <b>O caso é dado pela função, não pela aparência.<\/b><\/p>\n<p>E não há artigo em latim: o \"o\" e o \"a\" da tradução foram acrescentados por nós.<\/p>\n"}, "exercicios": [{"q": "Qual caso indica o sujeito da frase?", "aceitas": ["nominativo"], "e": "O nominativo responde à pergunta 'quem?'."}, {"q": "Com o verbo sum, em que caso fica o predicativo?", "aceitas": ["nominativo", "no nominativo"], "e": "Sujeito e predicativo se ligam pelo verbo ser, e ambos ficam no nominativo."}, {"q": "Traduza para o português: est", "aceitas": ["é", "e", "ele é", "ela é"], "e": "Est é a 3ª pessoa do singular de sum."}, {"q": "Traduza para o português: vita", "aceitas": ["vida", "a vida"], "e": "Vita, vitae: substantivo da 1ª declinação."}, {"q": "Como se pronuncia o 'ae' no latim eclesiástico?", "aceitas": ["é", "e", "som de é"], "e": "Caelum soa 'tchélum'; o ditongo vira um é aberto."}], "teste": [{"q": "Em latim, a função de uma palavra na frase é indicada principalmente:", "o": ["Pela terminação da palavra.", "Pela posição na frase.", "Pelo artigo que a acompanha.", "Pela entonação da leitura."], "c": 0, "e": "É a diferença central entre o latim e o português. O latim nem tem artigo, e a posição pode variar sem mudar o sentido."}, {"q": "O caso do sujeito é o:", "o": ["Acusativo.", "Nominativo.", "Genitivo.", "Vocativo."], "c": 1, "e": "Acusativo é o objeto direto; genitivo, a posse; vocativo, o chamamento."}, {"q": "Quantos casos o latim possui?", "o": ["Quatro.", "Cinco.", "Seis.", "Sete."], "c": 2, "e": "Nominativo, vocativo, acusativo, genitivo, dativo e ablativo."}, {"q": "No latim eclesiástico, o ditongo 'ae' pronuncia-se:", "o": ["Como 'ai'.", "Como 'é'.", "Com as duas vogais separadas.", "Como 'i'."], "c": 1, "e": "Caelum soa 'tchélum'. Separar as vogais ou dizer 'ai' é a pronúncia reconstruída do latim clássico, não a da liturgia."}, {"q": "Antes de 'e' ou 'i', a letra 'c' soa, no latim eclesiástico, como:", "o": ["k", "s", "tch", "ç"], "c": 2, "e": "Por isso caelis soa 'tchélis', como se ouve no Pater Noster."}, {"q": "Das classes de palavras abaixo, a que o latim NÃO possui é:", "o": ["O verbo de ligação.", "O pronome pessoal.", "A preposição.", "O artigo."], "c": 3, "e": "Os artigos da tradução são acrescentados pelo contexto. Todas as outras classes existem em latim."}, {"q": "Em 'Ego sum via', a palavra via está no nominativo porque:", "o": ["É predicativo, com o verbo sum.", "É o objeto direto do verbo sum na frase.", "É um chamamento dirigido a alguém.", "Está no plural."], "c": 0, "e": "Sum não tem objeto direto: liga o sujeito a uma qualidade ou identidade, e ambos ficam no nominativo."}, {"q": "A forma est traduz-se por:", "o": ["És.", "Sou.", "Somos.", "É."], "c": 3, "e": "Sum é 'sou', es é 'és', est é 'é'."}, {"q": "A melhor tradução de 'Ego sum via, et veritas, et vita' é:", "o": ["O caminho é a verdade e a vida.", "Eu sou o caminho, a verdade e a vida.", "Eu tenho o caminho, a verdade e a vida.", "Nós somos o caminho, e a verdade, e a vida."], "c": 1, "e": "Ego é o sujeito; sum é 1ª pessoa do singular e significa 'sou', não 'tenho'."}, {"q": "Em João 14,6, via, veritas e vita estão no mesmo caso porque:", "o": ["Pertencem todas à mesma declinação.", "Estão todas no plural.", "São predicativos.", "São objetos diretos do verbo sum."], "c": 2, "e": "Veritas é de outra declinação que via e vita. O caso segue a função, não a declinação."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L02", "titulo": "Primeira declinação: nominativo e acusativo", "subtitulo": "Sujeito e objeto direto", "gramatica": "\n<p>A <b>primeira declinação<\/b> reúne os nomes cujo nominativo singular termina em <b>-a<\/b> e cujo genitivo singular termina em <b>-ae<\/b>. Por isso o dicionário apresenta sempre as duas formas: <i>puella, puellae<\/i>. É pelo genitivo que se reconhece a declinação.<\/p>\n<p>A maioria é feminina. Há exceções importantes, que designam ofícios de homens: <i>poeta<\/i>, <i>nauta<\/i> (marinheiro), <i>agricola<\/i> (lavrador) são masculinos.<\/p>\n<p>Nesta lição ficamos com dois casos, os mais usados:<\/p>\n<table>\n<tr><th><\/th><th>Singular<\/th><th>Plural<\/th><\/tr>\n<tr><td>Nominativo — sujeito<\/td><td>puell<b>a<\/b><\/td><td>puell<b>ae<\/b><\/td><\/tr>\n<tr><td>Acusativo — objeto direto<\/td><td>puell<b>am<\/b><\/td><td>puell<b>as<\/b><\/td><\/tr>\n<\/table>\n<p>Com isso já se lê uma frase inteira:<\/p>\n<p style=\"text-align:center\"><i>Puella rosam amat.<\/i> — A menina ama a rosa.<br><i>Rosam puella amat.<\/i> — A menina ama a rosa.<\/p>\n<p>As duas frases dizem o mesmo. <i>Puella<\/i>, com -a, é o sujeito; <i>rosam<\/i>, com -am, é o objeto — onde quer que estejam.<\/p>\n<p><b>Guarde o -m.<\/b> Em quase todas as declinações, o acusativo singular termina em <b>-m<\/b>. É uma das marcas mais confiáveis do latim.<\/p>\n", "vocab": [["puella, -ae", "menina"], ["rosa, -ae", "rosa"], ["terra, -ae", "terra"], ["anima, -ae", "alma"], ["ancilla, -ae", "serva"], ["gloria, -ae", "glória"], ["poeta, -ae (masc.)", "poeta"], ["amat / amant", "ama / amam"], ["laudat / laudant", "louva / louvam"], ["meus, mea", "meu, minha"]], "lectio": {"latim": "Magnificat anima mea Dominum.", "ref": "Lucas 1,46 — o Magnificat, cântico de Nossa Senhora", "traducao": "A minha alma engrandece o Senhor.", "analise": "\n<ul>\n<li><b>anima<\/b> — nominativo singular da 1ª declinação: o <b>sujeito<\/b>. É a alma que engrandece.<\/li>\n<li><b>mea<\/b> — \"minha\", concorda com <i>anima<\/i>.<\/li>\n<li><b>Dominum<\/b> — acusativo: o <b>objeto direto<\/b>. É o Senhor que é engrandecido.<\/li>\n<li><b>Magnificat<\/b> — verbo, 3ª pessoa do singular: \"engrandece\".<\/li>\n<\/ul>\n<p><i>Dominus<\/i> é da 2ª declinação, que ainda não estudamos. Mas repare no <b>-m<\/b> final de <i>Dominum<\/i>: é a marca do acusativo, e ela basta para saber quem engrandece e quem é engrandecido.<\/p>\n<p>A ordem latina coloca o verbo primeiro e o objeto por último. Traduzindo palavra por palavra, sairia \"Engrandece alma minha o Senhor\" — por isso se ordena a frase <b>depois<\/b> de identificar os casos.<\/p>\n"}, "exercicios": [{"q": "Acusativo singular de puella:", "aceitas": ["puellam"], "e": "Nominativo -a, acusativo -am."}, {"q": "Nominativo plural de rosa:", "aceitas": ["rosae"], "e": "O nominativo plural da 1ª declinação termina em -ae."}, {"q": "Acusativo plural de terra:", "aceitas": ["terras"], "e": "Acusativo plural em -as."}, {"q": "Traduza: Puella rosam amat.", "aceitas": ["a menina ama a rosa", "menina ama rosa", "uma menina ama uma rosa"], "e": "Puella é sujeito (-a); rosam é objeto (-am)."}, {"q": "Em 'Rosam puella amat', quem ama?", "aceitas": ["puella", "a menina", "menina"], "e": "A ordem mudou, as terminações não: puella continua sendo o sujeito."}], "teste": [{"q": "A 1ª declinação reúne nomes cujo nominativo singular termina em:", "o": ["-us", "-a", "-um", "-is"], "c": 1, "e": "E cujo genitivo singular termina em -ae. -us e -um são da 2ª declinação."}, {"q": "Acusativo singular de rosa:", "o": ["rosae", "rosas", "rosam", "rosa"], "c": 2, "e": "Rosae é nominativo plural; rosas, acusativo plural; rosa, nominativo singular."}, {"q": "Nominativo plural de puella:", "o": ["puellae", "puellas", "puellam", "puellis"], "c": 0, "e": "Puellas é o acusativo plural — o erro mais comum é trocar os dois."}, {"q": "Acusativo plural de terra:", "o": ["terrae", "terram", "terris", "terras"], "c": 3, "e": "Acusativo plural em -as. Terram é o singular."}, {"q": "Em 'Puella rosam amat', o sujeito é:", "o": ["rosam", "puella", "amat", "Não há sujeito."], "c": 1, "e": "Puella está no nominativo; rosam, no acusativo, é o objeto."}, {"q": "'Rosam puella amat' significa:", "o": ["A rosa ama a menina.", "As meninas amam as rosas.", "A menina ama a rosa.", "A menina amou a rosa."], "c": 2, "e": "Mudar a ordem não troca as funções. Quem ama continua marcada pelo -a do nominativo."}, {"q": "O acusativo indica principalmente:", "o": ["O sujeito.", "O objeto direto.", "A posse.", "O chamamento."], "c": 1, "e": "Sujeito é nominativo; posse, genitivo; chamamento, vocativo."}, {"q": "Em 'Magnificat anima mea Dominum', quem engrandece?", "o": ["Dominum, porque vem no fim da frase.", "Anima, que está no nominativo.", "Mea, que é a palavra do meio.", "Magnificat, que vem primeiro."], "c": 1, "e": "A posição não decide nada em latim. Anima está no nominativo: é o sujeito."}, {"q": "O -m final de Dominum indica:", "o": ["Acusativo.", "Genitivo.", "Nominativo.", "Plural."], "c": 0, "e": "O acusativo singular termina em -m na maioria das declinações — em puellam, rosam e também em Dominum."}, {"q": "'As meninas amam as rosas' em latim:", "o": ["Puellas rosae amant.", "Puella rosam amat.", "Puellae rosae amant.", "Puellae rosas amant."], "c": 3, "e": "Sujeito plural no nominativo (-ae), objeto plural no acusativo (-as), verbo no plural (amant)."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L03", "titulo": "O verbo sum e a primeira conjugação", "subtitulo": "Pessoas, números e o sujeito escondido", "gramatica": "\n<p>O verbo latino carrega o sujeito dentro de si. A terminação diz quem age — por isso o pronome quase nunca aparece. <i>Amo<\/i> já é \"eu amo\"; <i>ego amo<\/i> só se usa para dar ênfase.<\/p>\n<h4>As desinências pessoais<\/h4>\n<p>São quase as mesmas em todos os verbos, e vale decorá-las antes de qualquer tabela:<\/p>\n<table>\n<tr><th>Pessoa<\/th><th>Desinência<\/th><\/tr>\n<tr><td>eu<\/td><td><b>-o<\/b> ou <b>-m<\/b><\/td><\/tr>\n<tr><td>tu<\/td><td><b>-s<\/b><\/td><\/tr>\n<tr><td>ele, ela<\/td><td><b>-t<\/b><\/td><\/tr>\n<tr><td>nós<\/td><td><b>-mus<\/b><\/td><\/tr>\n<tr><td>vós<\/td><td><b>-tis<\/b><\/td><\/tr>\n<tr><td>eles, elas<\/td><td><b>-nt<\/b><\/td><\/tr>\n<\/table>\n<h4>O verbo sum<\/h4>\n<table>\n<tr><td>sum<\/td><td>sou<\/td><td>sumus<\/td><td>somos<\/td><\/tr>\n<tr><td>es<\/td><td>és<\/td><td>estis<\/td><td>sois<\/td><\/tr>\n<tr><td>est<\/td><td>é<\/td><td>sunt<\/td><td>são<\/td><\/tr>\n<\/table>\n<h4>A primeira conjugação<\/h4>\n<p>Reconhece-se pelo infinitivo em <b>-āre<\/b>: <i>amare<\/i> (amar), <i>laudare<\/i> (louvar), <i>orare<\/i> (rezar). Tira-se o -re e acrescentam-se as desinências:<\/p>\n<table>\n<tr><td>am<b>o<\/b><\/td><td>amo<\/td><td>ama<b>mus<\/b><\/td><td>amamos<\/td><\/tr>\n<tr><td>ama<b>s<\/b><\/td><td>amas<\/td><td>ama<b>tis<\/b><\/td><td>amais<\/td><\/tr>\n<tr><td>ama<b>t<\/b><\/td><td>ama<\/td><td>ama<b>nt<\/b><\/td><td>amam<\/td><\/tr>\n<\/table>\n<p>Na 1ª pessoa do singular o <i>a<\/i> do tema desaparece: <i>amo<\/i>, não <i>amao<\/i>.<\/p>\n", "vocab": [["sum, es, est...", "ser"], ["amo, -as, -are", "amar"], ["laudo, -as, -are", "louvar"], ["oro, -as, -are", "rezar, pedir"], ["adoro, -as, -are", "adorar"], ["laboro, -as, -are", "trabalhar"], ["canto, -as, -are", "cantar"], ["caritas, -atis", "caridade, amor"], ["te", "te, a ti"], ["devote", "devotamente"]], "lectio": {"latim": "Deus caritas est. — Adoro te devote.", "ref": "1 João 4,8 — Vulgata · Hino de Santo Tomás de Aquino", "traducao": "Deus é amor. — Adoro-te devotamente.", "analise": "\n<p><b>Deus caritas est.<\/b><\/p>\n<ul>\n<li><b>Deus<\/b> — nominativo, sujeito.<\/li>\n<li><b>caritas<\/b> — nominativo também: é <b>predicativo<\/b>, com o verbo <i>est<\/i>. Não é o objeto de nada.<\/li>\n<li><b>est<\/b> — 3ª pessoa do singular de <i>sum<\/i>. Em latim o verbo gosta de vir no fim.<\/li>\n<\/ul>\n<p><b>Adoro te devote.<\/b> — o primeiro verso do hino que Santo Tomás de Aquino compôs para o Santíssimo Sacramento.<\/p>\n<ul>\n<li><b>Adoro<\/b> — 1ª conjugação, 1ª pessoa do singular: \"(eu) adoro\". O sujeito está escondido na desinência -o.<\/li>\n<li><b>te<\/b> — pronome no acusativo: \"te\". É o objeto de <i>adoro<\/i>.<\/li>\n<li><b>devote<\/b> — advérbio: \"devotamente\".<\/li>\n<\/ul>\n<p>É o mesmo Tomás das Cinco Vias. Filosofia e oração, na mesma pessoa.<\/p>\n"}, "exercicios": [{"q": "'Nós louvamos' (laudo):", "aceitas": ["laudamus"], "e": "Desinência -mus para 'nós'."}, {"q": "'Eles rezam' (oro):", "aceitas": ["orant"], "e": "Desinência -nt para 'eles'."}, {"q": "'Tu és':", "aceitas": ["es"], "e": "Sum, es, est."}, {"q": "'Vós sois':", "aceitas": ["estis"], "e": "Sumus, estis, sunt."}, {"q": "Traduza: laboramus", "aceitas": ["trabalhamos", "nós trabalhamos"], "e": "O sujeito 'nós' está escondido na desinência -mus."}], "teste": [{"q": "Presente de sum, 1ª pessoa do plural:", "o": ["estis", "sunt", "sumus", "sum"], "c": 2, "e": "Sum, es, est, sumus, estis, sunt."}, {"q": "'Eles são':", "o": ["sunt", "estis", "est", "sumus"], "c": 0, "e": "A desinência -nt marca a 3ª pessoa do plural também em sum."}, {"q": "A desinência -nt indica:", "o": ["1ª pessoa do plural.", "2ª pessoa do plural.", "3ª pessoa do singular.", "3ª pessoa do plural."], "c": 3, "e": "-mus é nós, -tis é vós, -t é ele. O -n acrescenta o plural."}, {"q": "'Nós louvamos' (laudo):", "o": ["laudatis", "laudamus", "laudant", "laudas"], "c": 1, "e": "Laudatis é vós; laudant, eles; laudas, tu."}, {"q": "A forma orat traduz-se por:", "o": ["Eu rezo.", "Tu rezas.", "Ele reza.", "Eles rezam."], "c": 2, "e": "-t é a 3ª pessoa do singular."}, {"q": "O infinitivo da 1ª conjugação termina em:", "o": ["-āre", "-ēre, com e longo", "-ĕre, com e breve", "-īre"], "c": 0, "e": "As outras três terminações são das conjugações 2ª, 3ª e 4ª, que virão nas próximas lições."}, {"q": "Em laboramus, o sujeito é:", "o": ["Não há sujeito nessa forma verbal.", "'Eles', subentendido no contexto.", "'O trabalho', que vem do verbo.", "'Nós', pela desinência -mus."], "c": 3, "e": "O verbo latino traz a pessoa na terminação. -mus é sempre 'nós'."}, {"q": "Em 'Deus caritas est', caritas está no nominativo porque:", "o": ["É o objeto direto do verbo est.", "É predicativo, com o verbo sum.", "É um vocativo.", "É o sujeito da frase inteira."], "c": 1, "e": "O sujeito é Deus. Caritas diz o que Deus é — predicativo, que com sum fica no nominativo."}, {"q": "Em 'Adoro te devote', adoro está na:", "o": ["3ª pessoa do singular.", "1ª pessoa do singular.", "2ª pessoa do singular.", "1ª pessoa do plural."], "c": 1, "e": "A desinência -o marca 'eu'. Adorat seria 'ele adora'."}, {"q": "'Vós cantais':", "o": ["cantamus", "cantant", "cantatis", "cantas"], "c": 2, "e": "-tis é a desinência de 'vós'."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L04", "titulo": "Genitivo, dativo e ablativo", "subtitulo": "A primeira declinação completa", "gramatica": "\n<p>Agora a tabela inteira da primeira declinação:<\/p>\n<table>\n<tr><th>Caso<\/th><th>Singular<\/th><th>Plural<\/th><\/tr>\n<tr><td>Nominativo<\/td><td>puell<b>a<\/b><\/td><td>puell<b>ae<\/b><\/td><\/tr>\n<tr><td>Vocativo<\/td><td>puell<b>a<\/b><\/td><td>puell<b>ae<\/b><\/td><\/tr>\n<tr><td>Acusativo<\/td><td>puell<b>am<\/b><\/td><td>puell<b>as<\/b><\/td><\/tr>\n<tr><td>Genitivo<\/td><td>puell<b>ae<\/b><\/td><td>puell<b>arum<\/b><\/td><\/tr>\n<tr><td>Dativo<\/td><td>puell<b>ae<\/b><\/td><td>puell<b>is<\/b><\/td><\/tr>\n<tr><td>Ablativo<\/td><td>puell<b>ā<\/b><\/td><td>puell<b>is<\/b><\/td><\/tr>\n<\/table>\n<ul>\n<li><b>Genitivo<\/b> — \"de\", posse ou pertença: <i>rosa puellae<\/i>, \"a rosa da menina\".<\/li>\n<li><b>Dativo<\/b> — \"a, para\", a quem se dá ou se diz: <i>puellae rosam dat<\/i>, \"dá uma rosa à menina\".<\/li>\n<li><b>Ablativo<\/b> — circunstância: meio, modo, lugar, companhia. Muitas vezes vem com preposição.<\/li>\n<\/ul>\n<h4>O problema das terminações repetidas<\/h4>\n<p>Repare: <b>-ae<\/b> aparece em quatro lugares da tabela, e <b>-is<\/b> em dois. Decorar não resolve. <b>Comece pelo verbo.<\/b><\/p>\n<p>Em <i>Sententiae poetarum placent puellis<\/i>, <i>sententiae<\/i> poderia ser quatro coisas. Mas <i>placent<\/i> está no plural, logo o sujeito está no plural — e a única palavra que pode ser nominativo plural é <i>sententiae<\/i>. Resolvido o sujeito, o resto se encaixa: \"As sentenças dos poetas agradam às meninas.\"<\/p>\n", "vocab": [["filia, -ae", "filha"], ["sapientia, -ae", "sabedoria"], ["gratia, -ae", "graça"], ["familia, -ae", "família"], ["fabula, -ae", "fábula, história"], ["sententia, -ae", "sentença"], ["do, das, dare", "dar"], ["narro, -as, -are", "narrar"], ["placeo, -es, -ere", "agradar"], ["initium, -i", "início"], ["timor, -oris", "temor"]], "lectio": {"latim": "Initium sapientiae timor Domini.", "ref": "Salmo 110,10 — Vulgata (111,10 nas bíblias atuais)", "traducao": "O início da sabedoria é o temor do Senhor.", "analise": "\n<ul>\n<li><b>Initium<\/b> — nominativo: o sujeito. \"O início\".<\/li>\n<li><b>sapientiae<\/b> — <b>genitivo<\/b> singular da 1ª declinação: \"da sabedoria\".<\/li>\n<li><b>timor<\/b> — nominativo: predicativo. \"O temor\".<\/li>\n<li><b>Domini<\/b> — genitivo de <i>Dominus<\/i>: \"do Senhor\". A 2ª declinação faz o genitivo em -i.<\/li>\n<\/ul>\n<p><b>Onde está o verbo?<\/b> Não está. O latim, como o hebraico que traduz, frequentemente omite o <i>est<\/i> quando ele é óbvio. Quem traduz o acrescenta: \"o início ... <b>é<\/b> o temor\".<\/p>\n<p>E <i>sapientiae<\/i> é um caso clássico de ambiguidade: pela terminação poderia ser genitivo, dativo, nominativo plural ou vocativo plural. O que decide é o sentido — \"o início <i>da<\/i> sabedoria\".<\/p>\n<p><b>Sobre a numeração:<\/b> a Vulgata numera os salmos com um a menos que as bíblias atuais em boa parte do saltério. Por isso o mesmo salmo aparece como 110 e como 111.<\/p>\n"}, "exercicios": [{"q": "Genitivo plural de puella:", "aceitas": ["puellarum"], "e": "Genitivo plural da 1ª declinação em -arum."}, {"q": "Dativo singular de filia:", "aceitas": ["filiae"], "e": "Genitivo e dativo singular são iguais: -ae."}, {"q": "Ablativo plural de rosa:", "aceitas": ["rosis"], "e": "Dativo e ablativo plural terminam ambos em -is."}, {"q": "Como se diz 'da sabedoria'?", "aceitas": ["sapientiae"], "e": "Genitivo singular."}, {"q": "Traduza: Poeta puellis fabulas narrat.", "aceitas": ["o poeta narra fabulas as meninas", "o poeta narra historias as meninas", "o poeta conta fabulas as meninas", "o poeta narra fábulas às meninas"], "e": "Poeta é sujeito; puellis, dativo plural; fabulas, acusativo plural."}], "teste": [{"q": "Genitivo singular de filia:", "o": ["filiam", "filiae", "filiarum", "filia"], "c": 1, "e": "Filiarum é genitivo plural; filiam, acusativo singular."}, {"q": "Genitivo plural de rosa:", "o": ["rosis", "rosas", "rosarum", "rosae"], "c": 2, "e": "O genitivo plural é a única forma em -arum."}, {"q": "O dativo indica:", "o": ["A quem se dá ou se diz algo.", "A posse, o que pertence a alguém.", "O objeto direto.", "O chamamento."], "c": 0, "e": "Posse é genitivo; objeto direto, acusativo; chamamento, vocativo."}, {"q": "Ablativo plural de puella:", "o": ["puellarum", "puellas", "puellae", "puellis"], "c": 3, "e": "Dativo e ablativo plural coincidem em -is."}, {"q": "Na 1ª declinação, a terminação -ae pode indicar:", "o": ["Somente o genitivo singular, que indica posse.", "Somente o nominativo plural, que indica o sujeito.", "Quatro casos diferentes.", "O dativo ou o ablativo plural."], "c": 2, "e": "São quatro possibilidades — por isso é preciso analisar a frase, não só a palavra."}, {"q": "Na 1ª declinação, a terminação -is indica:", "o": ["Dativo ou ablativo plural.", "O genitivo plural, que indica posse.", "Acusativo plural.", "Nominativo singular."], "c": 0, "e": "Genitivo plural é -arum; acusativo plural, -as."}, {"q": "Para decidir o caso de uma palavra ambígua, o melhor começo é:", "o": ["A primeira palavra que aparece na frase.", "A palavra mais longa.", "O verbo.", "O dicionário, palavra por palavra."], "c": 2, "e": "O verbo concorda com o sujeito em número. Descoberto o sujeito, as demais funções se encaixam."}, {"q": "Em 'Initium sapientiae timor Domini', sapientiae está no:", "o": ["Dativo: 'à sabedoria'.", "Genitivo: 'da sabedoria'.", "Nominativo plural: 'as sabedorias'.", "Ablativo."], "c": 1, "e": "O sentido decide: 'o início da sabedoria'. O ablativo da 1ª declinação termina em -ā, não em -ae."}, {"q": "Nesse versículo, o verbo está subentendido. Ele é:", "o": ["sunt", "amat", "dat", "est"], "c": 3, "e": "O latim omite o 'é' quando o sentido o deixa claro. Sunt exigiria sujeito plural."}, {"q": "'Poeta puellis fabulas narrat' significa:", "o": ["O poeta narra fábulas às meninas.", "As meninas narram fábulas ao poeta.", "O poeta narra as fábulas das meninas.", "Os poetas narram fábulas à menina."], "c": 0, "e": "Poeta, nominativo singular (é masculino, apesar do -a); puellis, dativo plural; fabulas, acusativo plural."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L05", "titulo": "Segunda conjugação, vocativo e imperativo", "subtitulo": "Chamar e ordenar", "gramatica": "\n<h4>A segunda conjugação<\/h4>\n<p>Reconhece-se pelo infinitivo em <b>-ēre<\/b>, com e longo: <i>videre<\/i> (ver), <i>monere<\/i> (advertir), <i>tacere<\/i> (calar-se). As desinências são as mesmas da lição anterior; muda só a vogal:<\/p>\n<table>\n<tr><td>vide<b>o<\/b><\/td><td>vejo<\/td><td>vide<b>mus<\/b><\/td><td>vemos<\/td><\/tr>\n<tr><td>vide<b>s<\/b><\/td><td>vês<\/td><td>vide<b>tis<\/b><\/td><td>vedes<\/td><\/tr>\n<tr><td>vide<b>t<\/b><\/td><td>vê<\/td><td>vide<b>nt<\/b><\/td><td>veem<\/td><\/tr>\n<\/table>\n<p>Diferente da primeira, aqui o <i>e<\/i> do tema <b>fica<\/b> na 1ª pessoa: <i>video<\/i>, não <i>vido<\/i>.<\/p>\n<h4>O imperativo<\/h4>\n<p>Para dar uma ordem a <b>uma<\/b> pessoa, usa-se o tema puro. Para <b>várias<\/b>, acrescenta-se <b>-te<\/b>:<\/p>\n<table>\n<tr><th><\/th><th>a um<\/th><th>a vários<\/th><\/tr>\n<tr><td>1ª conjugação<\/td><td><b>lauda!<\/b> louva!<\/td><td><b>laudate!<\/b> louvai!<\/td><\/tr>\n<tr><td>2ª conjugação<\/td><td><b>vide!<\/b> vê!<\/td><td><b>videte!<\/b> vede!<\/td><\/tr>\n<tr><td>sum<\/td><td><b>es!<\/b> sê!<\/td><td><b>este!<\/b> sede!<\/td><\/tr>\n<\/table>\n<p><b>Cuidado:<\/b> <i>videtis<\/i> é \"vós vedes\" — afirma. <i>Videte<\/i> é \"vede!\" — ordena. Uma letra de diferença.<\/p>\n<h4>O vocativo<\/h4>\n<p>É o caso do chamamento. Na 1ª declinação é igual ao nominativo: <i>Maria!<\/i>, <i>puellae!<\/i>. Na 2ª, os nomes em <b>-us<\/b> fazem o vocativo em <b>-e<\/b>: <i>Dominus<\/i> → <b>Domine!<\/b> — a forma que se ouve na Missa, em <i>Domine, non sum dignus<\/i>.<\/p>\n", "vocab": [["video, -es, -ere", "ver"], ["moneo, -es, -ere", "advertir"], ["taceo, -es, -ere", "calar-se"], ["pareo, -es, -ere", "obedecer"], ["habeo, -es, -ere", "ter"], ["doceo, -es, -ere", "ensinar"], ["ave!", "salve! ave!"], ["plenus, -a, -um", "cheio"], ["tecum", "contigo"], ["Dominus, -i", "Senhor"]], "lectio": {"latim": "Ave Maria, gratia plena, Dominus tecum.", "ref": "Lucas 1,28 e a oração da Ave-Maria", "traducao": "Ave, Maria, cheia de graça, o Senhor é contigo. (Na oração em português: \"o Senhor é convosco\".)", "analise": "\n<ul>\n<li><b>Ave<\/b> — imperativo de uma saudação: \"salve!\", \"alegra-te!\". É a palavra do anjo.<\/li>\n<li><b>Maria<\/b> — <b>vocativo<\/b>: o anjo a chama. Na 1ª declinação, igual ao nominativo.<\/li>\n<li><b>gratia plena<\/b> — \"cheia de graça\". Aqui <i>gratia<\/i> está no <b>ablativo<\/b> (<i>gratiā<\/i>): <i>plenus<\/i> pede o ablativo daquilo de que se está cheio. A mesma palavra, outro caso — só a vogal longa, que o texto nem marca, denuncia.<\/li>\n<li><b>Dominus<\/b> — nominativo: o sujeito. \"O Senhor\".<\/li>\n<li><b>tecum<\/b> — <i>cum<\/i> (\"com\") + <i>te<\/i>, escritos juntos: \"contigo\". E, de novo, o <i>est<\/i> fica subentendido.<\/li>\n<\/ul>\n<p><b>Duas observações de fonte.<\/b> No evangelho, o anjo diz apenas <i>Ave, gratia plena<\/i>: o nome <i>Maria<\/i> foi acrescentado pela Igreja na oração. E em português rezamos \"o Senhor é <b>convosco<\/b>\", um tratamento de reverência; o latim, mais direto, diz <i>tecum<\/i>, \"contigo\". As duas formas estão certas — uma é a letra do texto, a outra o costume da nossa língua.<\/p>\n<p>Em seis palavras aparecem três casos diferentes e um verbo omitido. É a oração mais rezada da Igreja — e agora dá para lê-la entendendo cada palavra.<\/p>\n"}, "exercicios": [{"q": "Imperativo singular de laudo:", "aceitas": ["lauda"], "e": "O tema puro, sem desinência."}, {"q": "Imperativo plural de video:", "aceitas": ["videte"], "e": "Tema + -te. Videtis seria 'vós vedes'."}, {"q": "'Cala-te!' (taceo):", "aceitas": ["tace"], "e": "Imperativo singular da 2ª conjugação."}, {"q": "'Vós vedes':", "aceitas": ["videtis"], "e": "Presente, 2ª pessoa do plural — afirma, não ordena."}, {"q": "Vocativo de Dominus:", "aceitas": ["domine"], "e": "Nomes em -us fazem o vocativo em -e."}], "teste": [{"q": "O infinitivo da 2ª conjugação termina em:", "o": ["-āre", "-ēre, com e longo", "-ĕre, com e breve", "-īre"], "c": 1, "e": "-ĕre breve é da 3ª conjugação; a diferença está só na quantidade da vogal."}, {"q": "'Ele vê':", "o": ["vident", "vides", "videt", "videmus"], "c": 2, "e": "-t para a 3ª pessoa do singular."}, {"q": "Imperativo singular de laudo:", "o": ["laudate", "lauda", "laudat", "laudas"], "c": 1, "e": "Laudate é plural; laudat e laudas são presente do indicativo."}, {"q": "Imperativo plural de video:", "o": ["vide", "videtis", "vident", "videte"], "c": 3, "e": "Videtis afirma ('vós vedes'); videte ordena ('vede!')."}, {"q": "'Cala-te!', dito a uma só pessoa:", "o": ["Tacete!", "Tacet.", "Tace!", "Taces."], "c": 2, "e": "Tacete é dirigido a várias pessoas; tacet e taces são afirmações."}, {"q": "A diferença entre videtis e videte é que:", "o": ["São a mesma forma, com grafias diferentes.", "Videtis afirma; videte ordena.", "Videte é plural e videtis é singular.", "Videtis é imperativo e videte é presente."], "c": 1, "e": "Ambas são 2ª pessoa do plural. A diferença é o modo: indicativo e imperativo."}, {"q": "O vocativo de Maria é:", "o": ["Mariae", "Mariam", "Mariis", "Maria"], "c": 3, "e": "Na 1ª declinação, vocativo e nominativo coincidem."}, {"q": "O vocativo de Dominus é:", "o": ["Domine", "Dominus", "Domini", "Dominum"], "c": 0, "e": "É a forma de 'Domine, non sum dignus'. Domini é genitivo; Dominum, acusativo."}, {"q": "Em 'Ave Maria, gratia plena', a palavra Ave é:", "o": ["Um nome próprio, parte do nome de Maria.", "Um genitivo.", "Um vocativo dirigido a Maria.", "Uma saudação: 'salve!'."], "c": 3, "e": "Quem é chamada é Maria, no vocativo. Ave é a saudação que o anjo dirige a ela."}, {"q": "'Dominus tecum' significa:", "o": ["O Senhor é contigo.", "O teu Senhor.", "O Senhor para ti.", "O Senhor sem ti."], "c": 0, "e": "Tecum = cum + te, 'contigo'; o verbo est fica subentendido. Na oração em português se diz 'convosco', por reverência."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L06", "titulo": "Terceira e quarta conjugações", "subtitulo": "lego, capio, audio", "gramatica": "\n<p>Faltam duas conjugações, e com elas o quadro fica completo.<\/p>\n<h4>A terceira conjugação<\/h4>\n<p>Infinitivo em <b>-ĕre<\/b>, com e <b>breve<\/b>: <i>legere<\/i> (ler), <i>regere<\/i> (governar), <i>dicere<\/i> (dizer). Só a quantidade da vogal a distingue da segunda — <i>vidēre<\/i>, longo; <i>legĕre<\/i>, breve. Nas edições escolares isso costuma vir marcado.<\/p>\n<p>A terceira tem <b>dois grupos<\/b>, conforme a 1ª pessoa do singular:<\/p>\n<table>\n<tr><th>em -o: <i>lego<\/i><\/th><th>em -io: <i>capio<\/i><\/th><\/tr>\n<tr><td>leg<b>o<\/b><\/td><td>capi<b>o<\/b><\/td><\/tr>\n<tr><td>leg<b>is<\/b><\/td><td>capi<b>s<\/b><\/td><\/tr>\n<tr><td>leg<b>it<\/b><\/td><td>capi<b>t<\/b><\/td><\/tr>\n<tr><td>leg<b>imus<\/b><\/td><td>capi<b>mus<\/b><\/td><\/tr>\n<tr><td>leg<b>itis<\/b><\/td><td>capi<b>tis<\/b><\/td><\/tr>\n<tr><td>leg<b>unt<\/b><\/td><td>capi<b>unt<\/b><\/td><\/tr>\n<\/table>\n<p>No grupo de <i>lego<\/i> aparece uma vogal de ligação <b>-i-<\/b> antes das desinências (<i>leg-i-s<\/i>), e a 3ª do plural é <b>-unt<\/b>.<\/p>\n<h4>A quarta conjugação<\/h4>\n<p>Infinitivo em <b>-īre<\/b>: <i>audire<\/i> (ouvir), <i>venire<\/i> (vir), <i>dormire<\/i> (dormir).<\/p>\n<table>\n<tr><td>audi<b>o<\/b><\/td><td>ouço<\/td><td>audi<b>mus<\/b><\/td><td>ouvimos<\/td><\/tr>\n<tr><td>audi<b>s<\/b><\/td><td>ouves<\/td><td>audi<b>tis<\/b><\/td><td>ouvis<\/td><\/tr>\n<tr><td>audi<b>t<\/b><\/td><td>ouve<\/td><td>audi<b>unt<\/b><\/td><td>ouvem<\/td><\/tr>\n<\/table>\n<p><b>O ponto que mais confunde:<\/b> a 3ª do plural. <i>Legunt<\/i>, sem i; <i>audiunt<\/i> e <i>capiunt<\/i>, com i.<\/p>\n<h4>Imperativo<\/h4>\n<p><i>lege! / legite!<\/i> · <i>cape! / capite!<\/i> · <i>audi! / audite!<\/i><\/p>\n<p>Quatro verbos da terceira encurtam o singular: <b>dic!<\/b> (diz!), <b>duc!<\/b> (conduz!), <b>fac!<\/b> (faz!), <b>fer!<\/b> (leva!).<\/p>\n", "vocab": [["lego, -is, -ere", "ler"], ["rego, -is, -ere", "governar, conduzir"], ["dico, -is, -ere", "dizer"], ["scribo, -is, -ere", "escrever"], ["capio, -is, -ere", "tomar, prender"], ["facio, -is, -ere", "fazer"], ["audio, -is, -ire", "ouvir"], ["venio, -is, -ire", "vir"], ["dormio, -is, -ire", "dormir"], ["nihil", "nada"], ["mihi", "a mim"], ["noster, nostra", "nosso, nossa"], ["unus", "um, único"]], "lectio": {"latim": "Dominus regit me, et nihil mihi deerit. — Audi, Israel: Dominus Deus noster, Dominus unus est.", "ref": "Salmo 22,1 (Vulgata; 23,1 nas bíblias atuais) · Deuteronômio 6,4", "traducao": "O Senhor me conduz, e nada me faltará. — Ouve, Israel: o Senhor nosso Deus é o único Senhor.", "analise": "\n<p><b>Dominus regit me<\/b><\/p>\n<ul>\n<li><b>regit<\/b> — 3ª conjugação, 3ª pessoa do singular: \"conduz, governa\".<\/li>\n<li><b>me<\/b> — pronome no acusativo: o objeto. \"Me\".<\/li>\n<li><b>mihi<\/b> — pronome no <b>dativo<\/b>: \"a mim\". <i>Nihil mihi deerit<\/i>, \"nada a mim faltará\".<\/li>\n<li><b>deerit<\/b> — futuro de <i>desum<\/i>, \"faltar\". O futuro vem no Módulo II; por ora, basta reconhecer.<\/li>\n<\/ul>\n<p>É o salmo \"O Senhor é meu pastor\". A Vulgata, traduzida do grego, diz <i>regit<\/i> — \"conduz\". A imagem é a mesma: o pastor conduz o rebanho.<\/p>\n<p><b>Audi, Israel<\/b> — a oração central do povo judeu, que Jesus cita no Evangelho como o primeiro mandamento.<\/p>\n<ul>\n<li><b>Audi<\/b> — imperativo singular da 4ª conjugação: \"ouve!\".<\/li>\n<li><b>Israel<\/b> — <b>vocativo<\/b>: o povo é chamado.<\/li>\n<li><b>Dominus unus est<\/b> — <i>unus<\/i> é predicativo, no nominativo: \"o Senhor é um só\".<\/li>\n<\/ul>\n"}, "exercicios": [{"q": "'Ele lê' (lego):", "aceitas": ["legit"], "e": "3ª conjugação, grupo de lego: vogal de ligação -i-."}, {"q": "'Eles ouvem' (audio):", "aceitas": ["audiunt"], "e": "4ª conjugação: a 3ª do plural leva o i."}, {"q": "'Eles leem' (lego):", "aceitas": ["legunt"], "e": "3ª conjugação: -unt, sem i."}, {"q": "Imperativo plural de audio:", "aceitas": ["audite"], "e": "Tema + -te."}, {"q": "'Diz!', dito a uma pessoa (dico):", "aceitas": ["dic"], "e": "Um dos quatro imperativos curtos: dic, duc, fac, fer."}], "teste": [{"q": "O infinitivo da 3ª conjugação termina em:", "o": ["-āre", "-ēre, com e longo", "-ĕre, com e breve", "-īre"], "c": 2, "e": "A diferença para a 2ª conjugação é só a quantidade da vogal."}, {"q": "'Eles leem' (lego):", "o": ["legunt", "leguint", "legent", "legitis"], "c": 0, "e": "Legent existe, mas é futuro ('lerão'). Legitis é 'vós ledes'."}, {"q": "'Eles ouvem' (audio):", "o": ["audunt", "audiunt", "audient", "auditis"], "c": 1, "e": "Na 4ª conjugação o i permanece: audi-unt. Audient é futuro."}, {"q": "3ª pessoa do plural de capio:", "o": ["capunt", "capitis", "capient", "capiunt"], "c": 3, "e": "O grupo de capio se comporta como a 4ª na 3ª do plural."}, {"q": "Imperativo singular de audio:", "o": ["audite", "audit", "audi", "audis"], "c": 2, "e": "Audite é plural; audit e audis são presente do indicativo."}, {"q": "Imperativo singular de lego:", "o": ["lege", "legite", "legit", "legis"], "c": 0, "e": "Na 3ª conjugação o imperativo singular termina em -e."}, {"q": "Imperativo singular de dico:", "o": ["dice", "dicite", "dicis", "dic"], "c": 3, "e": "Dico é um dos quatro verbos que encurtam: dic, duc, fac, fer."}, {"q": "Em 'Dominus regit me', a palavra me é:", "o": ["O sujeito da frase, que pratica a ação.", "O objeto de regit.", "Um dativo: 'a mim'.", "Um vocativo dirigido a Deus."], "c": 1, "e": "O sujeito é Dominus. 'A mim' seria mihi, que aparece na segunda metade do versículo."}, {"q": "Em 'Audi, Israel', Israel está no:", "o": ["Nominativo.", "Vocativo.", "Acusativo.", "Genitivo."], "c": 1, "e": "O povo é chamado: é o caso do chamamento. Audi, no imperativo, confirma."}, {"q": "'Dominus regit me' significa:", "o": ["O Senhor me conduz.", "Eu conduzo o Senhor.", "O Senhor conduziu-me.", "Conduz-me, Senhor!"], "c": 0, "e": "Dominus é sujeito; me, objeto; regit, presente. 'Conduz-me, Senhor!' exigiria imperativo e vocativo: rege me, Domine."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L07", "titulo": "Segunda declinação e adjetivos", "subtitulo": "dominus, puer e a concordância", "gramatica": "\n<p>A <b>segunda declinação<\/b> reúne nomes com genitivo singular em <b>-i<\/b>. Nesta lição, os masculinos em <b>-us<\/b>:<\/p>\n<table>\n<tr><th>Caso<\/th><th>Singular<\/th><th>Plural<\/th><\/tr>\n<tr><td>Nominativo<\/td><td>domin<b>us<\/b><\/td><td>domin<b>i<\/b><\/td><\/tr>\n<tr><td>Vocativo<\/td><td>domin<b>e<\/b><\/td><td>domin<b>i<\/b><\/td><\/tr>\n<tr><td>Acusativo<\/td><td>domin<b>um<\/b><\/td><td>domin<b>os<\/b><\/td><\/tr>\n<tr><td>Genitivo<\/td><td>domin<b>i<\/b><\/td><td>domin<b>orum<\/b><\/td><\/tr>\n<tr><td>Dativo<\/td><td>domin<b>o<\/b><\/td><td>domin<b>is<\/b><\/td><\/tr>\n<tr><td>Ablativo<\/td><td>domin<b>o<\/b><\/td><td>domin<b>is<\/b><\/td><\/tr>\n<\/table>\n<p>Compare com a primeira: <i>-orum<\/i> corresponde a <i>-arum<\/i>, e o plural em <i>-is<\/i> é igual nas duas.<\/p>\n<p><b>Particularidades:<\/b><\/p>\n<ul>\n<li>Alguns nomes terminam em <b>-er<\/b>: <i>puer, pueri<\/i> (menino), <i>ager, agri<\/i> (campo). O vocativo é igual ao nominativo.<\/li>\n<li><i>Filius<\/i> faz o vocativo em <b>fili<\/b>, e <i>meus<\/i> em <b>mi<\/b>: <i>mi fili!<\/i>, \"meu filho!\".<\/li>\n<li>Quase todos são masculinos — mas os <b>nomes de árvores<\/b> são femininos: <i>pinus<\/i>, <i>ulmus<\/i>.<\/li>\n<\/ul>\n<h4>Adjetivos de primeira classe<\/h4>\n<p><i>Bonus, bona, bonum<\/i>: o masculino segue a 2ª declinação, o feminino a 1ª. (O neutro, em <i>-um<\/i>, fica para o Módulo II.)<\/p>\n<p>O adjetivo concorda com o substantivo em <b>gênero, número e caso<\/b> — não necessariamente na terminação visível. <i>Poeta bonus<\/i> está certo: <i>poeta<\/i> é masculino da 1ª declinação, e o adjetivo vai para o masculino, <i>bonus<\/i>.<\/p>\n", "vocab": [["dominus, -i", "senhor"], ["servus, -i", "escravo, servo"], ["filius, -i", "filho"], ["agnus, -i", "cordeiro"], ["mundus, -i", "mundo"], ["discipulus, -i", "discípulo, aluno"], ["puer, pueri", "menino"], ["bonus, -a, -um", "bom"], ["malus, -a, -um", "mau"], ["magnus, -a, -um", "grande"], ["meus, -a, -um", "meu"], ["ecce", "eis"]], "lectio": {"latim": "Ecce agnus Dei. — Dominus meus et Deus meus.", "ref": "João 1,29 · João 20,28", "traducao": "Eis o Cordeiro de Deus. — Meu Senhor e meu Deus.", "analise": "\n<p><b>Ecce agnus Dei<\/b> — as palavras de João Batista ao ver Jesus, repetidas em toda Missa antes da comunhão.<\/p>\n<ul>\n<li><b>Ecce<\/b> — \"eis\", aponta para algo.<\/li>\n<li><b>agnus<\/b> — nominativo singular da 2ª declinação: \"o cordeiro\".<\/li>\n<li><b>Dei<\/b> — <b>genitivo<\/b> de <i>Deus<\/i>: \"de Deus\". A marca -i do genitivo singular.<\/li>\n<\/ul>\n<p><b>Dominus meus et Deus meus<\/b> — a exclamação do apóstolo Tomé ao ver o Ressuscitado. É o apóstolo de quem Santo Tomás de Aquino recebeu o nome.<\/p>\n<ul>\n<li><b>Dominus<\/b>, <b>Deus<\/b> — nominativos.<\/li>\n<li><b>meus<\/b> — adjetivo possessivo, repetido duas vezes, concordando com cada substantivo: masculino, singular, nominativo.<\/li>\n<\/ul>\n<p>Repare: Tomé fala diretamente a Jesus, mas o texto usa o nominativo, não o vocativo. É uma exclamação — e, aliás, <i>Deus<\/i> não tem vocativo diferente do nominativo.<\/p>\n"}, "exercicios": [{"q": "Genitivo singular de dominus:", "aceitas": ["domini"], "e": "A 2ª declinação faz o genitivo singular em -i."}, {"q": "Acusativo plural de servus:", "aceitas": ["servos"], "e": "Acusativo plural em -os."}, {"q": "Genitivo plural de discipulus:", "aceitas": ["discipulorum"], "e": "Genitivo plural em -orum."}, {"q": "Vocativo de filius:", "aceitas": ["fili"], "e": "Exceção: nomes em -ius fazem o vocativo em -i."}, {"q": "'O bom senhor' (sujeito):", "aceitas": ["dominus bonus", "bonus dominus"], "e": "Nominativo masculino singular nos dois."}], "teste": [{"q": "Os masculinos da 2ª declinação têm nominativo singular em:", "o": ["-a", "-us", "-ae", "-is"], "c": 1, "e": "E genitivo singular em -i."}, {"q": "Genitivo singular de dominus:", "o": ["domino", "dominum", "domini", "dominorum"], "c": 2, "e": "Domino é dativo ou ablativo; dominorum, genitivo plural."}, {"q": "Acusativo plural de servus:", "o": ["servi", "servos", "servis", "servorum"], "c": 1, "e": "Servi é nominativo plural — a troca mais comum."}, {"q": "Na 2ª declinação, dativo e ablativo singular terminam em:", "o": ["-i", "-um", "-o", "-is"], "c": 2, "e": "São iguais: domino. Só o contexto ou a preposição distinguem."}, {"q": "Vocativo de filius:", "o": ["filie", "filius", "filium", "fili"], "c": 3, "e": "A regra geral daria filie, mas os nomes em -ius fazem o vocativo em -i."}, {"q": "Qual combinação está correta?", "o": ["poeta bonus", "poeta bona", "poeta bonum", "poeta boni"], "c": 0, "e": "Poeta é masculino. O adjetivo concorda no gênero, não na terminação."}, {"q": "Na 2ª declinação, os nomes de árvores são:", "o": ["Masculinos.", "Neutros.", "Femininos.", "Sempre plurais."], "c": 2, "e": "Pinus, ulmus: terminam em -us, mas são femininos."}, {"q": "Em 'Ecce agnus Dei', a palavra Dei é:", "o": ["Genitivo: 'de Deus'.", "Dativo: 'a Deus'.", "Nominativo plural: 'os deuses'.", "Vocativo."], "c": 0, "e": "O genitivo liga Deus ao cordeiro: o Cordeiro de Deus."}, {"q": "Em 'Dominus meus', o adjetivo meus concorda com Dominus em:", "o": ["Gênero, número e caso.", "Apenas na terminação visível -us.", "Apenas no número.", "Em nada, porque é invariável."], "c": 0, "e": "Aqui as terminações coincidem, mas o que a regra exige é gênero, número e caso."}, {"q": "'Discipuli dominum bonum amant' significa:", "o": ["O discípulo ama os bons senhores.", "O bom senhor ama os discípulos.", "Os discípulos amam o bom senhor.", "Os discípulos do bom senhor amam."], "c": 2, "e": "Discipuli, nominativo plural (amant confirma o plural); dominum bonum, acusativo singular."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L08", "titulo": "O pretérito imperfeito", "subtitulo": "O que durava ou se repetia no passado", "gramatica": "\n<p>O imperfeito narra uma ação <b>contínua ou habitual<\/b> no passado: \"trabalhava\", \"lia\", \"era\". Não diz que a ação terminou — diz que ela <b>estava em curso<\/b>.<\/p>\n<p>Forma-se com um infixo entre o tema e as desinências de sempre (-m, -s, -t, -mus, -tis, -nt):<\/p>\n<table>\n<tr><th>1ª e 2ª: <b>-ba-<\/b><\/th><th>3ª e 4ª: <b>-eba-<\/b><\/th><\/tr>\n<tr><td>ama<b>ba<\/b>m — eu amava<\/td><td>leg<b>eba<\/b>m — eu lia<\/td><\/tr>\n<tr><td>vide<b>ba<\/b>s — tu vias<\/td><td>audi<b>eba<\/b>s — tu ouvias<\/td><\/tr>\n<tr><td>ama<b>ba<\/b>t — ele amava<\/td><td>capi<b>eba<\/b>t — ele tomava<\/td><\/tr>\n<tr><td>vide<b>ba<\/b>mus — nós víamos<\/td><td>leg<b>eba<\/b>mus — nós líamos<\/td><\/tr>\n<tr><td>ama<b>ba<\/b>tis — vós amáveis<\/td><td>audi<b>eba<\/b>tis — vós ouvíeis<\/td><\/tr>\n<tr><td>vide<b>ba<\/b>nt — eles viam<\/td><td>leg<b>eba<\/b>nt — eles liam<\/td><\/tr>\n<\/table>\n<h4>O imperfeito de sum é irregular<\/h4>\n<p><b>eram, eras, erat, eramus, eratis, erant<\/b> — era, eras, era, éramos, éreis, eram.<\/p>\n<p><b>O erro que mais custa pontos:<\/b> traduzir o imperfeito como perfeito. <i>Servus laborabat<\/i> é \"o escravo trabalhava\", não \"trabalhou\".<\/p>\n", "vocab": [["erat", "era, estava"], ["in principio", "no princípio"], ["verbum, -i (neutro)", "palavra, Verbo"], ["apud (+ acusativo)", "junto de"], ["habito, -as, -are", "habitar"], ["lux, lucis", "luz"], ["vita, -ae", "vida"], ["homo, hominis", "homem"], ["semper", "sempre"], ["saepe", "frequentemente"]], "lectio": {"latim": "In principio erat Verbum, et Verbum erat apud Deum, et Deus erat Verbum.", "ref": "João 1,1 — Vulgata", "traducao": "No princípio era o Verbo, e o Verbo estava junto de Deus, e o Verbo era Deus.", "analise": "\n<ul>\n<li><b>In principio<\/b> — <i>in<\/i> + ablativo: \"no princípio\".<\/li>\n<li><b>erat<\/b> — imperfeito de <i>sum<\/i>, três vezes.<\/li>\n<li><b>Verbum<\/b> — nominativo. É neutro da 2ª declinação: nominativo e acusativo iguais, em <i>-um<\/i>. O Módulo II trata dos neutros.<\/li>\n<li><b>apud Deum<\/b> — <i>apud<\/i> pede acusativo: \"junto de Deus\".<\/li>\n<\/ul>\n<p><b>Por que o imperfeito aqui importa.<\/b> João não escreve que o Verbo <i>começou a existir<\/i> no princípio — isso pediria um tempo de ação concluída. Escreve <i>erat<\/i>: no princípio, o Verbo <b>já era<\/b>. O imperfeito, que indica duração sem começo marcado, carrega uma afirmação teológica: o Verbo é eterno.<\/p>\n<p><b>E a última frase.<\/b> Em <i>Deus erat Verbum<\/i>, as duas palavras estão no nominativo — em latim, qualquer uma poderia ser o sujeito. A tradução é \"o Verbo era Deus\" porque no original grego o sujeito vem marcado pelo artigo, e o artigo está no Verbo. É um bom exemplo de que traduzir exige conhecer a fonte, não só a gramática.<\/p>\n"}, "exercicios": [{"q": "'Eu amava' (amo):", "aceitas": ["amabam"], "e": "1ª conjugação: infixo -ba-, desinência -m."}, {"q": "'Eles viam' (video):", "aceitas": ["videbant"], "e": "2ª conjugação: -ba- e -nt."}, {"q": "'Ele lia' (lego):", "aceitas": ["legebat"], "e": "3ª conjugação: infixo -eba-."}, {"q": "'Nós ouvíamos' (audio):", "aceitas": ["audiebamus"], "e": "4ª conjugação: -eba- e -mus."}, {"q": "'Ele era' (sum):", "aceitas": ["erat"], "e": "Imperfeito irregular: eram, eras, erat..."}], "teste": [{"q": "O pretérito imperfeito indica:", "o": ["Ação contínua ou habitual no passado.", "Ação passada que já foi concluída de vez.", "Ação que ainda vai acontecer.", "Uma ordem dada a alguém."], "c": 0, "e": "A ação concluída é o perfeito; a futura, o futuro; a ordem, o imperativo."}, {"q": "O infixo do imperfeito na 1ª e na 2ª conjugações é:", "o": ["-eba-", "-ba-", "-bi-", "-era-"], "c": 1, "e": "-eba- é o da 3ª e da 4ª."}, {"q": "O infixo do imperfeito na 3ª e na 4ª conjugações é:", "o": ["-ba-", "-iba-", "-eri-", "-eba-"], "c": 3, "e": "Leg-eba-m, audi-eba-m."}, {"q": "'Eles amavam' (amo):", "o": ["amabunt", "amant", "amabant", "amabatis"], "c": 2, "e": "Amabunt é futuro ('amarão'); amabatis, 'vós amáveis'."}, {"q": "'Tu lias' (lego):", "o": ["legebas", "legabas", "legis", "legebatis"], "c": 0, "e": "Legabas usa o infixo errado: lego é da 3ª conjugação."}, {"q": "Imperfeito de sum, 3ª pessoa do plural:", "o": ["sunt", "erunt", "erat", "erant"], "c": 3, "e": "Sunt é presente; erunt, futuro; erat, singular."}, {"q": "A melhor tradução de 'Servus laborabat' é:", "o": ["O escravo trabalhou.", "O escravo trabalhava.", "Os escravos trabalhavam.", "O escravo trabalhará."], "c": 1, "e": "O imperfeito indica duração: 'trabalhava'. 'Trabalhou' seria o perfeito."}, {"q": "Em 'In principio erat Verbum', o imperfeito erat indica que o Verbo:", "o": ["Começou a existir exatamente no princípio.", "Já existia no princípio.", "Deixou de existir depois.", "Existirá no fim dos tempos."], "c": 1, "e": "Começar a existir pediria um tempo de ação pontual. O imperfeito fala de duração."}, {"q": "Em 'apud Deum', a palavra Deum está no acusativo porque:", "o": ["É o sujeito da frase inteira.", "É o objeto direto do verbo erat.", "Apud rege acusativo.", "É um vocativo."], "c": 2, "e": "Erat, forma de sum, não tem objeto direto. O caso vem da preposição."}, {"q": "Por que 'Deus erat Verbum' se traduz 'o Verbo era Deus'?", "o": ["Porque Verbum está no acusativo.", "Porque em latim o sujeito vem sempre por último.", "Porque o original grego marca o sujeito.", "Porque a palavra Deus está no genitivo."], "c": 2, "e": "Em latim os dois estão no nominativo e a frase é ambígua. A fonte grega resolve."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L09", "titulo": "As preposições", "subtitulo": "Acusativo ou ablativo", "gramatica": "\n<p>Muitas circunstâncias se exprimem por uma preposição seguida de um nome. A regra que poupa tempo: <b>nenhuma preposição rege nominativo, vocativo, genitivo ou dativo<\/b>. Se há preposição, o caso só pode ser <b>acusativo<\/b> ou <b>ablativo<\/b>.<\/p>\n<table>\n<tr><th>Com acusativo<\/th><th>Com ablativo<\/th><\/tr>\n<tr><td><b>ad<\/b> — para, junto a<\/td><td><b>in<\/b> — em (lugar onde)<\/td><\/tr>\n<tr><td><b>apud<\/b> — junto de<\/td><td><b>cum<\/b> — com<\/td><\/tr>\n<tr><td><b>per<\/b> — através de, por<\/td><td><b>sine<\/b> — sem<\/td><\/tr>\n<tr><td><b>propter<\/b> — por causa de<\/td><td><b>de<\/b> — de, acerca de<\/td><\/tr>\n<tr><td><b>ante / post<\/b> — antes / depois<\/td><td><b>e, ex<\/b> — de dentro de<\/td><\/tr>\n<tr><td><b>contra<\/b> — contra<\/td><td><b>pro<\/b> — por, em favor de<\/td><\/tr>\n<\/table>\n<h4>A preposição in<\/h4>\n<p>É a mais importante, e rege os dois casos conforme o sentido:<\/p>\n<ul>\n<li><b>in + ablativo<\/b> — lugar onde: <i>in villa<\/i>, \"na casa de campo\".<\/li>\n<li><b>in + acusativo<\/b> — movimento para dentro: <i>in villam<\/i>, \"para dentro da casa\".<\/li>\n<\/ul>\n<p>Uma letra muda tudo.<\/p>\n<h4>Cum escrito depois<\/h4>\n<p>Com os pronomes pessoais, <i>cum<\/i> vem depois e se junta à palavra: <b>mecum<\/b> (comigo), <b>tecum<\/b> (contigo), <b>nobiscum<\/b> (conosco) — de onde vem o <i>Dominus vobiscum<\/i> da Missa, \"o Senhor esteja convosco\".<\/p>\n", "vocab": [["ad (+ acus.)", "para, junto a"], ["per (+ acus.)", "através de"], ["propter (+ acus.)", "por causa de"], ["in (+ abl. / + acus.)", "em / para dentro"], ["cum (+ abl.)", "com"], ["sine (+ abl.)", "sem"], ["de (+ abl.)", "de, acerca de"], ["nomen, nominis", "nome"], ["pater, patris", "pai"], ["altare, altaris", "altar"], ["villa, -ae", "casa de campo"], ["schola, -ae", "escola"]], "lectio": {"latim": "In nomine Patris, et Filii, et Spiritus Sancti. — Introibo ad altare Dei.", "ref": "O sinal da cruz · Salmo 42,4 (Vulgata)", "traducao": "Em nome do Pai, e do Filho, e do Espírito Santo. — Subirei ao altar de Deus.", "analise": "\n<p><b>In nomine Patris...<\/b> — o sinal da cruz, a primeira oração que um católico aprende.<\/p>\n<ul>\n<li><b>In nomine<\/b> — <i>in<\/i> + <b>ablativo<\/b>: \"em nome\". Estado, não movimento. <i>Nomen<\/i> é da 3ª declinação.<\/li>\n<li><b>Patris, Filii, Spiritus Sancti<\/b> — três <b>genitivos<\/b>, todos ligados a <i>nomine<\/i>: \"do Pai, do Filho, do Espírito Santo\".<\/li>\n<\/ul>\n<p>Só <i>Filii<\/i> é de uma declinação que já conhecemos — o genitivo de <i>filius<\/i>. <i>Patris<\/i> é da 3ª, <i>Spiritus<\/i> da 4ª. Mas a função é a mesma, e é ela que decide o caso — a lição que vem desde a primeira aula.<\/p>\n<p>E repare: <b>um só nome<\/b>, <i>nomine<\/i>, no singular, para as três Pessoas. A gramática da oração afirma a Trindade — um só Deus em três Pessoas.<\/p>\n<p><b>Introibo ad altare Dei<\/b> — com este verso o sacerdote começava a Missa na forma tradicional, ao pé do altar.<\/p>\n<ul>\n<li><b>Introibo<\/b> — futuro de <i>introeo<\/i>: \"entrarei, subirei\".<\/li>\n<li><b>ad altare<\/b> — <i>ad<\/i> + <b>acusativo<\/b>: movimento em direção a. <i>Altare<\/i> é neutro da 3ª declinação.<\/li>\n<li><b>Dei<\/b> — genitivo: \"de Deus\".<\/li>\n<\/ul>\n"}, "exercicios": [{"q": "'Com a menina':", "aceitas": ["cum puella"], "e": "Cum rege ablativo."}, {"q": "'Sem água':", "aceitas": ["sine aqua"], "e": "Sine rege ablativo: aqua."}, {"q": "'Para a escola' (ad):", "aceitas": ["ad scholam"], "e": "Ad rege acusativo."}, {"q": "'Na casa de campo' (lugar onde):", "aceitas": ["in villa"], "e": "In + ablativo para lugar onde."}, {"q": "'Por causa da vida':", "aceitas": ["propter vitam"], "e": "Propter rege acusativo."}], "teste": [{"q": "As preposições latinas regem:", "o": ["Acusativo ou ablativo.", "Nominativo ou dativo.", "Qualquer um dos seis casos.", "Somente o genitivo."], "c": 0, "e": "Nenhuma rege nominativo, vocativo, genitivo ou dativo."}, {"q": "A preposição ad rege:", "o": ["Ablativo.", "Acusativo.", "Dativo.", "Genitivo."], "c": 1, "e": "Ad scholam, ad altare: acusativo."}, {"q": "A preposição cum rege:", "o": ["Acusativo.", "Nominativo.", "Ablativo.", "Dativo."], "c": 2, "e": "Cum puella, cum Deo."}, {"q": "'In villa' indica:", "o": ["Movimento para dentro da casa.", "Lugar onde.", "Origem.", "Companhia."], "c": 1, "e": "In + ablativo: estar na casa."}, {"q": "'In villam' indica:", "o": ["Lugar onde se está.", "Companhia.", "Movimento para dentro.", "Causa ou motivo da ação."], "c": 2, "e": "In + acusativo: ir para dentro da casa."}, {"q": "'Sem água':", "o": ["sine aquam", "sine aqua", "cum aqua", "sine aquae"], "c": 1, "e": "Sine rege ablativo, que na 1ª declinação termina em -a."}, {"q": "'Por causa da vida':", "o": ["propter vita", "propter vitae", "propter vitam", "pro vita"], "c": 2, "e": "Propter rege acusativo. Pro vita seria 'em favor da vida'."}, {"q": "A forma tecum é:", "o": ["Cum + te, com a preposição depois.", "Um verbo da 3ª conjugação no imperativo.", "O genitivo de tu.", "Um advérbio de tempo."], "c": 0, "e": "Com pronomes pessoais, cum se junta depois: mecum, tecum, nobiscum."}, {"q": "Em 'In nomine Patris', nomine está no ablativo porque:", "o": ["In indica estado, não movimento.", "É o sujeito da oração inteira.", "É o objeto direto do verbo subentendido.", "Toda preposição rege ablativo."], "c": 0, "e": "In com ablativo indica lugar ou estado; com acusativo, movimento."}, {"q": "Em 'Introibo ad altare Dei', altare está no acusativo porque:", "o": ["É o sujeito do verbo introibo.", "Ad rege acusativo.", "É um vocativo.", "Indica lugar onde, sem movimento."], "c": 1, "e": "Ad rege acusativo e indica movimento em direção a."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L10", "titulo": "Revisão: leitura contínua", "subtitulo": "Uma oração inteira, analisada palavra por palavra", "gramatica": "\n<p>Chegou a hora de juntar tudo. Uma leitura contínua não se faz palavra por palavra na ordem em que aparecem — faz-se por <b>método<\/b>:<\/p>\n<ol>\n<li><b>Ache o verbo<\/b> e veja pessoa, número e tempo. Se não houver verbo, ele está subentendido — quase sempre <i>est<\/i>.<\/li>\n<li><b>Ache o nominativo<\/b> que concorda com ele: é o sujeito.<\/li>\n<li><b>Acusativo<\/b>: objeto direto. <b>Dativo<\/b>: a quem. <b>Genitivo<\/b>: de quem.<\/li>\n<li>O que vier depois de <b>preposição<\/b>: acusativo ou ablativo, conforme ela pedir.<\/li>\n<li><b>Só então<\/b> ordene a frase em português.<\/li>\n<\/ol>\n<h4>O quadro dos casos<\/h4>\n<table>\n<tr><th><\/th><th>1ª sing.<\/th><th>1ª pl.<\/th><th>2ª sing.<\/th><th>2ª pl.<\/th><\/tr>\n<tr><td>Nom.<\/td><td>-a<\/td><td>-ae<\/td><td>-us<\/td><td>-i<\/td><\/tr>\n<tr><td>Voc.<\/td><td>-a<\/td><td>-ae<\/td><td>-e<\/td><td>-i<\/td><\/tr>\n<tr><td>Acus.<\/td><td>-am<\/td><td>-as<\/td><td>-um<\/td><td>-os<\/td><\/tr>\n<tr><td>Gen.<\/td><td>-ae<\/td><td>-arum<\/td><td>-i<\/td><td>-orum<\/td><\/tr>\n<tr><td>Dat.<\/td><td>-ae<\/td><td>-is<\/td><td>-o<\/td><td>-is<\/td><\/tr>\n<tr><td>Abl.<\/td><td>-ā<\/td><td>-is<\/td><td>-o<\/td><td>-is<\/td><\/tr>\n<\/table>\n<h4>O quadro dos verbos<\/h4>\n<p><b>Presente:<\/b> -o, -s, -t, -mus, -tis, -nt · <b>Imperfeito:<\/b> -ba- (1ª, 2ª) ou -eba- (3ª, 4ª) · <b>sum:<\/b> sum, es, est... / eram, eras, erat... · <b>Imperativo:<\/b> tema puro, e -te no plural.<\/p>\n", "vocab": [["gloria, -ae", "glória"], ["Patri", "ao Pai (dativo)"], ["Filio", "ao Filho (dativo)"], ["Spiritui Sancto", "ao Espírito Santo (dativo)"], ["sicut", "assim como"], ["principium, -i", "princípio"], ["nunc", "agora"], ["semper", "sempre"], ["saeculum, -i (neutro)", "século, era"], ["amen", "assim seja"]], "lectio": {"latim": "Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen.", "ref": "O Glória ao Pai — doxologia", "traducao": "Glória ao Pai, e ao Filho, e ao Espírito Santo. Como era no princípio, agora e sempre, pelos séculos dos séculos. Amém.", "analise": "\n<p>Uma oração curta, rezada milhares de vezes — e quase toda a gramática do módulo está dentro dela.<\/p>\n<ul>\n<li><b>Gloria<\/b> — nominativo: o sujeito. O verbo está subentendido: \"[seja] glória\".<\/li>\n<li><b>Patri, Filio, Spiritui Sancto<\/b> — três <b>dativos<\/b>: \"ao Pai, ao Filho, ao Espírito Santo\". De três declinações diferentes — 3ª, 2ª e 4ª —, e no mesmo caso, porque têm a mesma função. É a lição da primeira aula, com <i>via, veritas, vita<\/i>.<\/li>\n<li><b>Sicut erat<\/b> — imperfeito de <i>sum<\/i>: \"como era\".<\/li>\n<li><b>in principio<\/b> — <i>in<\/i> + ablativo: \"no princípio\". A oração ecoa, palavra por palavra, o começo do Evangelho de João que lemos na lição 8.<\/li>\n<li><b>in saecula<\/b> — <i>in<\/i> + <b>acusativo<\/b> plural: extensão para diante, \"pelos séculos\". Compare com <i>in principio<\/i>: a mesma preposição, outro caso, outro sentido.<\/li>\n<li><b>saeculorum<\/b> — genitivo plural da 2ª declinação: \"dos séculos\".<\/li>\n<li><b>Amen<\/b> — palavra hebraica: \"assim seja\", \"certamente\".<\/li>\n<\/ul>\n<p><b>\"Pelos séculos dos séculos\"<\/b> é um modo hebraico de fazer superlativo, como \"Cântico dos Cânticos\" ou \"Santo dos Santos\": significa <b>por toda a eternidade<\/b>.<\/p>\n"}, "exercicios": [{"q": "Em que caso está Filio?", "aceitas": ["dativo", "no dativo"], "e": "A quem se dá a glória: dativo."}, {"q": "Em que tempo está erat?", "aceitas": ["imperfeito", "preterito imperfeito", "pretérito imperfeito"], "e": "Imperfeito irregular de sum."}, {"q": "Em que caso está saeculorum?", "aceitas": ["genitivo", "genitivo plural", "no genitivo"], "e": "Genitivo plural da 2ª declinação: -orum."}, {"q": "Em 'in saecula', que caso a preposição in rege?", "aceitas": ["acusativo", "no acusativo"], "e": "In com acusativo: movimento, extensão."}, {"q": "Traduza: Gloria Patri", "aceitas": ["gloria ao pai", "glória ao pai"], "e": "Gloria, nominativo; Patri, dativo."}], "teste": [{"q": "Patri, Filio e Spiritui Sancto estão no:", "o": ["Genitivo.", "Dativo.", "Ablativo.", "Nominativo."], "c": 1, "e": "A quem se dá a glória: dativo."}, {"q": "Estão no mesmo caso, embora de declinações diferentes, porque:", "o": ["Pertencem à mesma declinação.", "Têm a mesma função na frase.", "Estão todos no plural.", "Vêm depois de uma preposição."], "c": 1, "e": "O caso é dado pela função. Patri é da 3ª, Filio da 2ª, Spiritui da 4ª."}, {"q": "Na frase 'Gloria Patri', o verbo:", "o": ["É gloria.", "É patri.", "Está subentendido.", "Está no imperativo."], "c": 2, "e": "Gloria é um substantivo, o sujeito. O verbo não aparece."}, {"q": "A forma erat é:", "o": ["Presente de sum.", "Imperfeito de sum.", "Futuro de sum.", "Imperativo plural de sum."], "c": 1, "e": "Eram, eras, erat: o imperfeito irregular."}, {"q": "'Sicut erat in principio' retoma:", "o": ["O início do Evangelho de João.", "O Pai-Nosso, no pedido do pão.", "O Magnificat.", "O Salmo 22."], "c": 0, "e": "In principio erat Verbum — João 1,1, a lectio da lição 8."}, {"q": "Em 'in principio', principio está no:", "o": ["Acusativo.", "Genitivo.", "Ablativo.", "Dativo."], "c": 2, "e": "In + ablativo: lugar ou estado — aqui, no tempo."}, {"q": "Em 'in saecula', saecula está no acusativo porque indica:", "o": ["Lugar onde, sem movimento algum.", "Extensão para diante no tempo.", "Posse.", "Companhia."], "c": 1, "e": "In + acusativo exprime movimento ou extensão: 'pelos séculos'."}, {"q": "saeculorum é:", "o": ["Genitivo plural.", "Dativo plural.", "Acusativo plural.", "Genitivo singular."], "c": 0, "e": "-orum é a marca do genitivo plural da 2ª declinação."}, {"q": "A expressão 'pelos séculos dos séculos' significa:", "o": ["Um número exato de séculos.", "Por toda a eternidade.", "Só os séculos passados.", "O tempo de uma geração."], "c": 1, "e": "É um superlativo hebraico, como 'Santo dos Santos'."}, {"q": "A palavra Amen:", "o": ["É latina e significa 'fim'.", "É hebraica: 'assim seja'.", "É grega e significa 'glória'.", "É latina e quer dizer 'Senhor'."], "c": 1, "e": "O latim da Igreja conservou várias palavras hebraicas: amen, alleluia, hosanna."}], "modulo": "Módulo I — Fundamentos"}, {"id": "L11", "titulo": "Os neutros", "subtitulo": "templum, verbum e a regra do plural em -a", "gramatica": "\n<p>Além de masculino e feminino, o latim tem um terceiro gênero: o <b>neutro<\/b>. Na 2ª declinação, os neutros terminam em <b>-um<\/b>:<\/p>\n<table>\n<tr><th>Caso<\/th><th>Singular<\/th><th>Plural<\/th><\/tr>\n<tr><td>Nominativo<\/td><td>templ<b>um<\/b><\/td><td>templ<b>a<\/b><\/td><\/tr>\n<tr><td>Vocativo<\/td><td>templ<b>um<\/b><\/td><td>templ<b>a<\/b><\/td><\/tr>\n<tr><td>Acusativo<\/td><td>templ<b>um<\/b><\/td><td>templ<b>a<\/b><\/td><\/tr>\n<tr><td>Genitivo<\/td><td>templ<b>i<\/b><\/td><td>templ<b>orum<\/b><\/td><\/tr>\n<tr><td>Dativo<\/td><td>templ<b>o<\/b><\/td><td>templ<b>is<\/b><\/td><\/tr>\n<tr><td>Ablativo<\/td><td>templ<b>o<\/b><\/td><td>templ<b>is<\/b><\/td><\/tr>\n<\/table>\n<p>Do genitivo em diante, é igual a <i>dominus<\/i>. A diferença está nos três primeiros casos.<\/p>\n<h4>A regra dos neutros — vale para todas as declinações<\/h4>\n<ul>\n<li><b>Nominativo, vocativo e acusativo são sempre iguais<\/b>, no singular e no plural.<\/li>\n<li><b>No plural, esses três casos terminam em -a.<\/b><\/li>\n<\/ul>\n<p>Duas consequências práticas:<\/p>\n<p><b>1.<\/b> Um neutro em <i>-um<\/i> pode ser sujeito ou objeto. Quem decide é o verbo e o sentido — o método de sempre.<\/p>\n<p><b>2.<\/b> <i>Verba<\/i>, <i>templa<\/i>, <i>opera<\/i> terminam em -a, mas <b>não<\/b> são femininos da 1ª declinação: são <b>plurais neutros<\/b>. É a armadilha mais comum desta lição.<\/p>\n<p>Agora se explicam duas palavras que já apareceram: <i>Verbum<\/i>, em <i>In principio erat Verbum<\/i>, e <i>saecula<\/i>, em <i>in saecula saeculorum<\/i>.<\/p>\n<p>O adjetivo também tem neutro: <i>bonus, bona, <b>bonum<\/b><\/i>. <i>Donum bonum<\/i>, \"um bom dom\"; <i>dona bona<\/i>, \"bons dons\".<\/p>\n", "vocab": [["verbum, -i (n.)", "palavra"], ["templum, -i (n.)", "templo"], ["caelum, -i (n.)", "céu"], ["regnum, -i (n.)", "reino"], ["donum, -i (n.)", "dom, presente"], ["bellum, -i (n.)", "guerra"], ["aeternus, -a, -um", "eterno"], ["maneo, -es, -ere", "permanecer"], ["autem", "mas, porém"], ["benedico, -is, -ere", "bendizer"], ["omnia (n. pl.)", "todas as coisas"]], "lectio": {"latim": "Verbum autem Domini manet in aeternum. — Benedicite, omnia opera Domini, Domino.", "ref": "1 Pedro 1,25 · Daniel 3,57 — Vulgata", "traducao": "Mas a palavra do Senhor permanece para sempre. — Todas as obras do Senhor, bendizei o Senhor.", "analise": "\n<p><b>Verbum autem Domini manet in aeternum<\/b><\/p>\n<ul>\n<li><b>Verbum<\/b> — neutro. Poderia ser nominativo ou acusativo. É o sujeito porque <i>manet<\/i> precisa de um, e é a única palavra que pode sê-lo.<\/li>\n<li><b>autem<\/b> — \"mas\". Costuma vir em segundo lugar na frase.<\/li>\n<li><b>manet<\/b> — 2ª conjugação: \"permanece\".<\/li>\n<li><b>in aeternum<\/b> — <i>in<\/i> + acusativo neutro: extensão, \"para o eterno\" — \"para sempre\". Como <i>in saecula<\/i>.<\/li>\n<\/ul>\n<p><b>Benedicite, omnia opera Domini, Domino<\/b> — o início do Cântico dos três jovens na fornalha, rezado nas Laudes.<\/p>\n<ul>\n<li><b>Benedicite<\/b> — imperativo plural: \"bendizei!\".<\/li>\n<li><b>omnia opera<\/b> — <b>vocativo plural neutro<\/b>, em -a: as obras são chamadas. <i>Opera<\/i> vem de <i>opus, operis<\/i>, da 3ª declinação — e a regra do -a continua valendo.<\/li>\n<li><b>Domini<\/b> — genitivo: \"do Senhor\". <b>Domino<\/b> — dativo: <i>benedicere<\/i> é, ao pé da letra, \"dizer bem <i>a<\/i> alguém\".<\/li>\n<\/ul>\n"}, "exercicios": [{"q": "Nominativo plural de templum:", "aceitas": ["templa"], "e": "Plural neutro em -a."}, {"q": "Acusativo singular de regnum:", "aceitas": ["regnum"], "e": "Nos neutros, acusativo igual ao nominativo."}, {"q": "Genitivo plural de verbum:", "aceitas": ["verborum"], "e": "Do genitivo em diante, igual a dominus."}, {"q": "'Bons dons', como sujeito:", "aceitas": ["dona bona", "bona dona"], "e": "Substantivo e adjetivo no neutro plural."}, {"q": "Traduza: in aeternum", "aceitas": ["para sempre", "eternamente", "para o eterno"], "e": "In + acusativo: extensão no tempo."}], "teste": [{"q": "Nos neutros, nominativo, vocativo e acusativo são:", "o": ["Sempre diferentes entre si.", "Iguais.", "Iguais apenas no plural.", "Iguais apenas no singular."], "c": 1, "e": "No singular e no plural. É a regra geral dos neutros."}, {"q": "O nominativo plural neutro termina em:", "o": ["-i", "-ae", "-a", "-os"], "c": 2, "e": "-i e -os são do masculino da 2ª; -ae, do feminino da 1ª."}, {"q": "Nominativo plural de templum:", "o": ["templi", "templos", "templae", "templa"], "c": 3, "e": "Templi seria o plural de um masculino, que templum não é."}, {"q": "Acusativo singular de caelum:", "o": ["caelum", "caelam", "caeli", "caelo"], "c": 0, "e": "Neutro: acusativo igual ao nominativo."}, {"q": "Em 'Verbum Domini manet', verbum é o sujeito porque:", "o": ["Termina em -um.", "É a única palavra que pode ser sujeito de manet.", "Vem no começo, que é o lugar do sujeito.", "É uma palavra neutra."], "c": 1, "e": "Verbum poderia ser acusativo. Quem decide é o verbo: manet precisa de um sujeito no singular."}, {"q": "A forma verba é:", "o": ["Um feminino singular da 1ª declinação.", "Um ablativo singular.", "Um plural neutro.", "Um genitivo."], "c": 2, "e": "Termina em -a, mas vem de verbum: é plural neutro."}, {"q": "'In aeternum' indica:", "o": ["Lugar onde se está, sem movimento algum.", "Posse.", "Companhia.", "Extensão no tempo: 'para sempre'."], "c": 3, "e": "In + acusativo exprime movimento ou extensão, como in saecula."}, {"q": "Em 'Benedicite, omnia opera Domini', opera está no:", "o": ["Vocativo plural.", "Nominativo singular feminino.", "Acusativo singular.", "Ablativo singular."], "c": 0, "e": "As obras são chamadas a bendizer. Plural neutro em -a."}, {"q": "A regra do plural neutro em -a vale:", "o": ["Somente nos neutros da 2ª declinação.", "Em todas as declinações.", "Só na 1ª declinação.", "Só no nominativo."], "c": 1, "e": "Opera, de opus, é da 3ª declinação e segue a mesma regra."}, {"q": "A forma correta para concordar com donum é:", "o": ["donum bonus", "donum bona", "donum bonum", "donum boni"], "c": 2, "e": "Donum é neutro: o adjetivo vai ao neutro, bonum."}], "modulo": "Módulo II — Leitura"}, {"id": "L12", "titulo": "O futuro", "subtitulo": "O que ainda vai acontecer", "gramatica": "\n<p>O futuro tem <b>duas formações<\/b>, conforme a conjugação.<\/p>\n<table>\n<tr><th>1ª e 2ª: <b>-bo, -bis, -bit...<\/b><\/th><th>3ª e 4ª: <b>-am, -es, -et...<\/b><\/th><\/tr>\n<tr><td>ama<b>bo<\/b> — amarei<\/td><td>leg<b>am<\/b> — lerei<\/td><\/tr>\n<tr><td>ama<b>bis<\/b> — amarás<\/td><td>leg<b>es<\/b> — lerás<\/td><\/tr>\n<tr><td>ama<b>bit<\/b> — amará<\/td><td>leg<b>et<\/b> — lerá<\/td><\/tr>\n<tr><td>ama<b>bimus<\/b> — amaremos<\/td><td>leg<b>emus<\/b> — leremos<\/td><\/tr>\n<tr><td>ama<b>bitis<\/b> — amareis<\/td><td>leg<b>etis<\/b> — lereis<\/td><\/tr>\n<tr><td>ama<b>bunt<\/b> — amarão<\/td><td>leg<b>ent<\/b> — lerão<\/td><\/tr>\n<\/table>\n<p>Na 4ª: <i>audiam, audies, audiet...<\/i><\/p>\n<h4>O futuro de sum<\/h4>\n<p><b>ero, eris, erit, erimus, eritis, erunt<\/b> — serei, serás, será...<\/p>\n<p>Atenção a <i>erunt<\/i> (\"serão\") e <i>erant<\/i> (\"eram\"): uma vogal separa o futuro do imperfeito.<\/p>\n<h4>A armadilha<\/h4>\n<p>Na 3ª conjugação, o futuro usa um <b>-e-<\/b>: <i>leges<\/i>, \"lerás\". Isso se parece com o <b>presente<\/b> da 2ª: <i>vides<\/i>, \"vês\". Por isso é preciso saber a conjugação do verbo antes de traduzir — de novo, o dicionário em pares resolve.<\/p>\n<p>E um reencontro: <i>deerit<\/i>, no salmo da lição 6, é o futuro de <i>desum<\/i> — <i>de<\/i> + <i>erit<\/i>, \"faltará\".<\/p>\n", "vocab": [["libero, -as, -are", "libertar"], ["cognosco, -is, -ere", "conhecer"], ["veritas, -atis", "verdade"], ["vos", "vós; vos"], ["ero, eris, erit...", "serei, serás, será"], ["venio, -is, -ire", "vir"], ["dies, diei", "dia"], ["servo, -as, -are", "guardar, salvar"], ["videbo", "verei"], ["audiam", "ouvirei"]], "lectio": {"latim": "Et cognoscetis veritatem, et veritas liberabit vos.", "ref": "João 8,32 — Vulgata", "traducao": "E conhecereis a verdade, e a verdade vos libertará.", "analise": "\n<p>Um versículo, <b>as duas formações do futuro<\/b>:<\/p>\n<ul>\n<li><b>cognoscetis<\/b> — <i>cognosco<\/i>, 3ª conjugação: futuro em <b>-e-<\/b>, 2ª pessoa do plural. \"Conhecereis.\"<\/li>\n<li><b>liberabit<\/b> — <i>libero<\/i>, 1ª conjugação: futuro em <b>-bi-<\/b>, 3ª do singular. \"Libertará.\"<\/li>\n<li><b>veritatem<\/b> — acusativo singular da 3ª declinação. Repare no <b>-m<\/b>: a marca do acusativo desde a lição 2.<\/li>\n<li><b>veritas<\/b> — nominativo: o sujeito de <i>liberabit<\/i>.<\/li>\n<li><b>vos<\/b> — pronome no acusativo: \"vos\". É o objeto.<\/li>\n<\/ul>\n<p>A palavra <i>veritas<\/i> aparece duas vezes, em dois casos: primeiro objeto (conhecereis <i>a verdade<\/i>), depois sujeito (<i>a verdade<\/i> libertará). A mesma coisa, duas funções — o latim marca a diferença; o português, só pela posição.<\/p>\n"}, "exercicios": [{"q": "'Eu amarei' (amo):", "aceitas": ["amabo"], "e": "1ª conjugação: -bo."}, {"q": "'Eles verão' (video):", "aceitas": ["videbunt"], "e": "2ª conjugação: -bunt."}, {"q": "'Ele lerá' (lego):", "aceitas": ["leget"], "e": "3ª conjugação: futuro em -e-."}, {"q": "'Tu serás' (sum):", "aceitas": ["eris"], "e": "Ero, eris, erit..."}, {"q": "'Nós ouviremos' (audio):", "aceitas": ["audiemus"], "e": "4ª conjugação: futuro em -e-."}], "teste": [{"q": "O futuro da 1ª e da 2ª conjugações termina em:", "o": ["-am, -es, -et", "-bo, -bis, -bit", "-bam, -bas, -bat", "-i, -isti, -it"], "c": 1, "e": "-am, -es, -et é o futuro da 3ª e 4ª; -bam é o imperfeito; -i, -isti é o perfeito."}, {"q": "O futuro da 3ª e da 4ª conjugações termina em:", "o": ["-bo, -bis, -bit", "-bam, -bas, -bat", "-am, -es, -et", "-o, -s, -t"], "c": 2, "e": "Leg-am, leg-es, leg-et."}, {"q": "'Eles amarão':", "o": ["amabant", "amant", "amabitis", "amabunt"], "c": 3, "e": "Amabant é o imperfeito, 'amavam' — a troca mais comum."}, {"q": "'Ele lerá' (lego):", "o": ["leget", "legebit", "legit", "legebat"], "c": 0, "e": "Lego é da 3ª: futuro em -e-. Legebit mistura duas formações."}, {"q": "Futuro de sum, 3ª pessoa do plural:", "o": ["erant", "erunt", "sunt", "erit"], "c": 1, "e": "Erant é o imperfeito, 'eram'."}, {"q": "Na 3ª conjugação, leges significa:", "o": ["Lês.", "Lias.", "Lerás.", "Leste."], "c": 2, "e": "Parece o presente da 2ª conjugação, mas lego é da 3ª: é futuro."}, {"q": "Em João 8,32, cognoscetis está no:", "o": ["Presente.", "Imperfeito.", "Imperativo.", "Futuro."], "c": 3, "e": "Cognosco é da 3ª conjugação: o -e- marca o futuro. 'Conhecereis.'"}, {"q": "Em João 8,32, liberabit está no futuro da 1ª conjugação, marcado por:", "o": ["-bi-", "-eba-", "-ba-", "-e-"], "c": 0, "e": "Libera-bi-t. O -ba- seria o imperfeito."}, {"q": "Veritatem está no acusativo. A marca é:", "o": ["O -e- antes do fim.", "O -m final.", "O -t- do meio.", "A vogal inicial."], "c": 1, "e": "O acusativo singular em -m, reconhecível em quase todas as declinações."}, {"q": "Deerit, no Salmo 22 da lição 6, é:", "o": ["Presente de desum.", "Perfeito de desum.", "Futuro de desum: de + erit.", "Imperativo de desum, uma ordem."], "c": 2, "e": "'Nada me faltará' — o futuro de sum, com o prefixo de-."}], "modulo": "Módulo II — Leitura"}, {"id": "L13", "titulo": "A terceira declinação", "subtitulo": "rex, pater, nomen", "gramatica": "\n<p>A <b>terceira declinação<\/b> é a mais numerosa e a mais variada. Reconhece-se pelo genitivo singular em <b>-is<\/b>.<\/p>\n<p><b>Aqui o genitivo é indispensável.<\/b> O nominativo muda muito, e o radical que se usa em todos os outros casos só aparece no genitivo: <i>rex, <b>reg<\/b>is<\/i>; <i>pater, <b>patr<\/b>is<\/i>; <i>nomen, <b>nomin<\/b>is<\/i>; <i>lux, <b>luc<\/b>is<\/i>.<\/p>\n<table>\n<tr><th>Caso<\/th><th>rex (m.)<\/th><th>plural<\/th><th>nomen (n.)<\/th><th>plural<\/th><\/tr>\n<tr><td>Nom.<\/td><td>rex<\/td><td>reg<b>es<\/b><\/td><td>nomen<\/td><td>nomin<b>a<\/b><\/td><\/tr>\n<tr><td>Voc.<\/td><td>rex<\/td><td>reg<b>es<\/b><\/td><td>nomen<\/td><td>nomin<b>a<\/b><\/td><\/tr>\n<tr><td>Acus.<\/td><td>reg<b>em<\/b><\/td><td>reg<b>es<\/b><\/td><td>nomen<\/td><td>nomin<b>a<\/b><\/td><\/tr>\n<tr><td>Gen.<\/td><td>reg<b>is<\/b><\/td><td>reg<b>um<\/b><\/td><td>nomin<b>is<\/b><\/td><td>nomin<b>um<\/b><\/td><\/tr>\n<tr><td>Dat.<\/td><td>reg<b>i<\/b><\/td><td>reg<b>ibus<\/b><\/td><td>nomin<b>i<\/b><\/td><td>nomin<b>ibus<\/b><\/td><\/tr>\n<tr><td>Abl.<\/td><td>reg<b>e<\/b><\/td><td>reg<b>ibus<\/b><\/td><td>nomin<b>e<\/b><\/td><td>nomin<b>ibus<\/b><\/td><\/tr>\n<\/table>\n<p>O neutro segue a regra da lição 11: nominativo, vocativo e acusativo iguais, e plural em <b>-a<\/b>.<\/p>\n<h4>Muita coisa agora se explica<\/h4>\n<p><i>Veritas<\/i> e <i>veritatem<\/i> (lições 1 e 12) · <i>Patri<\/i> no Glória, dativo · <i>Patris<\/i> no sinal da cruz, genitivo · <i>in nomine<\/i>, ablativo · <i>lux, lucis<\/i>. Eram todas da 3ª declinação.<\/p>\n", "vocab": [["rex, regis (m.)", "rei"], ["pater, patris (m.)", "pai"], ["mater, matris (f.)", "mãe"], ["homo, hominis (m.)", "homem, ser humano"], ["lux, lucis (f.)", "luz"], ["nomen, nominis (n.)", "nome"], ["corpus, corporis (n.)", "corpo"], ["virgo, virginis (f.)", "virgem"], ["caro, carnis (f.)", "carne"], ["sanctus, -a, -um", "santo"]], "lectio": {"latim": "Rex regum et Dominus dominantium. — Sancta Maria, Mater Dei.", "ref": "Apocalipse 19,16 · a Ave-Maria", "traducao": "Rei dos reis e Senhor dos senhores. — Santa Maria, Mãe de Deus.", "analise": "\n<p><b>Rex regum et Dominus dominantium<\/b> — o título escrito no manto de Cristo vitorioso, no Apocalipse.<\/p>\n<ul>\n<li><b>Rex<\/b> — nominativo singular da 3ª declinação.<\/li>\n<li><b>regum<\/b> — <b>genitivo plural<\/b>: \"dos reis\". Compare as três terminações de genitivo plural: <i>-arum<\/i> (1ª), <i>-orum<\/i> (2ª), <i>-um<\/i> (3ª).<\/li>\n<li><b>dominantium<\/b> — \"dos que dominam\", um particípio. Não precisa conjugar: basta reconhecer o genitivo plural.<\/li>\n<\/ul>\n<p>\"Rei dos reis\" é o mesmo superlativo hebraico de \"séculos dos séculos\": o rei acima de todos os reis.<\/p>\n<p><b>Sancta Maria, Mater Dei<\/b> — a segunda metade da Ave-Maria, que o Módulo I não conseguia ler inteira.<\/p>\n<ul>\n<li><b>Mater<\/b> — <b>vocativo<\/b> da 3ª declinação, igual ao nominativo. Maria é chamada.<\/li>\n<li><b>Sancta<\/b> — adjetivo feminino, concorda com <i>Maria<\/i>.<\/li>\n<li><b>Dei<\/b> — genitivo: \"de Deus\".<\/li>\n<\/ul>\n"}, "exercicios": [{"q": "Genitivo singular de rex:", "aceitas": ["regis"], "e": "O radical reg- só aparece no genitivo."}, {"q": "Acusativo singular de pater:", "aceitas": ["patrem"], "e": "Acusativo singular em -em."}, {"q": "Genitivo plural de rex:", "aceitas": ["regum"], "e": "Genitivo plural da 3ª em -um."}, {"q": "Dativo singular de pater:", "aceitas": ["patri"], "e": "Como no Glória: Gloria Patri."}, {"q": "Nominativo plural de nomen:", "aceitas": ["nomina"], "e": "Neutro: plural em -a."}], "teste": [{"q": "A 3ª declinação reconhece-se pelo genitivo singular em:", "o": ["-ae", "-i", "-is", "-us"], "c": 2, "e": "-ae é da 1ª; -i, da 2ª."}, {"q": "Na 3ª declinação é indispensável aprender o genitivo porque:", "o": ["O radical dos outros casos só aparece nele.", "O nominativo é sempre igual ao genitivo.", "A 3ª declinação não tem nominativo.", "O genitivo é o caso mais usado nas frases latinas."], "c": 0, "e": "Rex, regis: sem o genitivo não se sabe que o radical é reg-."}, {"q": "Acusativo singular de rex:", "o": ["rexem", "regem", "regis", "rege"], "c": 1, "e": "Radical do genitivo + -em. Rege é o ablativo."}, {"q": "O genitivo plural da 3ª declinação termina em:", "o": ["-orum", "-arum", "-is", "-um"], "c": 3, "e": "-arum e -orum são da 1ª e da 2ª."}, {"q": "Dativo e ablativo plural da 3ª terminam em:", "o": ["-ibus", "-is", "-um", "-es"], "c": 0, "e": "Regibus, nominibus. O -is é da 1ª e da 2ª."}, {"q": "Em 'Gloria Patri', Patri é:", "o": ["Genitivo de pater.", "Nominativo de pater.", "Dativo de pater.", "Ablativo de pater."], "c": 2, "e": "Glória ao Pai: dativo. O genitivo seria Patris, como no sinal da cruz."}, {"q": "Em 'In nomine Patris', nomine é:", "o": ["Nominativo de nomen.", "Ablativo de nomen.", "Genitivo de nomen.", "Acusativo de nomen."], "c": 1, "e": "In + ablativo. O radical nomin- vem do genitivo."}, {"q": "'Rex regum' significa:", "o": ["O rei e os reis.", "O rei é dos reis.", "Rei dos reis.", "Os reis do rei."], "c": 2, "e": "Regum é genitivo plural: 'dos reis'."}, {"q": "A forma nomina é:", "o": ["Nominativo ou acusativo plural.", "Genitivo singular.", "Feminino singular da 1ª declinação.", "Ablativo plural."], "c": 0, "e": "Nomen é neutro: plural em -a."}, {"q": "Em 'Sancta Maria, Mater Dei', Mater está no:", "o": ["Genitivo.", "Acusativo.", "Dativo.", "Vocativo."], "c": 3, "e": "Maria é chamada. Na 3ª declinação, vocativo igual ao nominativo."}], "modulo": "Módulo II — Leitura"}, {"id": "L14", "titulo": "Os pronomes pessoais", "subtitulo": "ego, tu, nos, vos", "gramatica": "\n<p>Os pronomes pessoais se declinam como os nomes. Como o verbo já traz a pessoa na terminação, o pronome sujeito quase nunca aparece — quando aparece, é para dar <b>ênfase<\/b>: <i>Ego sum via<\/i>, \"<b>Eu<\/b> sou o caminho\".<\/p>\n<table>\n<tr><th>Caso<\/th><th>eu<\/th><th>tu<\/th><th>nós<\/th><th>vós<\/th><\/tr>\n<tr><td>Nom.<\/td><td>ego<\/td><td>tu<\/td><td>nos<\/td><td>vos<\/td><\/tr>\n<tr><td>Acus.<\/td><td>me<\/td><td>te<\/td><td>nos<\/td><td>vos<\/td><\/tr>\n<tr><td>Gen.<\/td><td>mei<\/td><td>tui<\/td><td>nostri<\/td><td>vestri<\/td><\/tr>\n<tr><td>Dat.<\/td><td>mihi<\/td><td>tibi<\/td><td>nobis<\/td><td>vobis<\/td><\/tr>\n<tr><td>Abl.<\/td><td>me<\/td><td>te<\/td><td>nobis<\/td><td>vobis<\/td><\/tr>\n<\/table>\n<p>Repare: <i>nos<\/i> e <i>vos<\/i> servem de nominativo e de acusativo. Como sempre, o verbo decide.<\/p>\n<p>Com <i>cum<\/i>, a preposição vem depois: <b>mecum, tecum, nobiscum, vobiscum<\/b>.<\/p>\n<h4>Os possessivos<\/h4>\n<p><b>meus, tuus, noster, vester<\/b> — \"meu, teu, nosso, vosso\". São adjetivos: concordam em gênero, número e caso com o que se possui, não com o possuidor. <i>Spiritu tuo<\/i>, \"com o teu espírito\": <i>tuo<\/i> está no ablativo porque <i>spiritu<\/i> está.<\/p>\n", "vocab": [["ego, tu", "eu, tu"], ["nos, vos", "nós, vós"], ["mihi, tibi", "a mim, a ti"], ["nobis, vobis", "a nós, a vós"], ["meus, tuus", "meu, teu"], ["noster, vester", "nosso, vosso"], ["spiritus, -us (m.)", "espírito"], ["tollo, -is, -ere", "tirar, levar"], ["peccatum, -i (n.)", "pecado"], ["miserere", "tem piedade"]], "lectio": {"latim": "Dominus vobiscum. — Et cum spiritu tuo. — Agnus Dei, qui tollis peccata mundi, miserere nobis.", "ref": "A saudação da Missa · o Agnus Dei", "traducao": "O Senhor esteja convosco. — E com o teu espírito. — Cordeiro de Deus, que tiras os pecados do mundo, tem piedade de nós.", "analise": "\n<p><b>Dominus vobiscum — Et cum spiritu tuo<\/b><\/p>\n<ul>\n<li><b>vobiscum<\/b> — <i>cum<\/i> + <i>vobis<\/i>, ablativo: \"convosco\". O verbo está subentendido — \"esteja\".<\/li>\n<li><b>cum spiritu tuo<\/b> — <i>cum<\/i> + ablativo. <i>Spiritus<\/i> é da 4ª declinação; <i>tuo<\/i> concorda com ele.<\/li>\n<\/ul>\n<p><b>Agnus Dei, qui tollis peccata mundi, miserere nobis<\/b><\/p>\n<ul>\n<li><b>Agnus<\/b> — vocativo: o Cordeiro é chamado. <b>Dei<\/b>, genitivo.<\/li>\n<li><b>qui tollis<\/b> — \"que tiras\": <i>tollis<\/i> está na 2ª pessoa, porque se fala diretamente ao Cordeiro.<\/li>\n<li><b>peccata<\/b> — acusativo plural <b>neutro<\/b>, em -a: \"os pecados\". A regra da lição 11.<\/li>\n<li><b>mundi<\/b> — genitivo: \"do mundo\".<\/li>\n<li><b>miserere nobis<\/b> — \"tem piedade de nós\". <i>Nobis<\/i> é o pronome no dativo, como se usa no latim da Igreja.<\/li>\n<\/ul>\n<p>Em português a Missa diz \"tirais\" e \"tende piedade\", no tratamento de reverência — como o \"convosco\" da Ave-Maria. O latim, mais direto, usa o \"tu\".<\/p>\n"}, "exercicios": [{"q": "'A mim' (dativo):", "aceitas": ["mihi"], "e": "Dativo de ego."}, {"q": "'Contigo':", "aceitas": ["tecum"], "e": "Cum + te, com a preposição depois."}, {"q": "'Conosco':", "aceitas": ["nobiscum"], "e": "Cum + nobis."}, {"q": "'Nós', como sujeito:", "aceitas": ["nos"], "e": "Nominativo de nós — igual ao acusativo."}, {"q": "'Teu', concordando com spiritu (ablativo):", "aceitas": ["tuo"], "e": "O possessivo concorda com o que se possui."}], "teste": [{"q": "Dativo de ego:", "o": ["me", "mihi", "mei", "tibi"], "c": 1, "e": "Me é acusativo ou ablativo; mei, genitivo; tibi é de tu."}, {"q": "Acusativo de tu:", "o": ["tibi", "tui", "te", "tu"], "c": 2, "e": "Tibi é dativo; tui, genitivo."}, {"q": "A forma vobiscum é:", "o": ["O genitivo de vos.", "Um verbo.", "Um advérbio de lugar.", "Cum + vobis."], "c": 3, "e": "Com os pronomes pessoais, cum vem depois e se junta."}, {"q": "A forma nos pode ser:", "o": ["Nominativo ou acusativo.", "Somente nominativo, nunca objeto.", "Genitivo.", "Dativo."], "c": 0, "e": "Como vos. O dativo seria nobis."}, {"q": "Em 'Dominus vobiscum', o verbo:", "o": ["É vobiscum.", "Está subentendido.", "É Dominus.", "Está no futuro do indicativo."], "c": 1, "e": "Entende-se 'esteja': o Senhor esteja convosco."}, {"q": "Em 'cum spiritu tuo', spiritu está no:", "o": ["Nominativo, porque é o sujeito.", "Genitivo.", "Ablativo, por causa de cum.", "Acusativo."], "c": 2, "e": "Cum rege ablativo."}, {"q": "O possessivo tuo concorda com:", "o": ["O possuidor, que é a pessoa tu.", "O verbo da frase.", "Nada: é invariável.", "Spiritu, o que é possuído."], "c": 3, "e": "Possessivos concordam com a coisa possuída."}, {"q": "Em 'qui tollis peccata mundi', peccata é:", "o": ["Acusativo plural neutro.", "Feminino singular.", "Ablativo singular.", "Genitivo plural: 'dos pecados'."], "c": 0, "e": "Peccatum é neutro: o plural termina em -a."}, {"q": "Por que tollis está na 2ª pessoa?", "o": ["Porque o sujeito é 'nós'.", "Porque se fala diretamente ao Cordeiro.", "Porque é um imperativo.", "Porque concorda com peccata, o objeto."], "c": 1, "e": "Agnus Dei é vocativo: o Cordeiro é chamado, e o verbo se dirige a ele."}, {"q": "Em 'Ego sum via', o pronome ego aparece porque:", "o": ["O verbo latino não indica a pessoa.", "É obrigatório com sum.", "Dá ênfase: 'eu sou'.", "Está no vocativo."], "c": 2, "e": "Sum já diz 'eu sou'. O pronome expresso reforça."}], "modulo": "Módulo II — Leitura"}, {"id": "L15", "titulo": "O pretérito perfeito", "subtitulo": "O que aconteceu e terminou", "gramatica": "\n<p>O perfeito narra a ação <b>concluída<\/b>: \"amei\", \"vi\", \"li\". É o contrário do imperfeito, que narra o que <i>durava<\/i>.<\/p>\n<p style=\"text-align:center\"><i>Servus laborabat<\/i> — o escravo trabalhava.<br><i>Servus laboravit<\/i> — o escravo trabalhou.<\/p>\n<h4>As desinências são as mesmas para todos<\/h4>\n<table>\n<tr><td>-<b>i<\/b><\/td><td>-<b>imus<\/b><\/td><\/tr>\n<tr><td>-<b>isti<\/b><\/td><td>-<b>istis<\/b><\/td><\/tr>\n<tr><td>-<b>it<\/b><\/td><td>-<b>erunt<\/b><\/td><\/tr>\n<\/table>\n<h4>O que varia é o tema<\/h4>\n<p>E o tema do perfeito <b>precisa ser decorado<\/b> com cada verbo. Por isso o dicionário dá quatro formas: <i>amo, amas, amare, <b>amavi<\/b><\/i>.<\/p>\n<ul>\n<li>1ª conjugação, quase sempre <b>-avi<\/b>: <i>amavi, laudavi, habitavi<\/i>.<\/li>\n<li>4ª, quase sempre <b>-ivi<\/b>: <i>audivi<\/i> — mas <i>venio<\/i> faz <b>veni<\/b>.<\/li>\n<li>2ª e 3ª, muito variadas: <i>video → vidi<\/i>, <i>moneo → monui<\/i>, <i>lego → legi<\/i>, <i>dico → dixi<\/i>, <i>facio → feci<\/i>, <i>vinco → vici<\/i>.<\/li>\n<\/ul>\n<p>O perfeito de <i>sum<\/i>: <b>fui, fuisti, fuit, fuimus, fuistis, fuerunt<\/b> — fui, foste, foi...<\/p>\n", "vocab": [["amavi", "amei"], ["vidi", "vi"], ["legi", "li"], ["dixi", "disse"], ["veni", "vim"], ["vici (vinco)", "venci"], ["feci (facio)", "fiz"], ["fui", "fui"], ["habito, -as, -are, habitavi", "habitar"], ["creo, -as, -are, creavi", "criar"]], "lectio": {"latim": "Et Verbum caro factum est, et habitavit in nobis. — Veni, vidi, vici.", "ref": "João 1,14 — Vulgata · Júlio César, 47 a.C.", "traducao": "E o Verbo se fez carne, e habitou entre nós. — Vim, vi, venci.", "analise": "\n<p><b>Et Verbum caro factum est, et habitavit in nobis<\/b><\/p>\n<ul>\n<li><b>Verbum<\/b> — nominativo neutro: o sujeito.<\/li>\n<li><b>caro<\/b> — nominativo da 3ª declinação (<i>caro, carnis<\/i>): predicativo, \"carne\".<\/li>\n<li><b>factum est<\/b> — perfeito passivo: \"foi feito\", \"se fez\". A voz passiva fica para depois; por ora, basta reconhecer.<\/li>\n<li><b>habitavit<\/b> — perfeito da 1ª conjugação, 3ª do singular: \"habitou\".<\/li>\n<li><b>in nobis<\/b> — <i>in<\/i> + ablativo do pronome: \"entre nós\".<\/li>\n<\/ul>\n<p><b>Compare com a lição 8.<\/b> O Evangelho de João começa com <i>erat<\/i>, imperfeito: o Verbo <b>era<\/b>, desde sempre. No versículo 14 muda para o perfeito: o Verbo <b>se fez<\/b> carne e <b>habitou<\/b> — um acontecimento, num momento da história. A mudança de tempo verbal separa o que é eterno do que aconteceu no tempo: é a Encarnação.<\/p>\n<p><b>Veni, vidi, vici<\/b> — a mensagem de Júlio César ao Senado depois de uma vitória relâmpago. Três perfeitos de três conjugações: <i>venio<\/i> (4ª), <i>video<\/i> (2ª), <i>vinco<\/i> (3ª), todos na 1ª pessoa. Latim secular, para mostrar que a gramática é a mesma.<\/p>\n"}, "exercicios": [{"q": "'Eu amei' (amo):", "aceitas": ["amavi"], "e": "1ª conjugação: -avi."}, {"q": "'Ele viu' (video, vidi):", "aceitas": ["vidit"], "e": "Tema vid- + -it."}, {"q": "'Eles vieram' (venio, veni):", "aceitas": ["venerunt"], "e": "Tema ven- + -erunt."}, {"q": "'Tu foste' (sum):", "aceitas": ["fuisti"], "e": "Fui, fuisti, fuit..."}, {"q": "'Ele habitou':", "aceitas": ["habitavit"], "e": "Como em João 1,14."}], "teste": [{"q": "O pretérito perfeito indica:", "o": ["Ação que durava no passado.", "Ação concluída no passado.", "Ação futura.", "Uma ordem."], "c": 1, "e": "A ação que durava é o imperfeito."}, {"q": "A 3ª pessoa do plural do perfeito termina em:", "o": ["-unt", "-nt", "-bant", "-erunt"], "c": 3, "e": "Amaverunt, viderunt, venerunt."}, {"q": "'Eu vi':", "o": ["video", "videbam", "vidi", "videbo"], "c": 2, "e": "Video é presente; videbam, imperfeito; videbo, futuro."}, {"q": "'Ele trabalhou':", "o": ["laboravit", "laborabat", "laborat", "laborabit"], "c": 0, "e": "Laborabat é 'trabalhava'; laborabit, 'trabalhará'."}, {"q": "Perfeito de sum, 1ª pessoa do singular:", "o": ["eram", "fui", "ero", "sum"], "c": 1, "e": "Eram é imperfeito; ero, futuro."}, {"q": "A diferença entre laborabat e laboravit é:", "o": ["Trabalhava e trabalhou.", "Trabalha e trabalhou.", "Trabalhou e trabalhará.", "Não há diferença de sentido entre elas."], "c": 0, "e": "Imperfeito é duração; perfeito, ação concluída."}, {"q": "É preciso decorar o perfeito de cada verbo porque:", "o": ["As desinências mudam a cada verbo.", "O perfeito não tem desinências.", "O tema do perfeito varia muito.", "Só existe na 1ª conjugação."], "c": 2, "e": "As desinências são fixas; o tema é que varia: vidi, legi, dixi, feci."}, {"q": "Em João 1,14, habitavit significa:", "o": ["Habitava.", "Habitará.", "Habita.", "Habitou."], "c": 3, "e": "Perfeito da 1ª conjugação: ação concluída."}, {"q": "João 1,1 usa erat, e João 1,14 usa perfeitos. A diferença mostra:", "o": ["Um erro de copista.", "O eterno e o acontecimento no tempo.", "Que o texto fala de duas pessoas diferentes.", "Nenhuma diferença de sentido."], "c": 1, "e": "O Verbo era desde sempre; e num momento da história se fez carne."}, {"q": "Veni, vidi, vici são:", "o": ["Três imperativos dirigidos ao Senado.", "Três presentes.", "Três perfeitos, 1ª pessoa.", "Três futuros."], "c": 2, "e": "Vim, vi, venci: de venio, video e vinco."}], "modulo": "Módulo II — Leitura"}, {"id": "L16", "titulo": "Leitura final: as orações", "subtitulo": "Pater Noster, Ave Maria, Salve Regina, Credo", "gramatica": "\n<p>Esta lição é de leitura. Com o que você aprendeu, dá para ler as orações da Igreja entendendo cada palavra.<\/p>\n<p>Uma forma nova aparece: o <b>subjuntivo de desejo<\/b> — <i>sanctificetur<\/i> (\"seja santificado\"), <i>adveniat<\/i> (\"venha\"), <i>fiat<\/i> (\"seja feita\"). Exprime um pedido. Não é preciso conjugá-lo: basta reconhecer que é um desejo.<\/p>\n\n<h4>Ave Maria<\/h4>\n<p><i>Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc et in hora mortis nostrae. Amen.<\/i><\/p>\n<p>Ave, Maria, cheia de graça, o Senhor é contigo. Bendita és tu entre as mulheres, e bendito o fruto do teu ventre, Jesus. Santa Maria, Mãe de Deus, roga por nós pecadores, agora e na hora da nossa morte. Amém.<\/p>\n<p class=\"sub\"><i>in mulieribus<\/i>: in + ablativo plural da 3ª · <i>ventris tui<\/i>: genitivo · <i>ora<\/i>: imperativo, \"roga\" (em português rezamos \"rogai\") · <i>pro nobis peccatoribus<\/i>: pro + ablativo · <i>mortis nostrae<\/i>: genitivo.<\/p>\n\n<h4>Salve Regina<\/h4>\n<p><i>Salve, Regina, Mater misericordiae, vita, dulcedo et spes nostra, salve. Ad te clamamus, exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria.<\/i><\/p>\n<p>Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A ti clamamos, exilados filhos de Eva. A ti suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses teus olhos misericordiosos volta para nós. E, depois deste exílio, mostra-nos Jesus, bendito fruto do teu ventre. Ó clemente, ó piedosa, ó doce Virgem Maria.<\/p>\n<p class=\"sub\"><i>Regina, Mater<\/i>: vocativos · <i>misericordiae<\/i>: genitivo · <i>ad te<\/i>: ad + acusativo · <i>lacrimarum<\/i>: genitivo plural · <i>converte, ostende<\/i>: imperativos · O latim diz \"ó doce Virgem\"; a oração em português acrescenta \"sempre\".<\/p>\n\n<h4>Credo — o Símbolo dos Apóstolos<\/h4>\n<p><i>Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.<\/i><\/p>\n<p>Creio em Deus Pai todo-poderoso, Criador do céu e da terra. E em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado, desceu à mansão dos mortos, ressuscitou ao terceiro dia, subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos. Creio no Espírito Santo, na santa Igreja católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.<\/p>\n<p class=\"sub\"><i>Credo in Deum<\/i>: in + <b>acusativo<\/b> — crer é movimento da alma em direção a Deus · <i>Creatorem<\/i>: acusativo, concordando com <i>Deum<\/i> · <i>descendit, resurrexit, ascendit<\/i>: perfeitos · <i>sedet<\/i>: presente · <i>ad dexteram<\/i>: ad + acusativo.<\/p>\n", "vocab": [["sanctificetur", "seja santificado"], ["adveniat", "venha"], ["fiat", "seja feita"], ["panis, -is (m.)", "pão"], ["quotidianus, -a, -um", "de cada dia"], ["hodie", "hoje"], ["debitum, -i (n.)", "dívida"], ["dimitto, -is, -ere", "perdoar, deixar ir"], ["tentatio, -onis (f.)", "tentação"], ["malum, -i (n.)", "mal"], ["voluntas, -atis (f.)", "vontade"]], "lectio": {"latim": "Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris. Et ne nos inducas in tentationem, sed libera nos a malo. Amen.", "ref": "Mateus 6,9-13 — a oração que Jesus ensinou", "traducao": "Pai nosso, que estás nos céus, santificado seja o teu nome. Venha o teu reino. Seja feita a tua vontade, assim no céu como na terra. O pão nosso de cada dia dá-nos hoje, e perdoa-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores. E não nos deixes cair em tentação, mas livra-nos do mal. Amém.", "analise": "\n<ul>\n<li><b>Pater noster<\/b> — vocativo da 3ª declinação: Deus é chamado. <i>Noster<\/i> concorda.<\/li>\n<li><b>qui es in caelis<\/b> — <i>es<\/i>, 2ª pessoa de <i>sum<\/i>: fala-se diretamente a Deus. <i>In caelis<\/i>: in + ablativo plural neutro.<\/li>\n<li><b>sanctificetur, adveniat, fiat<\/b> — três subjuntivos de desejo: três pedidos.<\/li>\n<li><b>nomen tuum, regnum tuum<\/b> — neutros, nominativo: são os sujeitos dos pedidos.<\/li>\n<li><b>Panem ... quotidianum<\/b> — acusativo da 3ª declinação (-em), com o adjetivo concordando.<\/li>\n<li><b>da<\/b> — imperativo de <i>do<\/i>, \"dá\". <b>nobis<\/b> — dativo: \"a nós\".<\/li>\n<li><b>dimitte<\/b> — imperativo da 3ª conjugação. <b>debita nostra<\/b> — acusativo plural neutro, em -a.<\/li>\n<li><b>dimittimus<\/b> — presente, \"perdoamos\". <b>debitoribus nostris<\/b> — dativo plural da 3ª (-ibus).<\/li>\n<li><b>ne ... inducas in tentationem<\/b> — \"não nos induzas\": <i>in<\/i> + <b>acusativo<\/b>, movimento — para dentro da tentação.<\/li>\n<li><b>libera nos a malo<\/b> — imperativo da 1ª conjugação; <i>a<\/i> + ablativo: \"do mal\".<\/li>\n<\/ul>\n<p><b>Duas diferenças em relação ao português que rezamos.<\/b> O latim, como o texto de Mateus, diz <i>debita<\/i>, \"dívidas\", e <i>debitoribus<\/i>, \"devedores\"; em português dizemos \"ofensas\" e \"a quem nos tem ofendido\" — é a mesma ideia, o pecado como uma dívida. E a ordem latina é \"como no céu, assim na terra\"; o português inverte.<\/p>\n<p>Chegou até aqui: você lê o Pai-Nosso em latim sabendo o caso de cada palavra.<\/p>\n"}, "exercicios": [{"q": "Em que caso está Pater, em 'Pater noster'?", "aceitas": ["vocativo", "no vocativo"], "e": "Deus é chamado."}, {"q": "Em que modo está da, em 'panem da nobis'?", "aceitas": ["imperativo", "no imperativo"], "e": "Imperativo de do, dare: 'dá'."}, {"q": "Em que caso está debitoribus?", "aceitas": ["dativo", "dativo plural", "no dativo"], "e": "A quem perdoamos: dativo plural da 3ª."}, {"q": "Em 'in tentationem', que caso in rege aqui?", "aceitas": ["acusativo", "no acusativo"], "e": "Movimento: para dentro da tentação."}, {"q": "Traduza: libera nos a malo", "aceitas": ["livra-nos do mal", "livra nos do mal", "livrai-nos do mal", "liberta-nos do mal"], "e": "Libera, imperativo; nos, acusativo; a malo, a + ablativo."}], "teste": [{"q": "Em 'Pater noster', Pater está no:", "o": ["Nominativo.", "Genitivo.", "Vocativo.", "Dativo."], "c": 2, "e": "Deus é chamado: vocativo."}, {"q": "Em 'qui es in caelis', caelis é:", "o": ["Ablativo plural, com in.", "Acusativo plural, indicando movimento.", "Genitivo plural.", "Nominativo plural."], "c": 0, "e": "In + ablativo: lugar onde. Caelum, neutro, faz o ablativo plural em -is."}, {"q": "Sanctificetur, adveniat e fiat estão no:", "o": ["Imperativo, porque são ordens a Deus.", "Futuro.", "Subjuntivo de desejo.", "Perfeito."], "c": 2, "e": "Exprimem pedidos: 'seja santificado', 'venha', 'seja feita'."}, {"q": "Em 'panem ... da nobis', panem está no:", "o": ["Nominativo.", "Acusativo.", "Genitivo.", "Ablativo."], "c": 1, "e": "É o objeto de da. Acusativo da 3ª em -em."}, {"q": "O latim diz debita. A palavra significa:", "o": ["Ofensas.", "Pecados graves.", "Orações.", "Dívidas."], "c": 3, "e": "Em português rezamos 'ofensas'; o texto latino, como Mateus, fala em dívidas."}, {"q": "Em 'in tentationem', in rege acusativo porque indica:", "o": ["Lugar onde já se está, sem movimento.", "Posse.", "Movimento para dentro.", "Companhia."], "c": 2, "e": "Não nos induzas para dentro da tentação."}, {"q": "Na Ave-Maria, 'ora pro nobis peccatoribus' usa pro com:", "o": ["Ablativo.", "Acusativo.", "Genitivo.", "Dativo."], "c": 0, "e": "Pro, 'por, em favor de', rege ablativo."}, {"q": "Na Salve Rainha, 'Mater misericordiae': misericordiae é:", "o": ["Dativo: 'à misericórdia'.", "Genitivo: 'de misericórdia'.", "Vocativo: a misericórdia é chamada.", "Nominativo plural."], "c": 1, "e": "Mãe de misericórdia: genitivo."}, {"q": "No Credo, 'Credo in Deum': por que in rege acusativo?", "o": ["Porque Deus é o sujeito.", "Porque indica o lugar onde Deus está.", "Por erro de tradição.", "Porque crer é ir em direção a Deus."], "c": 3, "e": "In + acusativo é movimento: a fé como movimento da alma para Deus."}, {"q": "No Credo, 'tertia die resurrexit a mortuis': resurrexit é:", "o": ["Perfeito: 'ressuscitou'.", "Presente: 'ressuscita'.", "Futuro: 'ressuscitará'.", "Imperfeito: 'ressuscitava'."], "c": 0, "e": "Ação concluída num momento: perfeito."}], "modulo": "Módulo II — Leitura"}]};
+const CL_KEY = "classica_curso_latim";
+const CL_ETAPAS = ["Gramática","Vocabulário","Lectio","Exercícios","Teste"];
+let clEst = null;
+try{ clEst = JSON.parse(localStorage.getItem(CL_KEY)||"null"); }catch(e){ clEst = null; }
+if(!clEst || typeof clEst!=="object" || !clEst.alunos) clEst = {alunos:{}, atual:null};
+let clI = null, clEtapa = 0, clTesteQ = null;
+
+function clSalvar(){ try{ localStorage.setItem(CL_KEY, JSON.stringify(clEst)); }catch(e){} }
+function clEsc(t){ return String(t==null?"":t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function clAl(){ return clEst.atual ? clEst.alunos[clEst.atual] : null; }
+function clRes(id){ const a=clAl(); return a && a.licoes ? a.licoes[id] : null; }
+function clLiberada(i){
+  if(i===0) return true;
+  const r = clRes(CURSO_LATIM.licoes[i-1].id);
+  return !!(r && r.aprovado);
+}
+
+function abrirCursoLatim(){ show("cursoLatim"); clEntrada(); window.scrollTo(0,0); }
+
+function clEntrada(){
+  clI = null;
+  const nomes = Object.keys(clEst.alunos).sort((a,b)=>a.localeCompare(b,"pt"));
+  let h = '<div class="card"><h3 style="margin-top:0">Quem vai estudar?</h3>';
+  if(nomes.length){
+    h += '<div class="cl-alunos">' + nomes.map(n =>
+      `<button class="${n===clEst.atual?'gold':'gray'}" data-n="${clEsc(n)}" onclick="clTrocar(this.dataset.n)">${clEsc(n)}</button>`
+    ).join("") + '</div>';
+  } else {
+    h += '<p class="sub">Cada aluno tem o seu progresso. Escreva o nome para começar.</p>';
+  }
+  h += '<div style="display:flex;gap:8px;margin-top:10px"><input id="clNome" placeholder="Nome do aluno" style="flex:1" maxlength="30">'
+     + '<button class="green" style="width:auto" onclick="clNovo()">＋ Adicionar</button></div></div>';
+  if(clAl()) h += clHojeHTML() + clTrilhaHTML();
+  document.getElementById("clBox").innerHTML = h;
+}
+
+function clNovo(){
+  const n = (document.getElementById("clNome").value||"").trim();
+  if(!n) return;
+  if(!clEst.alunos[n]) clEst.alunos[n] = {licoes:{}, criado:new Date().toISOString()};
+  clEst.atual = n; clSalvar(); clEntrada();
+}
+function clTrocar(n){ if(clEst.alunos[n]){ clEst.atual = n; clSalvar(); clEntrada(); } }
+
+function clTrilhaHTML(){
+  const L = CURSO_LATIM.licoes;
+  const feitas = L.filter(l => { const r=clRes(l.id); return r && r.aprovado; }).length;
+  let h = `<div class="card"><h3 style="margin-top:0">A trilha de ${clEsc(clEst.atual)}</h3>`
+        + `<p class="sub">${feitas} de ${L.length} lições concluídas</p>`;
+  let mod = null;
+  L.forEach((l,i) => {
+    if(l.modulo !== mod){ mod = l.modulo; h += `<h4 class="cl-modulo">${clEsc(mod)}</h4>`; }
+    const r = clRes(l.id), lib = clLiberada(i);
+    const ico = (r && r.aprovado) ? "✔️" : (lib ? "▶️" : "🔒");
+    const nota = (r && r.melhor!=null) ? `<span class="tag">melhor: ${r.melhor}/${l.teste.length}</span>` : "";
+    h += `<div class="cl-linha ${lib?'':'bloq'}"><div class="cl-ico">${ico}</div>`
+       + `<div class="cl-txt"><b>${i+1}. ${clEsc(l.titulo)}</b> ${nota}<div class="sub">${clEsc(l.subtitulo)}</div></div>`
+       + (lib ? `<button class="${r&&r.aprovado?'gray':'gold'}" onclick="clAbrir(${i})">${r&&r.aprovado?'Rever':'Abrir'}</button>` : '')
+       + `</div>`;
+  });
+  h += `<button class="gray" onclick="clRelatorio()">📋 Copiar relatório de ${clEsc(clEst.atual)}</button></div>`;
+  return h;
+}
+
+function clAbrir(i){ if(!clLiberada(i)) return; clI=i; clEtapa=0; clTesteQ=null; clRender(); }
+function clIr(e){ clEtapa=e; if(e!==4) clTesteQ=null; clRender(); }
+
+function clRender(){
+  const l = CURSO_LATIM.licoes[clI];
+  let h = `<div class="card"><button class="gray" onclick="clEntrada()">← Trilha</button>`
+        + `<h3 style="margin:10px 0 2px">${clI+1}. ${clEsc(l.titulo)}</h3><div class="sub">${clEsc(l.subtitulo)}</div>`
+        + '<div class="cl-pills">' + CL_ETAPAS.map((n,k)=>
+            `<button class="${k===clEtapa?'gold':'gray'}" onclick="clIr(${k})">${k+1}. ${n}</button>`).join("") + '</div></div>';
+  h += '<div class="card cl-corpo">';
+  if(clEtapa===0) h += l.gramatica;
+  if(clEtapa===1){
+    h += '<h4 style="margin-top:0">Vocabulário</h4><p class="sub">Estude sempre em pares: a segunda forma revela a declinação ou a conjugação.</p>'
+       + '<table>' + l.vocab.map(v=>`<tr><td><b><i>${clEsc(v[0])}</i></b></td><td>${clEsc(v[1])}</td></tr>`).join("") + '</table>';
+  }
+  if(clEtapa===2){
+    const x = l.lectio;
+    h += `<h4 style="margin-top:0">Lectio</h4><div class="cl-verso">${clEsc(x.latim)}</div><p class="sub" style="text-align:center">${clEsc(x.ref)}</p>`
+       + '<p>Antes de ver a resposta, escreva sua tradução. Errar aqui não conta nada — o que conta é tentar.</p>'
+       + '<textarea id="clTrad" rows="3" style="width:100%" placeholder="Sua tradução"></textarea>'
+       + '<button class="gold" onclick="clVerTrad()">Ver tradução e análise</button><div id="clTradOut"></div>';
+  }
+  if(clEtapa===3){
+    h += '<h4 style="margin-top:0">Exercícios</h4><p class="sub">Escreva a resposta e confira. Não valem nota: servem para preparar o teste.</p>';
+    l.exercicios.forEach((ex,n)=>{
+      h += `<div class="cl-ex"><b>${n+1}.</b> ${clEsc(ex.q)}<input id="clEx${n}" autocomplete="off" autocapitalize="off">`
+         + `<button class="gray" onclick="clConferir(${n})">Conferir</button><div id="clExOut${n}"></div></div>`;
+    });
+  }
+  if(clEtapa===4) h += clTesteHTML();
+  h += '</div>';
+  h += '<div class="cl-nav">'
+     + (clEtapa>0 ? `<button class="gray" onclick="clIr(${clEtapa-1})">← ${CL_ETAPAS[clEtapa-1]}</button>` : '')
+     + (clEtapa<4 ? `<button class="gold" onclick="clIr(${clEtapa+1})">${CL_ETAPAS[clEtapa+1]} →</button>` : '')
+     + '</div>';
+  document.getElementById("clBox").innerHTML = h;
+  window.scrollTo(0,0);
+}
+
+function clVerTrad(){
+  const t = (document.getElementById("clTrad").value||"").trim();
+  const out = document.getElementById("clTradOut");
+  if(t.split(/\s+/).filter(Boolean).length < 3){
+    out.innerHTML = '<p class="cl-no">Escreva sua tentativa antes — pelo menos três palavras.</p>'; return;
+  }
+  const x = CURSO_LATIM.licoes[clI].lectio;
+  out.innerHTML = `<div class="exp"><p><b>Tradução:</b> ${clEsc(x.traducao)}</p>${x.analise}`
+    + '<p class="sub">Compare com a sua: acertou o sujeito? o verbo? os casos?</p></div>';
+}
+
+function clNorm(s){ return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()
+  .replace(/[.,;:!?"'()]/g," ").replace(/\s+/g," ").trim(); }
+function clConferir(n){
+  const ex = CURSO_LATIM.licoes[clI].exercicios[n];
+  const r = document.getElementById("clEx"+n).value;
+  let ok = false;
+  try{
+    if(typeof v76CorrigirRespostaAberta==="function") ok = v76CorrigirRespostaAberta(r,{respostas:ex.aceitas}).ok;
+  }catch(e){}
+  if(!ok) ok = ex.aceitas.some(a => clNorm(a)===clNorm(r));
+  document.getElementById("clExOut"+n).innerHTML = ok
+    ? `<p class="cl-ok">✅ Certo.</p><p class="sub">${clEsc(ex.e)}</p>`
+    : `<p class="cl-no">❌ Ainda não.</p><p><b>Resposta:</b> ${clEsc(ex.aceitas[0])}</p><p class="sub">${clEsc(ex.e)}</p>`;
+}
+
+function clEmbaralhar(q){
+  const idx=[0,1,2,3];
+  for(let i=idx.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [idx[i],idx[j]]=[idx[j],idx[i]]; }
+  return {q:q.q, e:q.e, o:idx.map(k=>q.o[k]), c:idx.indexOf(q.c)};
+}
+
+function clTesteHTML(){
+  const l = CURSO_LATIM.licoes[clI];
+  const r = clRes(l.id);
+  if(!clTesteQ){
+    return '<h4 style="margin-top:0">Teste da lição</h4>'
+      + `<p>${l.teste.length} questões. Com ${Math.ceil(l.teste.length*CURSO_LATIM.aprovacao)} acertos a próxima lição é liberada. Pode refazer quantas vezes quiser — conta a melhor nota.</p>`
+      + (r && r.melhor!=null ? `<p class="sub">Sua melhor nota até agora: ${r.melhor}/${l.teste.length}</p>` : '')
+      + '<button class="gold" onclick="clComecarTeste()">Começar o teste</button>';
+  }
+  let h = '<h4 style="margin-top:0">Teste da lição</h4>';
+  clTesteQ.forEach((q,n)=>{
+    h += `<div class="cl-q"><b>${n+1}.</b> ${clEsc(q.q)}`
+       + q.o.map((o,k)=>`<label><input type="radio" name="clT${n}" value="${k}"> ${clEsc(o)}</label>`).join("")
+       + `<div id="clTOut${n}"></div></div>`;
+  });
+  h += '<button class="gold" onclick="clCorrigirTeste()">Corrigir o teste</button><div id="clTRes"></div>';
+  return h;
+}
+function clComecarTeste(){ clTesteQ = CURSO_LATIM.licoes[clI].teste.map(clEmbaralhar); clRender(); }
+
+function clCorrigirTeste(){
+  const l = CURSO_LATIM.licoes[clI];
+  let ac = 0, faltou = 0;
+  clTesteQ.forEach((q,n)=>{
+    const m = document.querySelector(`input[name="clT${n}"]:checked`);
+    if(!m){ faltou++; return; }
+  });
+  if(faltou){ document.getElementById("clTRes").innerHTML = `<p class="cl-no">Faltam ${faltou} questão(ões) sem resposta.</p>`; return; }
+  clTesteQ.forEach((q,n)=>{
+    const m = document.querySelector(`input[name="clT${n}"]:checked`);
+    const k = parseInt(m.value,10), ok = k===q.c;
+    if(ok) ac++;
+    document.querySelectorAll(`input[name="clT${n}"]`).forEach(x=>x.disabled=true);
+    document.getElementById("clTOut"+n).innerHTML = ok ? '<p class="cl-ok">✅</p>'
+      : `<p class="cl-no">❌ Correta: ${clEsc(q.o[q.c])}</p><p class="sub">${clEsc(q.e)}</p>`;
+  });
+  const tot = clTesteQ.length, aprovado = ac/tot >= CURSO_LATIM.aprovacao;
+  const al = clAl(); al.licoes = al.licoes || {};
+  const r = al.licoes[l.id] || {tentativas:0};
+  r.tentativas = (r.tentativas||0)+1;
+  r.melhor = Math.max(r.melhor||0, ac);
+  r.aprovado = !!(r.aprovado || aprovado);
+  r.ultima = new Date().toISOString();
+  al.licoes[l.id] = r; clSalvar(); clMarcarDia();
+  const prox = CURSO_LATIM.licoes[clI+1];
+  let msg = `<div class="exp"><h4 style="margin-top:0">${ac} de ${tot}</h4>`;
+  if(aprovado){
+    msg += '<p class="cl-ok">Lição concluída.</p>'
+        + (prox ? `<p>Liberada: <b>${clEsc(prox.titulo)}</b></p><button class="gold" onclick="clAbrir(${clI+1})">Ir para a próxima lição →</button>`
+                : '<p>Você concluiu todas as lições disponíveis deste módulo.</p>');
+  } else {
+    msg += `<p class="cl-no">Faltaram ${Math.ceil(tot*CURSO_LATIM.aprovacao)-ac} acerto(s) para liberar a próxima lição.</p>`
+        + '<p>Releia as explicações das questões que errou, volte à gramática se precisar, e refaça — as alternativas mudam de ordem.</p>'
+        + '<button class="gold" onclick="clComecarTeste()">Refazer o teste</button>';
+  }
+  msg += '</div>';
+  document.getElementById("clTRes").innerHTML = msg;
+}
+
+function clRelatorio(){
+  const al = clAl(); if(!al) return;
+  const ym = clHoje().slice(0,7);
+  const cart = clCartoes(), srs = al.srs||{};
+  const fix = cart.filter(c => srs[c.id] && srs[c.id].box>=4).length;
+  const linhas = [`Curso de Latim — ${clEst.atual}`, "",
+    `Dias de estudo em ${CL_MESES[+ym.slice(5)-1]}: ${clDiasNoMes(al,ym)} · no total: ${(al.dias||[]).length}`,
+    `Vocabulário: ${fix} de ${cart.length} cartões bem fixados`, ""];
+  let mod = null;
+  CURSO_LATIM.licoes.forEach((l,i)=>{
+    if(l.modulo!==mod){ mod=l.modulo; linhas.push(mod); }
+    const r = (al.licoes||{})[l.id];
+    const st = r&&r.aprovado ? "concluída" : (clLiberada(i) ? "em andamento" : "bloqueada");
+    linhas.push(`  ${i+1}. ${l.titulo} — ${st}` + (r&&r.melhor!=null ? ` (melhor: ${r.melhor}/${l.teste.length}, ${r.tentativas} tentativa(s))` : ""));
+  });
+  const txt = linhas.join("\n");
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(()=>alert("Relatório copiado."), ()=>prompt("Copie o relatório:", txt));
+  } else prompt("Copie o relatório:", txt);
+}
+
+/* ── Latim de hoje ────────────────────────────────────────────────────────
+   Tirado do Duolingo: a dose diária curta e a revisão espaçada.
+   Deixado de fora: ofensiva que se perde, vidas, ligas. Os dias de estudo
+   são registrados como constância — nunca há punição pelo dia que faltou. */
+const CL_INTERVALO = [0,1,2,4,8,16];   // dias até a próxima revisão, por caixa 1..5
+const CL_MAX_SESSAO = 10, CL_MAX_NOVOS = 6, CL_QUESTOES = 3;
+const CL_MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+let clSess = null;
+
+function clDataStr(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function clHoje(){ return clDataStr(new Date()); }
+function clMaisDias(ymd,n){ const p=ymd.split("-").map(Number); return clDataStr(new Date(p[0],p[1]-1,p[2]+n)); }
+function clMarcarDia(){ const al=clAl(); if(!al) return; al.dias=al.dias||[]; const h=clHoje(); if(al.dias.indexOf(h)<0){ al.dias.push(h); clSalvar(); } }
+function clDiasNoMes(al,ym){ return (al.dias||[]).filter(d=>d.indexOf(ym)===0).length; }
+function clEmbLista(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+function clCartoes(){
+  const al=clAl(), out=[]; if(!al) return out;
+  CURSO_LATIM.licoes.forEach(l=>{
+    const r=(al.licoes||{})[l.id]; if(!(r&&r.aprovado)) return;
+    l.vocab.forEach((v,k)=>{
+      out.push({id:l.id+"."+k+".la", frente:v[0], verso:v[1], dir:"Latim → português"});
+      out.push({id:l.id+"."+k+".pt", frente:v[1], verso:v[0], dir:"Português → latim"});
+    });
+  });
+  return out;
+}
+function clPendentes(){
+  const al=clAl(); al.srs=al.srs||{}; const h=clHoje(), todos=clCartoes();
+  return { rev: todos.filter(c=>al.srs[c.id] && al.srs[c.id].due<=h),
+           novos: todos.filter(c=>!al.srs[c.id]) };
+}
+function clTamanhoSessao(){ const p=clPendentes(); return Math.min(CL_MAX_SESSAO, p.rev.length + Math.min(CL_MAX_NOVOS, p.novos.length)); }
+
+function clCalendario(al){
+  const hoje=clHoje(), y=+hoje.slice(0,4), m=+hoje.slice(5,7), ult=new Date(y,m,0).getDate();
+  let h='<div class="cl-cal">';
+  for(let d=1; d<=ult; d++){
+    const ds=`${y}-${String(m).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+    const cls=((al.dias||[]).indexOf(ds)>=0?"feito ":"")+(ds===hoje?"hoje":"");
+    h+=`<span class="${cls}">${d}</span>`;
+  }
+  return h+'</div>';
+}
+
+function clHojeHTML(){
+  const al=clAl();
+  const algumaFeita = CURSO_LATIM.licoes.some(l=>{ const r=(al.licoes||{})[l.id]; return r&&r.aprovado; });
+  const ym=clHoje().slice(0,7), dias=clDiasNoMes(al,ym), feito=(al.dias||[]).indexOf(clHoje())>=0;
+  let h='<div class="card"><h3 style="margin-top:0">☀️ Latim de hoje</h3>';
+  if(!algumaFeita){
+    return h+'<p>Conclua a primeira lição e a revisão diária começa: cinco minutos por dia com as palavras que você já aprendeu.</p></div>';
+  }
+  const n=clTamanhoSessao();
+  h += `<p>${n ? n+' cartão(ões) de vocabulário' : 'Nenhum cartão vencendo hoje'} e ${CL_QUESTOES} questões das lições que você já fez. Uns cinco minutos.</p>`;
+  h += feito ? '<p class="cl-ok">✔ Você já estudou hoje. Pode fazer de novo, se quiser.</p>' : '';
+  h += `<button class="${feito?'gray':'gold'}" onclick="clComecarHoje()">${feito?'Estudar de novo':'Começar'}</button>`;
+  h += `<p class="sub" style="margin-top:12px">${clEsc(clEst.atual)} estudou <b>${dias}</b> dia(s) em ${CL_MESES[+ym.slice(5)-1]}.</p>` + clCalendario(al);
+  return h+'</div>';
+}
+
+function clComecarHoje(){
+  const al=clAl(), p=clPendentes();
+  const rev = p.rev.slice().sort((a,b)=>al.srs[a.id].due.localeCompare(al.srs[b.id].due));
+  const cards = clEmbLista(rev.concat(clEmbLista(p.novos).slice(0,CL_MAX_NOVOS)).slice(0,CL_MAX_SESSAO));
+  const pool=[]; CURSO_LATIM.licoes.forEach(l=>{ const r=(al.licoes||{})[l.id]; if(r&&r.aprovado) l.teste.forEach(q=>pool.push(q)); });
+  clSess = {cards, i:0, virou:false, okC:0, qs:clEmbLista(pool).slice(0,CL_QUESTOES).map(clEmbaralhar), qi:0, escolha:null, okQ:0, fim:false};
+  clSessRender();
+}
+function clVirar(){ clSess.virou=true; clSessRender(); }
+function clMarcarCartao(ok){
+  const s=clSess, c=s.cards[s.i], al=clAl(); al.srs=al.srs||{};
+  const atual=al.srs[c.id]||{box:0}, box = ok ? Math.min((atual.box||0)+1,5) : 1;
+  al.srs[c.id] = {box, due: ok ? clMaisDias(clHoje(), CL_INTERVALO[box]) : clHoje()};
+  if(ok) s.okC++;
+  clSalvar(); s.i++; s.virou=false; clSessRender();
+}
+function clResponderQ(){
+  const m=document.querySelector('input[name="clHQ"]:checked'); if(!m) return;
+  const s=clSess; s.escolha=parseInt(m.value,10); if(s.escolha===s.qs[s.qi].c) s.okQ++; clSessRender();
+}
+function clProxQ(){ clSess.qi++; clSess.escolha=null; clSessRender(); }
+
+function clSessRender(){
+  const s=clSess, al=clAl();
+  let h='<div class="card"><button class="gray" onclick="clEntrada()">← Trilha</button><h3 style="margin:10px 0 4px">☀️ Latim de hoje</h3>';
+  if(s.i < s.cards.length){
+    const c=s.cards[s.i];
+    h += `<p class="sub">Cartão ${s.i+1} de ${s.cards.length} • ${c.dir}</p><div class="cl-cartao"><i>${clEsc(c.frente)}</i></div>`;
+    h += !s.virou ? '<p class="sub">Responda de cabeça, depois confira.</p><button class="gold" onclick="clVirar()">Mostrar resposta</button>'
+      : `<div class="cl-cartao cl-resp">${clEsc(c.verso)}</div><p class="sub">Seja honesto: o cartão errado volta amanhã, o certo demora mais a voltar.</p>`
+        + '<div class="cl-nav"><button class="gray" onclick="clMarcarCartao(false)">✗ Não sabia</button><button class="green" onclick="clMarcarCartao(true)">✓ Sabia</button></div>';
+  } else if(s.qi < s.qs.length){
+    const q=s.qs[s.qi], resp=s.escolha!==null;
+    h += `<p class="sub">Questão ${s.qi+1} de ${s.qs.length}</p><div class="cl-q"><b>${clEsc(q.q)}</b>`
+       + q.o.map((o,k)=>`<label><input type="radio" name="clHQ" value="${k}" ${resp?'disabled':''} ${resp&&k===s.escolha?'checked':''}> ${clEsc(o)}</label>`).join("");
+    if(resp) h += s.escolha===q.c ? '<p class="cl-ok">✅ Certo.</p>' : `<p class="cl-no">❌ Correta: ${clEsc(q.o[q.c])}</p><p class="sub">${clEsc(q.e)}</p>`;
+    h += '</div>' + (resp ? '<button class="gold" onclick="clProxQ()">Continuar →</button>' : '<button class="gold" onclick="clResponderQ()">Conferir</button>');
+  } else {
+    if(!s.fim){ s.fim=true; clMarcarDia(); }
+    const ym=clHoje().slice(0,7);
+    h += '<div class="exp"><h4 style="margin-top:0">Feito por hoje.</h4>'
+       + (s.cards.length ? `<p>Vocabulário: ${s.okC} de ${s.cards.length}.</p>` : '')
+       + `<p>Questões: ${s.okQ} de ${s.qs.length}.</p>`
+       + `<p>${clEsc(clEst.atual)} estudou <b>${clDiasNoMes(al,ym)}</b> dia(s) em ${CL_MESES[+ym.slice(5)-1]}.</p>`
+       + clCalendario(al) + '</div><button class="gold" onclick="clEntrada()">Voltar à trilha</button>';
+  }
+  document.getElementById("clBox").innerHTML = h+'</div>';
+  window.scrollTo(0,0);
 }
 </script>
 </body></html>
