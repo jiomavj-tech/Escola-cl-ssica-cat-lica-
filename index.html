@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V99</title>
+<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V100</title>
 <style>
 :root{--bg:#f4efe6;--card:#fffdf8;--text:#332b25;--muted:#776b61;--gold:#9a6d1f;--wine:#6b2f3a;--green:#3f6652;--line:#d9cdbb;--soft:#f7f1e8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Georgia,"Times New Roman",serif;color:var(--text)}
@@ -3878,6 +3878,18 @@ function v61Documento(incluirGab){
 
 <style id="cursoLatimCSS">
 .cl-alunos{display:flex;flex-wrap:wrap;gap:8px}
+#cursoLatim .cl-aluno{display:inline-flex;align-items:stretch;gap:0}
+#cursoLatim .cl-aluno button{margin:0}
+#cursoLatim .cl-aluno > button:first-child{border-top-right-radius:0;border-bottom-right-radius:0}
+#cursoLatim .cl-aluno .cl-x{
+  width:auto;padding:8px 11px;font-size:.9em;line-height:1;
+  background:transparent;color:var(--muted);
+  border:1px solid var(--line);border-left:none;
+  border-top-right-radius:8px;border-bottom-right-radius:8px;
+  border-top-left-radius:0;border-bottom-left-radius:0;
+}
+#cursoLatim .cl-aluno .cl-x:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+
 .cl-alunos button{flex:0 0 auto;width:auto;padding:8px 14px}
 .cl-linha{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--card)}
 .cl-linha.bloq{opacity:.55}
@@ -4658,7 +4670,7 @@ function leAplicarFonte(){
 }
 </script>
 
-<script id="cursoLatim">
+<script id="cursoLatimJS">
 /* ── Curso de Latim ───────────────────────────────────────────────────────
    Perfis de aluno, trilha com trava de aprovação, cinco etapas por lição.
    Estado em classica_curso_latim: {alunos:{nome:{licoes:{id:{...}}}}, atual}. */
@@ -4688,7 +4700,10 @@ function clEntrada(){
   let h = '<div class="card"><h3 style="margin-top:0">Quem vai estudar?</h3>';
   if(nomes.length){
     h += '<div class="cl-alunos">' + nomes.map(n =>
-      `<button class="${n===clEst.atual?'gold':'gray'}" data-n="${clEsc(n)}" onclick="clTrocar(this.dataset.n)">${clEsc(n)}</button>`
+      `<span class="cl-aluno${n===clEst.atual?' atual':''}">`
+      + `<button class="${n===clEst.atual?'gold':'gray'}" data-n="${clEsc(n)}" onclick="clTrocar(this.dataset.n)">${clEsc(n)}</button>`
+      + `<button class="cl-x" title="Excluir ${clEsc(n)}" aria-label="Excluir ${clEsc(n)}" data-n="${clEsc(n)}" onclick="clExcluir(this.dataset.n)">✕</button>`
+      + `</span>`
     ).join("") + '</div>';
   } else {
     h += '<p class="sub">Cada aluno tem o seu progresso. Escreva o nome para começar.</p>';
@@ -4699,11 +4714,41 @@ function clEntrada(){
   document.getElementById("clBox").innerHTML = h;
 }
 
+/* Nomes iguais a menos de maiúsculas, acentos ou espaços são o mesmo aluno:
+   sem isto, "Giovanni" e "giovanni" viram dois cadastros e dois progressos. */
+function clChave(n){
+  return String(n||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .toLowerCase().replace(/\s+/g," ").trim();
+}
+function clAchaAluno(n){
+  const k = clChave(n);
+  return Object.keys(clEst.alunos).find(x => clChave(x) === k) || null;
+}
+
 function clNovo(){
   const n = (document.getElementById("clNome").value||"").trim();
   if(!n) return;
-  if(!clEst.alunos[n]) clEst.alunos[n] = {licoes:{}, criado:new Date().toISOString()};
-  clEst.atual = n; clSalvar(); clEntrada();
+  const existente = clAchaAluno(n);
+  if(existente){
+    clEst.atual = existente;                  // já havia cadastro: entra nele
+  } else {
+    clEst.alunos[n] = {licoes:{}, criado:new Date().toISOString()};
+    clEst.atual = n;
+  }
+  clSalvar(); clEntrada();
+}
+
+function clExcluir(n){
+  if(!clEst.alunos[n]) return;
+  const r = clEst.alunos[n].licoes || {};
+  const feitas = Object.keys(r).filter(k => r[k] && r[k].aprovado).length;
+  const aviso = feitas
+    ? `Excluir ${n}? As ${feitas} lição(ões) concluídas e a revisão diária serão apagadas, e isso não tem volta.`
+    : `Excluir ${n}? Este aluno ainda não concluiu nenhuma lição.`;
+  if(!confirm(aviso)) return;
+  delete clEst.alunos[n];
+  if(clEst.atual === n) clEst.atual = Object.keys(clEst.alunos)[0] || null;
+  clSalvar(); clEntrada();
 }
 function clTrocar(n){ if(clEst.alunos[n]){ clEst.atual = n; clSalvar(); clEntrada(); } }
 
