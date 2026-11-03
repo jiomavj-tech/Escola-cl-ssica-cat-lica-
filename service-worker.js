@@ -1,5 +1,5 @@
 
-const CACHE_NAME="academia-classica-v102";
+const CACHE_NAME="academia-classica-v103";
 const APP_SHELL=[
   "./","./index.html","./manifest.webmanifest","./version.json",
   "./icon-192.png","./icon-512.png","./icon-maskable-512.png"
