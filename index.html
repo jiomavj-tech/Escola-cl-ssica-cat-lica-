@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V103</title>
+<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V104</title>
 <style>
 :root{--bg:#f4efe6;--card:#fffdf8;--text:#332b25;--muted:#776b61;--gold:#9a6d1f;--wine:#6b2f3a;--green:#3f6652;--line:#d9cdbb;--soft:#f7f1e8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Georgia,"Times New Roman",serif;color:var(--text)}
@@ -4884,6 +4884,36 @@ function clVerTrad(){
 
 function clNorm(s){ return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()
   .replace(/[.,;:!?"'()]/g," ").replace(/\s+/g," ").trim(); }
+
+/* ── O corretor das respostas escritas ─────────────────────────────────────
+   Reprovar resposta certa é o pior defeito que um corretor pode ter: o
+   aluno que apanha por acertar deixa de responder e passa a adivinhar o
+   que a máquina quer. "o dativo" e "dativo plural" valem "dativo".
+   "nominativo" não vale "acusativo", e "dativo ou ablativo" também não:
+   hesitar não é saber. */
+const CL_SUPERFLUO = /^(o|a|os|as|um|uma|no|na|nos|nas|em|de|do|da|e|eh|é)\s+/;
+
+function clNormResp(s){
+  let t = clNorm(s);
+  for(let i=0; i<3 && CL_SUPERFLUO.test(t); i++) t = t.replace(CL_SUPERFLUO, "");
+  return t.trim();
+}
+
+function clAceita(dado, aceitas){
+  const d = clNormResp(dado);
+  if(!d) return false;
+  /* "dativo ou ablativo" começa pela resposta certa, mas quem lista as duas
+     possibilidades não escolheu nenhuma. Hesitar não é saber. */
+  if(/\s(ou|e|\/)\s/.test(d) && !(aceitas||[]).some(a => clNormResp(a) === d)) return false;
+  return (aceitas||[]).some(a => {
+    const x = clNormResp(a);
+    if(!x) return false;
+    if(d === x) return true;
+    // "dativo plural" quando se pedia "dativo": quem qualifica sabe mais
+    return d.indexOf(x + " ") === 0;
+  });
+}
+
 function clConferir(n){
   const ex = CURSO_LATIM.licoes[clI].exercicios[n];
   const r = document.getElementById("clEx"+n).value;
@@ -4891,7 +4921,7 @@ function clConferir(n){
   try{
     if(typeof v76CorrigirRespostaAberta==="function") ok = v76CorrigirRespostaAberta(r,{respostas:ex.aceitas}).ok;
   }catch(e){}
-  if(!ok) ok = ex.aceitas.some(a => clNorm(a)===clNorm(r));
+  if(!ok) ok = clAceita(r, ex.aceitas);
   document.getElementById("clExOut"+n).innerHTML = ok
     ? `<p class="cl-ok">✅ Certo.</p><p class="sub">${clEsc(ex.e)}</p>`
     : `<p class="cl-no">❌ Ainda não.</p><p><b>Resposta:</b> ${clEsc(ex.aceitas[0])}</p><p class="sub">${clEsc(ex.e)}</p>`;
@@ -4949,7 +4979,7 @@ function clFrConferir(n,k){
   try{
     if(typeof v76CorrigirRespostaAberta === "function") ok = v76CorrigirRespostaAberta(dado,{respostas:a.ac}).ok;
   }catch(e){}
-  if(!ok) ok = a.ac.some(x => clNorm(x) === clNorm(dado));
+  if(!ok) ok = clAceita(dado, a.ac);
   document.getElementById(`clFrOut${n}_${k}`).innerHTML = ok
     ? `<p class="cl-ok">✅ Certo.</p><p class="sub">${clEsc(a.e)}</p>`
     : `<p class="cl-no">❌ Ainda não.</p><p><b>Resposta:</b> ${clEsc(a.ac[0])}</p><p class="sub">${clEsc(a.e)}</p>`;

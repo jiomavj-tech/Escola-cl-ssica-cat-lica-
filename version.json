@@ -1,5 +1,5 @@
 {
-  "version": "2026.11.03-v103",
-  "build": "V103 — Léxico das orações: 14 orações em latim, glosadas palavra por palavra, com 197 palavras novas na revisão",
+  "version": "2026.11.03-v104",
+  "build": "V104 — o corretor deixa de reprovar resposta certa: \"o dativo\" e \"dativo plural\" valem \"dativo\"",
   "published": "2026-11-03"
 }
