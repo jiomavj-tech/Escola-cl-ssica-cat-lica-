@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V98</title>
+<meta name="theme-color" content="#5d4037"><title>Academia Clássica Católica V99</title>
 <style>
 :root{--bg:#f4efe6;--card:#fffdf8;--text:#332b25;--muted:#776b61;--gold:#9a6d1f;--wine:#6b2f3a;--green:#3f6652;--line:#d9cdbb;--soft:#f7f1e8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Georgia,"Times New Roman",serif;color:var(--text)}
@@ -333,61 +333,56 @@ body.v64-noscroll{overflow:hidden}
 <meta name="apple-mobile-web-app-title" content="Academia Clássica">
 <link rel="apple-touch-icon" href="./icon-192.png">
 
+<style id="menuCompactoCSS">
+#menu{padding:10px 10px 6px}
+#menu .menu-topo{margin:0 0 8px}
+#menu .menu-topo h2{margin:0;font-size:1.16rem;color:var(--wine);line-height:1.18}
+#menu .menu-topo p{display:none}
+#menu .menu-lista{display:flex;flex-direction:column;gap:5px}
+#menu .menu-lista button.menu-item{
+  display:flex;align-items:center;gap:10px;
+  width:100%;margin:0;min-height:46px;padding:0 12px;
+  background:var(--card);color:var(--text);
+  border:1px solid var(--line);border-radius:11px;
+  font:inherit;font-size:1rem;font-weight:600;text-align:left;line-height:1.2;
+}
+#menu .menu-lista button.menu-item .mi{
+  font-size:1.2em;width:1.45em;flex:0 0 auto;text-align:center;line-height:1;
+}
+#menu .menu-lista button.menu-item.destaque{
+  border:2px solid var(--gold);background:var(--soft);
+}
+#menu .menu-lista button.menu-item.sutil{
+  background:transparent;border-style:dashed;color:var(--muted);
+  font-weight:500;min-height:44px;font-size:.9rem;
+}
+@media (max-width:380px){
+  #menu .menu-lista button.menu-item{min-height:44px;font-size:.95rem;padding:0 10px}
+  #menu .menu-topo h2{font-size:1.14rem}
+}
+</style>
 </head><body>
 
 <main>
 
 <section id="menu">
 
-<div class="home-hero">
+<div class="menu-topo">
   <h2>Academia Clássica Católica</h2>
-  <p class="sub">Estude na ordem certa: lembrar, compreender, raciocinar, explicar e revisar ao longo do tempo.</p>
-  <button class="green" onclick="abrirEstudoHoje()">⭐ O que estudar hoje?</button>
+  <p>Lembrar · compreender · raciocinar · explicar · revisar</p>
 </div>
 
-<div class="home-grid">
-  <div class="home-card">
-    <h3>🏛️ Curso de Latim</h3>
-    <p class="home-small">Lições em sequência, com textos da Bíblia e da liturgia.</p>
-    <button class="gold" onclick="abrirCursoLatim()">Estudar</button>
-  </div>
-  <div class="home-card">
-    <h3>📝 Fazer avaliação</h3>
-    <p class="home-small">Treino por matéria ou simulado.</p>
-    <button class="gold" onclick="show('config')">Começar</button>
-  </div>
-  <div class="home-card">
-    <h3>📖 Ler a matéria</h3>
-    <p class="home-small">O conteúdo por extenso, antes de partir para as questões.</p>
-    <button class="green" onclick="abrirLeitura()">Ler</button>
-  </div>
-  <div class="home-card">
-    <h3>🎯 Treino livre</h3>
-    <p class="home-small">Exercite um assunto sem nota e sem limite de questões.</p>
-    <button class="gold" onclick="abrirTreino()">Treinar</button>
-  </div>
-  <div class="home-card">
-    <h3>🔁 Recuperar erros</h3>
-    <p class="home-small">Revise conteúdos em que houve erro antes de tentar novamente.</p>
-    <button class="green" onclick="review()">Abrir recuperação</button>
-  </div>
-  <div class="home-card">
-    <h3>🧠 Revisar hoje</h3>
-    <p class="home-small">Revisão espaçada para consolidar o que foi aprendido.</p>
-    <button class="green" onclick="abrirRevisaoEspacada()">Abrir revisão</button>
-  </div>
-  <div class="home-card">
-    <h3>🧭 Ver diagnóstico</h3>
-    <p class="home-small">Veja produção, raciocínio, expressão e retenção.</p>
-    <button class="gray" onclick="abrirDiagnosticoCentral()">Abrir diagnóstico</button>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Ferramentas de formação</h3>
-  <p class="home-small">Use quando o plano diário recomendar ou quando quiser estudar de forma mais aprofundada.</p>
-  <button class="gray" onclick="show('ferramentasAvancadas')">Abrir ferramentas avançadas</button>
-</div>
+<nav class="menu-lista">
+  <button class="menu-item destaque" onclick="abrirEstudoHoje()"><span class="mi">⭐</span>O que estudar hoje?</button>
+  <button class="menu-item" onclick="abrirCursoLatim()"><span class="mi">🏛️</span>Curso de Latim</button>
+  <button class="menu-item" onclick="show('config')"><span class="mi">📝</span>Fazer avaliação</button>
+  <button class="menu-item" onclick="abrirLeitura()"><span class="mi">📖</span>Ler a matéria</button>
+  <button class="menu-item" onclick="abrirTreino()"><span class="mi">🎯</span>Treino livre</button>
+  <button class="menu-item" onclick="review()"><span class="mi">🔁</span>Recuperar erros</button>
+  <button class="menu-item" onclick="abrirRevisaoEspacada()"><span class="mi">🧠</span>Revisar hoje</button>
+  <button class="menu-item" onclick="abrirDiagnosticoCentral()"><span class="mi">🧭</span>Ver diagnóstico</button>
+  <button class="menu-item sutil" onclick="show('ferramentasAvancadas')"><span class="mi">⚙️</span>Ferramentas de formação</button>
+</nav>
 </section>
 
 
@@ -737,6 +732,23 @@ body.v64-noscroll{overflow:hidden}
   </div>
 </div>
 <button onclick="show(&quot;auditoria41&quot;)">🛠 Auditoria de Integridade V41</button><button onclick="show(&quot;limpeza42&quot;)">🧹 Limpeza Editorial V42</button><button onclick="show(&quot;semantica43&quot;)">🧠 Auditoria Semântica V43</button><button onclick="show(&quot;div44&quot;)">🌱 Diversificação Real V44</button><button onclick="abrirCompet45()">🧭 Banco por Competência V45</button><button onclick="show(&quot;fix461&quot;)">🔧 Correção V46.1</button><button onclick="show(&quot;auditoria48&quot;)">✅ Auditoria Geral V48</button><button onclick="show(&quot;autoteste49&quot;);v49Executar()">🧪 Autoteste V49</button><button onclick="show(&quot;reforma50&quot;)">🏛️ Reforma Fundamental V50</button><button onclick="show(&quot;percursoFilo51&quot;)">🧠 Filosofia e Lógica V51</button><button onclick="show(&quot;historia52&quot;)">📜 Oficina do Historiador V52</button><button onclick="show(&quot;latim53&quot;)">🏺 Latim Progressivo V53</button><button onclick="show(&quot;portugues54&quot;)">✒️ Português V54</button><button onclick="show(&quot;matematica55&quot;)">📐 Matemática V55</button><button onclick="show(&quot;geografia56&quot;)">🗺️ Geografia V56</button><button onclick="show(&quot;artes57&quot;)">🎨 Artes V57</button><button onclick="show(&quot;filosofia58&quot;)">🏛️ Filosofia V58</button><button onclick="show(&quot;trivium59&quot;)">🏛️ Trivium Integrado V59</button><button onclick="abrirDominio60()">🎓 Domínio Intelectual V60</button>  <button class="gray" onclick="focoRestaurarTudo()">📚 Reativar as outras matérias</button>
+
+<div id="manutencaoMovida">
+<h3 style="margin-top:18px">Manutenção do aplicativo</h3>
+<p class="home-small">Conferência do banco de questões e dos critérios de publicação. Não é material de estudo.</p>
+<div id="v70DifficultyNote" style="margin:.75rem 0;padding:.8rem 1rem;border:1px solid #c9b27b;border-radius:10px;background:#fffaf0;font-size:.92rem">
+  <strong>Dificuldade recalibrada:</strong> fácil = reconhecimento/fundamentos; médio = aplicação e análise curta; difícil = análise mais exigente, demonstração ou produção.
+</div>
+<button type="button" class="v72-editorial-btn" onclick="v72AbrirRegras()">
+  📚 Ver critérios editoriais do banco
+</button>
+<button type="button" class="v73-validator-btn" onclick="v73AbrirValidador()">
+  ✅ Executar validador pré-publicação
+</button>
+<div id="v64ShareFooter" class="no-print">
+  <button id="v64ShareButton" class="gold" onclick="v64AbrirShare()">📤 Compartilhar aplicativo</button>
+</div>
+</div>
 <button onclick="abrirPDF61()">📄 Gerador de Provas PDF V61</button><button class="gold" onclick="abrirProva63()">🎯 Minha Próxima Prova</button></section>
 
 <section id="prova">
@@ -853,15 +865,9 @@ body.v64-noscroll{overflow:hidden}
 </div>
 </section>
 
-<div id="v70DifficultyNote" style="margin:.75rem 0;padding:.8rem 1rem;border:1px solid #c9b27b;border-radius:10px;background:#fffaf0;font-size:.92rem">
-  <strong>Dificuldade recalibrada:</strong> fácil = reconhecimento/fundamentos; médio = aplicação e análise curta; difícil = análise mais exigente, demonstração ou produção.
-</div>
-<button type="button" class="v72-editorial-btn" onclick="v72AbrirRegras()">
-  📚 Ver critérios editoriais do banco
-</button>
-<button type="button" class="v73-validator-btn" onclick="v73AbrirValidador()">
-  ✅ Executar validador pré-publicação
-</button>
+
+
+
 
 
 </main><script>
@@ -4097,9 +4103,7 @@ function abrirProva63(){show("prova63");v63Carregar()}
 </script>
 
 
-<div id="v64ShareFooter" class="no-print">
-  <button id="v64ShareButton" class="gold" onclick="v64AbrirShare()">📤 Compartilhar aplicativo</button>
-</div>
+
 <div id="v64ShareModal" class="modal" style="display:none">
   <div class="v64-panel">
     <button class="gray v64-close" onclick="v64FecharShare()">✕</button>
